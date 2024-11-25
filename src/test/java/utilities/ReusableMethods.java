@@ -251,14 +251,6 @@ public class ReusableMethods {
         }
     }
 
-    public static void closePopup(WebDriver driver) {
-        try {
-            WebElement closeButton = driver.findElement(By.xpath("//button[contains(@class, 'close')]"));
-            closeButton.click();
-        } catch (Exception e) {
-            System.err.println("Pop-up kapatılamadı: " + e.getMessage());
-        }
-    }
 
     public static void closePopupIfPresent(WebDriver driver) {
         try {

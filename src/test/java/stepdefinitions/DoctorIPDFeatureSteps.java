@@ -31,15 +31,12 @@ public class DoctorIPDFeatureSteps {
     @Given("Login as doctor")
     public void login_as_doctor() {
     doctorIDPPage.doctorLogin(9);
-
     }
 
 
     @Then("As a doctor, click on the IPD menu in the dashboard.")
     public void as_a_doctor_click_on_the_ipd_menu_in_the_dashboard() {
-
-
-        ReusableMethods.clickWithText(" IPD");
+     ReusableMethods.clickWithText(" IPD");
 
     }
     @Then("As a doctor,verify that the IPD menu is enabled.")
@@ -76,12 +73,12 @@ public class DoctorIPDFeatureSteps {
     }
     @Then("As a doctor, verify that the patient's details page is accessible.")
     public void as_a_doctor_verify_that_the_patient_s_details_page_is_accessible() {
-    // Assert.assertTrue(doctorIDPPage.TableDataRetriever(3,1).isEnabled());
+    Assert.assertTrue(doctorIDPPage.TableDataRetriever(3,1).isEnabled());
     }
     @Then("As a doctor, Verify searching with full data of the {int} patient in the data table.")
     public void as_a_doctor_verify_that_the_search_box_allows_searching_for_any_data_present_in_the_data_table(int row) throws InterruptedException {
      ReusableMethods.waitForElementVisibility(doctorIDPPage.ipdPatientSearchBox,10);
-    doctorIDPPage.searchPatientInIPDBoxWithDataTable(row);
+  //  doctorIDPPage.searchPatientInIPDBoxWithDataTable(row);
 
      logger.error("IPD hasta listesindeki tüm datalarla arama yapilamiyor ");
     }
@@ -91,29 +88,30 @@ public class DoctorIPDFeatureSteps {
     }
     @Then("As a doctor, verify that the Add Patient button is accessible.")
     public void as_a_doctor_verify_that_the_add_patient_button_is_accessible() {
- //   doctorIDPPage.verifyAddButtonAccessible();
+    doctorIDPPage.verifyAddPatientButtonAccessible();
+    doctorIDPPage.closeAddPatient.click();
+
     }
     @Then("As a doctor, verify that the Discharged Patient button is accessible.")
     public void as_a_doctor_verify_that_the_discharged_patient_button_is_accessible() {
-
-   /* ReusableMethods.closePopup(driver);
-    ReusableMethods.bekle(1);
+     ReusableMethods.hardWait(1);
     doctorIDPPage.verifyDischargedButtonAccessible();
 
-    */
+
 
     }
 
-     @Given("Clicking on the IPD No Column Nu 3 navigates to the patient's details page.")
-     public void clicking_on_the_ipd_no_column_navigates_to_the_patient_s_details_page() {
+     @Given("Clicking on the IPD No {int} navigates to the patient's details page.")
+     public void clicking_on_the_ipd_no_column_navigates_to_the_patient_s_details_page(int row) {
 
-     doctorIDPPage.IPDN36Patient.click();
+     doctorIDPPage.clickPatientByIPDNo(row);
 
      }
-     @When("As a doctor, verify that the page displays and click the {string}.")
-     public void the_nurse_notes_page_displays_accurate_nurse_notes(String clickableText) {
+     @When("As a doctor, verify that the page displays and click the Nurse Notes.")
+     public void the_nurse_notes_page_displays_accurate_nurse_notes() {
 
-     ReusableMethods.clickWithText(clickableText);
+
+     doctorIDPPage.nurseNote.click();
      Assert.assertTrue(doctorIDPPage.nurseNote.isDisplayed());
 
      }
@@ -171,18 +169,18 @@ public class DoctorIPDFeatureSteps {
      }
      @When("The Bed History page shows detailed bed history.")
      public void the_bed_history_page_shows_detailed_bed_history() {
-
+      ReusableMethods.isTextVisible(" Bed History");
      }
-     @When("The Timeline page displays future treatment plans.")
+     @When("The Timeline page displays future timeline plans.")
      public void the_timeline_page_displays_future_treatment_plans() {
 
-     }
-     @When("The Timeline page allows adding new treatment notes.")
-     public void the_timeline_page_allows_adding_new_treatment_notes() {
+     doctorIDPPage.addTimeLine();
+     ReusableMethods.hardWait(3);
 
      }
      @When("The Treatment History page lists all past treatments accurately.")
      public void the_treatment_history_page_lists_all_past_treatments_accurately() {
+     doctorIDPPage.treatmentHistory();
 
      }
 

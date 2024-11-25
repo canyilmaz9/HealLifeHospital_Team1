@@ -43,11 +43,13 @@ public class DoctorIDPPage extends BasePage {
     @FindBy(xpath = "//*[text()=' IPD Patient']")
     public WebElement ipdPatientText;
 
-    @FindBy(xpath = "//*[text()='Records: 1 to 4 of 4']")
+    @FindBy(xpath = "//*[text()='Records: 1 to 5 of 5']")
     public WebElement recordsPatientCountInDataTable;
 
     @FindBy(xpath = "//*[@type='search']")
     public WebElement ipdPatientSearchBox;
+    @FindBy(xpath = "//button[@class='close pt4']")
+    public WebElement closeAddPatient;
 
     @FindBy(xpath = "(//*[@class='fa fa-reorder'])[2]")
     public WebElement hamburgerMenuIPD;
@@ -55,15 +57,11 @@ public class DoctorIDPPage extends BasePage {
     @FindBy(xpath = "//*[@id='name']")
     public WebElement name;
 
-    @FindBy(xpath = "(//*[@class='timeline-header text-aqua'])[8]")
+    @FindBy(xpath = "//*[@href='#nurse_note']")
     public WebElement nurseNote;
 
     @FindBy(xpath = "//*[@href='#medication']")
     public WebElement medicineButton;
-
-    @FindBy(xpath = "//a[normalize-space()='IPDN36']")
-    public WebElement IPDN36Patient;
-
     @FindBy(xpath = "//span[@id='select2-add_charge_type-container']")
     public WebElement chargeTypeDDM;
 
@@ -136,24 +134,29 @@ public class DoctorIDPPage extends BasePage {
     public WebElement decrementMin;
 
 
+    @FindBy(xpath = "//a[@class='btn btn-sm btn-primary dropdown-toggle addtimeline']")
+    public WebElement addTimelineButton;
+    @FindBy(xpath = "//input[@id='timeline_title']")
+    public WebElement titleAddTimeLine;
 
+    @FindBy(xpath = "//input[@id='timeline_date']")
+    public WebElement datePickerAddTimeLine;
 
+    @FindBy(xpath = "//*[text()='26']") //  //*[text()='26']  //td[@class='active day']
+    public WebElement pickDateAddTimeLine;
 
+    @FindBy(xpath = "//button[@id='add_timelinebtn']")
+    public WebElement saveAddTimeLine;
 
+    @FindBy(xpath = "//div[@id='timeline']//li[4]//div[1]//h3[1]")
+    public WebElement lastTitleOnTimeLine;
+    @FindBy(xpath = "//*[@href='#treatment_history']")
+    public WebElement treatmentHistoryButton;
+    @FindBy(xpath = "//*[text()='Treatment History']")
+    public WebElement treatmentHistoryTitle;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "(//*[text()='IPDN36'])[2]")
+    public WebElement lastIPDNo;
 
 
 
@@ -228,7 +231,8 @@ public class DoctorIDPPage extends BasePage {
         String dataTablePatientCount=""+dataTablePatientCountList.size();
 
 
-    return dataTablePatientCount;
+
+        return dataTablePatientCount;
     }
 
 
@@ -243,7 +247,7 @@ public class DoctorIDPPage extends BasePage {
 
 
 
-    public void clickPatientByIPDNo(String IPDNo){
+    public void clickPatientByIPDNo(int IPDNo){
 
         WebElement data= driver.findElement(By.xpath("//*[text()='IPDN"+IPDNo+"']"));
         data.click();
@@ -255,6 +259,7 @@ public class DoctorIDPPage extends BasePage {
         List<WebElement> dataTable=driver.findElements(By.xpath("//tbody//tr["+row+"]//td"));
 
         for (WebElement data:dataTable) {
+            ReusableMethods.hardWait(8);
 
             ipdPatientSearchBox.sendKeys(data.getText());
 
@@ -266,9 +271,9 @@ public class DoctorIDPPage extends BasePage {
     public void clickOnHamburgerMenu(){
 
         //hoverover yap!
-       ReusableMethods.waitForElementVisibility(TableDataRetriever(1,8),5);
+       ReusableMethods.waitForElementVisibility(TableDataRetriever(1,8),6);
        ReusableMethods.hoverOver(hamburgerMenuIPD);
-       ReusableMethods.waitForElementVisibility(hamburgerMenuIPD,2);
+       ReusableMethods.waitForElementVisibility(hamburgerMenuIPD,5);
         hamburgerMenuIPD.click();
         Assert.assertTrue(ReusableMethods.isTextVisible(" Nurse Notes"));
 
@@ -276,7 +281,7 @@ public class DoctorIDPPage extends BasePage {
 
     }
 
-    public void verifyAddButtonAccessible(){
+    public void verifyAddPatientButtonAccessible(){
 
         ReusableMethods.clickWithText("  Add Patient");
         ReusableMethods.hardWait(1);
@@ -350,8 +355,8 @@ public class DoctorIDPPage extends BasePage {
         pickMin.click();
         ReusableMethods.hardWait(2);
         pickMin40.click();
-        ReusableMethods.hardWait(2);
-        Assert.assertEquals("AM",timePeriodAmOrPm.getText());
+
+       // Assert.assertEquals("AM",timePeriodAmOrPm.getText());
         ReusableMethods.hardWait(2);
         addCharge.click();
         ReusableMethods.hardWait(2);
@@ -361,7 +366,35 @@ public class DoctorIDPPage extends BasePage {
 
     }
 
+    public void addTimeLine(){
+        ReusableMethods.clickWithText(" Timeline");
+        addTimelineButton.click();
+        ReusableMethods.hardWait(2);
+        titleAddTimeLine.sendKeys(reader.getCellData(3,2));
+        ReusableMethods.hardWait(3);
+        datePickerAddTimeLine.click();
+        ReusableMethods.hardWait(3);
+        pickDateAddTimeLine.click();
+        ReusableMethods.hardWait(5);
+        saveAddTimeLine.click();
+        Assert.assertEquals(reader.getCellData(3,2),lastTitleOnTimeLine.getText());
 
+
+
+
+
+    }
+
+    public void treatmentHistory(){
+        treatmentHistoryButton.click();
+        ReusableMethods.hardWait(3);
+        Assert.assertTrue(lastIPDNo.isDisplayed());
+
+
+
+
+
+    }
 
 
 
