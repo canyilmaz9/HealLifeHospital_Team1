@@ -85,4 +85,24 @@ public class ExcelReader {
 		DataFormatter formatter = new DataFormatter(); // Tüm formatları string'e dönüştürür
 		return formatter.formatCellValue(cell);
 	}
+
+	// lokasyon girerek data cagirma
+	public static String getCellData(String filePath, int sheetIndex, int rowIndex, int columnIndex) {
+		try (FileInputStream fis = new FileInputStream(filePath);
+			 Workbook workbook = new XSSFWorkbook(fis)) {
+
+			Sheet sheet = workbook.getSheetAt(sheetIndex);
+			Row row = sheet.getRow(rowIndex);
+			if (row != null) {
+				Cell cell = row.getCell(columnIndex);
+				if (cell != null) {
+					return cell.toString();
+				}
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null; // Eğer hücre boşsa veya bulunamazsa null döndür
+	}
 }
