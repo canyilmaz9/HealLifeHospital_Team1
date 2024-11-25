@@ -160,30 +160,6 @@ public class DoctorIDPPage extends BasePage {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public void doctorLogin(int rowAccessInfo) {
         ExcelDataReader_Seren reader=new ExcelDataReader_Seren(ConfigReader.getProperty("testData"), "loginBilgileri");
 
