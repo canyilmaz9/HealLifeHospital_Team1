@@ -104,8 +104,8 @@ public class ExcelCreator_seren {
 
     public static Object[][] provideExcelData() {
         return new Object[][]{
-                {"Date", "Medicine Name", "Dose1", "Dose2"}, // Başlık satırı
-                {"20.11.2024 (Wednesday)", "AMOXIL", "Time: 07:00 AM 1 Hour", "Time: 12:00 PM 1 Hour","+"} // Veri satırı
+                {"titel", "Endoscopy planned"}, // Başlık satırı
+               // {"20.11.2024 (Wednesday)", "AMOXIL", "Time: 07:00 AM 1 Hour", "Time: 12:00 PM 1 Hour","+"} // Veri satırı
         };
     }
 
@@ -246,7 +246,7 @@ public class ExcelCreator_seren {
 
         Object[][] excelData =  provideExcelData();
 
-        writeToCellsByPosition(ConfigReader.getProperty("testData2"),"deneme", excelData,1,1);
+        writeToCellsByPosition(ConfigReader.getProperty("testData2"),"deneme", excelData,3,1);
 
 
 

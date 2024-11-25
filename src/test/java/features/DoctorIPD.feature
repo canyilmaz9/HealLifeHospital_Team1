@@ -20,7 +20,7 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
     * As a doctor, the number of patients displayed in the data table should be visible next to the record text below the table.
     * As a doctor, Verify that the patient's IPD number and name are enabled.
     * As a doctor, verify that the patient's details page is accessible.
-    * As a doctor, Verify searching with full data of the 3 patient in the data table.
+    * As a doctor, Verify searching with full data of the 1 patient in the data table.
     * As a doctor, verify that the Add Patient button is accessible.
     * As a doctor, verify that the Discharged Patient button is accessible.
     * As a doctor, access the patient details page through the hamburger menu under the Credit Limit text.
@@ -28,10 +28,10 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
 
 
 
-@ac
+  @ac
     Scenario: Verify that clicking on a patient's IPD No navigates to the detailed patient page.
-    *  Clicking on the IPD No Column Nu 3 navigates to the patient's details page.
-    *  As a doctor, verify that the page displays and click the " Nurse Notes".
+    *  Clicking on the IPD No 47 navigates to the patient's details page.
+    *  As a doctor, verify that the page displays and click the Nurse Notes.
     *  The Medication page displays medication history correctly.
     *  The Prescription page displays patient prescriptions.
     *  The Prescription page allows writing new prescriptions.
@@ -43,8 +43,7 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
     *  The Payment page lists all payment records.
     *  The Payment page allows adding new payments.
     *  The Bed History page shows detailed bed history.
-    *  The Timeline page displays future treatment plans.
-    *  The Timeline page allows adding new treatment notes.
+    *  The Timeline page displays future timeline plans.
     *  The Treatment History page lists all past treatments accurately.
 
 
