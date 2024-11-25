@@ -23,4 +23,22 @@ public class HomePage extends BasePage {
 
     @FindBy(xpath = "(//*[@class='he-title'])[4]")
     public WebElement openingHoursYazisi;
+
+
+    //US_005 icin locateler
+    @FindBy (xpath = "//*[text()='Featured Services']")
+    public WebElement featuredServicesTitle;
+
+    @FindBy (xpath ="//*[text()='Nurse-to-Resident Ratio']")
+    public  WebElement medicalTreatment;
+
+    @FindBy (xpath = "//*[text()='Emergency Help']")
+    public WebElement emergencyHelpTitle;
+
+    @FindBy (xpath = "//*[text()='Onsite Medical Staff']")
+    public WebElement qualifiedDoctorsTitle;
+
+    @FindBy (xpath = "//*[text()='Communication All Parties']")
+    public WebElement medicalProfessionalsTitle;
+
 }
