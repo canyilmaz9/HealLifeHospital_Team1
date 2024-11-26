@@ -27,6 +27,7 @@ public class HomePage extends BasePage {
     public WebElement openingHoursYazisi;
 
 
+
     @FindBy(xpath="//*[text()='About Us ']")
     public WebElement headerAboutUsButton;
     @FindBy (xpath = "//a[normalize-space()='About Hospitals']")
@@ -176,5 +177,20 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "/html/body/div[2]/div/div/div[1]/div/div[2]/div/div[1]/p")
     public WebElement AboutusTestimonialyorum2;
 
+    //US_005 icin locateler
+    @FindBy (xpath = "//*[text()='Featured Services']")
+    public WebElement featuredServicesTitle;
+
+    @FindBy (xpath ="//*[text()='Nurse-to-Resident Ratio']")
+    public  WebElement medicalTreatment;
+
+    @FindBy (xpath = "//*[text()='Emergency Help']")
+    public WebElement emergencyHelpTitle;
+
+    @FindBy (xpath = "//*[text()='Onsite Medical Staff']")
+    public WebElement qualifiedDoctorsTitle;
+
+    @FindBy (xpath = "//*[text()='Communication All Parties']")
+    public WebElement medicalProfessionalsTitle;
 
 }

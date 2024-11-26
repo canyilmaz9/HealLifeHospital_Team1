@@ -15,14 +15,12 @@ import org.junit.runner.RunWith;
                 "pretty",                         // Konsolda okunabilir loglar
                 "html:target/cucumber-reports/cucumber.html", // Cucumber HTML raporu
                 "json:target/cucumber-reports/cucumber.json", // JSON raporu (Cucumber HTML için gerekli)
-                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" // A                                                      llure raporları için plugin
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" // Allure raporları için plugin
         },
         monochrome = true,                         // Konsol çıktısını daha okunabilir hale getirir
         tags = "@ac"                           // Yalnızca belirtilen etiketli senaryolar çalıştırılır
 )
-public class
-
-SerenRunner {
+public class SerenRunner {
     private static final Logger logger = LogManager.getLogger(TestRunner.class);
 
     @BeforeClass

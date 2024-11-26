@@ -109,7 +109,7 @@ Scenario: US_019>TC_006 Visits sayfasinda Visits List'te (OPD No, Case ID, Appoi
     Then Patient verifies Lab investigation button is enable and click it
     Then Patients' Labs details enable under the Action header
 
-  #fail
+  #fail 
 
   Scenario: US_019>TC_010 Treatment History sayfasinda Treatment History list'te (OPD No, Case ID, Appointment Date, Syptomps, Consultant, Action) basliklarinin olmasi, text boxin olmasi ve burada arama yapilabilmesi, listede siralama yapilabilmesi testi
     Given Kullanici Anasayfa adresine gider
@@ -133,7 +133,7 @@ Scenario: US_019>TC_006 Visits sayfasinda Visits List'te (OPD No, Case ID, Appoi
       And Patient clicks to OPD button on the left side bar menu
       Then It can be seen that a line and enable to see timeline information
 
-  @homepage
+
    #US030 Gallery sayfasinda farkli bölümler (Health & Wellness, Hospitals and Directions, Specialities, Recreation Centre, Your Health, Surgery) ile ilgili her bölüme ait sayfalarin  olmasi ve ustune tiklanildiginda dogru sayfaya yonlendirilmesi testi
     Scenario: US_030>TC_012 Ana sayfa header bölümündeki Gallery linkine tiklandiginda "gallery" sayfasina yönlendirmesi testi
       Given Kullanici Anasayfa adresine gider
@@ -152,6 +152,40 @@ Scenario: US_019>TC_006 Visits sayfasinda Visits List'te (OPD No, Case ID, Appoi
       Then verification of the Recreation Centre page is clickable and forwarding correct link
       Then verification of the Your Health page is clickable and forwarding correct link
       Then verification of the Surgery page is clickable and forwarding correct link
+
+
+  @homepage
+  #US018 Bir kullanici(hasta) olarak randevularimi kontrol edebilmem icin bir randevularimla ilgili islemleri yapabilecegim bir randevu sayfasinin olmasini istiyorum
+  Scenario: US_018>TC001 Checking appointments information, perform operations and search appointment in appointment page
+    Given Kullanici Anasayfa adresine gider
+    When Patient clicks the login button
+    And Patient logins to patient dashboard
+    Then Patient clicks to my appointments
+    Then Checking informations about patient
+    | Patient Id      |
+    | Gender          |
+    | Marital Status  |
+    | Phone           |
+    | Email           |
+    | Address         |
+    | Age             |
+    | Guardian Name   |
+    | Username        |
+    | Password        |
+
+    Then Make a new appointment
+    Then Click on show, pay and delete
+    Then Search in appointments
+
+
+  Scenario: US_018>TC002 Checking appointments in appointment page
+    Given Kullanici Anasayfa adresine gider
+    When Patient clicks the login button
+    And Patient logins to patient dashboard
+    Then Patient clicks to my appointments
+    Then User can use all filters and sorting menu
+
+
 
 
 
