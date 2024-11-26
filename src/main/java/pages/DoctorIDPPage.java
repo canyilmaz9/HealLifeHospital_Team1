@@ -14,6 +14,9 @@ import utils.ExcelDataReader_Seren;
 import utils.JSUtilities;
 import utils.ReusableMethods;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.*;
 
@@ -234,6 +237,10 @@ public class DoctorIDPPage extends BasePage {
     public WebElement closeNurseNotPopUp;
     @FindBy(xpath = "(//div[contains(text(), 'Note')])[5]")
     public WebElement nurseNotesNoteText;
+    @FindBy (xpath = "//*[@class='fa fa-file-excel-o']")
+    public WebElement excelFileUploadButton;
+
+
 
 
 
@@ -532,6 +539,14 @@ public class DoctorIDPPage extends BasePage {
        WebElement lastMedi=driver.findElement(By.xpath("(//tbody)[12]//tr[" + row + "]//td[" + column + "]"));
         ReusableMethods.hardWait(1);
        Assert.assertEquals(lastMediName,lastMedi.getText());
+
+
+    }
+
+    public void isExcelFileDownloaded(String filePath){
+
+        Assert.assertTrue(Files.exists(Paths.get(filePath)));
+
 
 
     }

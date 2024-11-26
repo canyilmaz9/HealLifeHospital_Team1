@@ -72,7 +72,7 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
     *  Click the Save button.
     *  Verify the last entered operation from the "Dilation and curettage" Operation Name column.
 
-  @ac
+
   Scenario:(US_053_US01_TC04) Nurse Notes
     * Clicking on the IPD No 47 navigates to the patient's details page.
     * As a doctor, verify that the page displays and click the Nurse Notes.
@@ -81,6 +81,11 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
     * The user closes the opened pop-up page.
     * The user verifies the visibility of the most recently added note in the Nurse Notes list.
 
+  @ac
+  Scenario: (US_053_US01_TC05)
+    * Click on the Excel File Upload button.
+    * Verify that the Excel file containing the patient list is downloaded successfully.
+    * Verify that the first patient name in the downloaded Excel file equals the first patient name displayed in the IPD Patient List.
 
 
 
