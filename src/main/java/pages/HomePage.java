@@ -39,6 +39,6 @@ public class HomePage extends BasePage {
     public WebElement qualifiedDoctorsTitle;
 
     @FindBy (xpath = "//*[text()='Communication All Parties']")
-    public WebElement medicalProfessionalsTitle;
+    public WebElement medicalProfessionalsTitle;;
 
 }
