@@ -192,7 +192,7 @@ public class ReusableMethods {
 
     public static void clickWithText(String text) {
 
-        driver.findElement(By.xpath("//*[text()='" + text + "']")).click();  //   //*[text()=' Nurse Notes']
+        driver.findElement(By.xpath("//*[text()='" + text + "']")).click();
     }
 
     public static boolean isElementVisible(WebElement element) {

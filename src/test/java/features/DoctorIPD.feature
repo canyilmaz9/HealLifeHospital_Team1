@@ -28,7 +28,7 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
 
 
 
-  @ac
+
     Scenario: Verify that clicking on a patient's IPD No navigates to the detailed patient page.
     *  Clicking on the IPD No 47 navigates to the patient's details page.
     *  As a doctor, verify that the page displays and click the Nurse Notes.
@@ -47,7 +47,30 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
     *  The Treatment History page lists all past treatments accurately.
 
 
+    Scenario:Verify that a medication order can be successfully added to a patient's record.
+    * Clicking on the IPD No 47 navigates to the patient's details page.
+    * Navigate to the Medication button.
+    * Click on the Add Medication Dose button.
+    * Enter "29.11.2024" into the Date field.
+    * Enter 14:45 into the Time field by increment Button.
+    * Select "Tablet" from the Medicine Category dropdown.
+    * Select "Panto" from the Medicine Name dropdown.
+    * Select "1 Hour" from the Dosage dropdown.
+    * Click the Save button on the Add Medication form.
+    * Verify that the Medication data table's row 1 , column 2 matches the entered "Panto" .
 
+
+  @ac
+    Scenario:
+    *  Clicking on the IPD No 47 navigates to the patient's details page.
+    *  Click the Operation button.
+    *  Click the Add Operation button.
+    *  Click the OP Category dropdown
+    *  Select the "Gynaecology".
+    *  Enter the Operation Name as "Dilation and curettage".
+    *  Enter the Operation Date as 29.11.2024 10:30.
+    *  Click the Save button.
+    *  Verify the last entered operation from the "Dilation and curettage" Operation Name column.
 
 
 
