@@ -564,6 +564,7 @@
 2024-11-25 01:05:17 [main] INFO  stepdefinitions.HomePageGeneralSteps - Anasayfaya gidildi: https://qa.heallifehospital.com/
 2024-11-25 01:05:20 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: US_030>TC_013 Gallery sayfasinda farkli bölümler (Health & Wellness, Hospitals and Directions, Specialities, Recreation Centre, Your Health, Surgery) ile ilgili her bölüme ait sayfalarin  olmasi ve ustune tiklanildiginda dogru sayfaya yonlendirilmesi testi
 2024-11-25 01:05:21 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+
 2024-11-25 16:24:19 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
 2024-11-25 16:24:19 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that clicking on a patient's IPD No navigates to the detailed patient page.
 2024-11-25 16:24:22 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
@@ -904,3 +905,4 @@
 2024-11-26 11:58:12 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
 2024-11-26 11:58:20 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: (US_053_US01_TC04) Nurse Notes
 2024-11-26 11:58:21 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+
