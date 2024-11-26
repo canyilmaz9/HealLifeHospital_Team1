@@ -203,13 +203,6 @@ public class DoctorIDPPage extends BasePage {
 
 
 
-
-
-
-
-
-
-
     @FindBy(xpath = "(//*[@data-action='incrementMinute'])[2]")
     public WebElement getIncrementMinAddMEdi;
     @FindBy(xpath = "(//*[@name='hour'])[2]")
@@ -219,6 +212,21 @@ public class DoctorIDPPage extends BasePage {
 
     @FindBy(xpath = "//*[@id='add_medicationbtn']")
     public WebElement saveAddedMedi;
+
+    @FindBy(xpath = "//*[@aria-labelledby='select2-operation_category-container']")
+    public WebElement opCategoryDDM;
+
+    @FindBy(xpath = "//*[@id='form_addoperationtheatrbtn']")
+    public WebElement saveOP;
+
+    @FindBy(xpath = "(//tbody)[18]//tr[5]//td[6]")
+    public WebElement selectOPDate;
+
+    @FindBy(xpath = "//span[@aria-labelledby='select2-operation_name-container']")
+    public WebElement opNameAddOP;
+
+    @FindBy(xpath = "(//input[@class='form-control datetime'])[2]")
+    public WebElement OPDateAddOP;
 
 
 
@@ -249,6 +257,20 @@ public class DoctorIDPPage extends BasePage {
 
     }
 
+    public void clickContainsTextWE(String text){
+        WebElement textinWE=driver.findElement(By.xpath("//li[contains(text(), '"+ text + "')]"));
+        ReusableMethods.waitForElementVisibility(textinWE,20);
+        textinWE.click();
+
+    }
+
+    public WebElement containsTextWE(String text){
+
+        WebElement textinWE=driver.findElement(By.xpath("//li[contains(text(), '"+ text + "')]"));
+        ReusableMethods.waitForElementVisibility(textinWE,20);
+
+        return  textinWE;
+    }
 
 
     public void verifyHeadersAreVisible(WebDriver driver) {
@@ -468,10 +490,10 @@ public class DoctorIDPPage extends BasePage {
         ReusableMethods.hardWait(2);
     }
 
-    public void pickMedicineCategoryAddMEdi(){
+    public void pickMedicineCategoryAddMEdi(String tb){
         mediCategoryAddMEdi.click();
         ReusableMethods.hardWait(2);
-        WebElement tabletOption = driver.findElement(By.xpath("//li[contains(text(), 'Tablet')]"));
+        WebElement tabletOption = driver.findElement(By.xpath("//li[contains(text(), '"+ tb +"')]"));
         ReusableMethods.waitForElementVisibility(tabletOption,20);
         tabletOption.click();
         ReusableMethods.hardWait(2);
