@@ -204,6 +204,68 @@ public class HomePageGeneralPage extends BasePage{
 
 
     //US_030>TC012 Locations
+    @FindBy (xpath = "//*[@id=\"sibe-box\"]/ul/li[2]/a/i")
+    public WebElement myappointment;
+
+    @FindBy (xpath = "/html/body/div[1]/div[1]/section/div/div[2]/div/div[1]/div/a")
+    public WebElement addAppointment;
+
+    @FindBy (xpath = "//td[@class='day' and text()='30']")
+    public WebElement day30;
+
+    @FindBy (xpath = "//*[@class='form-control date']")
+    public WebElement date;
+
+    @FindBy (xpath = "(//*[@class='form-control'])[7]")
+    public WebElement specialist;
+
+    @FindBy (xpath = "//*[@id=\"doctor\"]")
+    public WebElement Doctor;
+
+    @FindBy (xpath = "//*[@id=\"global_shift\"]")
+    public WebElement shift;
+
+    @FindBy (xpath = "//*[@id=\"shift_id\"]")
+    public WebElement slot;
+
+    @FindBy (xpath = "//*[@id=\"message\"]")
+    public WebElement messageToDoctor;
+
+    @FindBy (xpath = "//*[@id=\"formaddbtn\"]")
+    public WebElement appointmentSave;
+
+    @FindBy (xpath = "//*[@id=\"slot_1\"]")
+    public WebElement availableSlots;
+
+    @FindBy (xpath = "//*[@id=\"DataTables_Table_0\"]/tbody/tr[1]/td[8]/a[1]")
+    public WebElement pay;
+
+    @FindBy (xpath = "/html/body/div/div/div/div[2]/div/div[2]/form/table/tbody/tr[4]/td[2]/button/span")
+    public WebElement paywithCard;
+
+    @FindBy (xpath = "(//*[@class='control'])[1]")
+    public WebElement payEmail;
+
+    @FindBy (xpath = "(//*[@class='control'])[2]")
+    public WebElement payCardNumber;
+
+    @FindBy (xpath = "(//*[@class='control'])[3]")
+    public WebElement payCardMonthYear;
+
+    @FindBy (xpath = "(//*[@class='control'])[4]")
+    public WebElement payCardCVC;
+
+    @FindBy (xpath = "//*[@id=\"billing-zip\"]")
+    public WebElement zipCode;
+
+    @FindBy (xpath = "//*[@id=\"submitButton\"]/span/span")
+    public WebElement payButtoninCard;
+
+    @FindBy (xpath = "/html/body/div/div/div/div/div/a")
+    public WebElement goToHomeButton;
+
+
+
 
 
     //US_030>TC013 Locations

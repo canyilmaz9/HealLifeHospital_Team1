@@ -1,20 +1,28 @@
 package stepdefinitions;
 
 import config.ConfigReader;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import pages.HomePageGeneralPage;
 import utilities.ReusableMethods;
 
 import javax.sound.midi.Soundbank;
 import java.security.Key;
+import java.util.Arrays;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 
 public class HomePageGeneralSteps {
 
@@ -38,7 +46,7 @@ public class HomePageGeneralSteps {
     public void anasayfa_slidebar_altinda_bulunan_insurance_plans_yazisinin_gorunur_oldugunu_dogrular() throws InterruptedException {
         String expectedInsurancePlansYazisi = "Insurance Plans";
         String actualIPYazisi = homePageGeneralPage.anaSayfaInsurancePlansYazisi.getText();
-        Assert.assertEquals(expectedInsurancePlansYazisi, actualIPYazisi);
+        assertEquals(expectedInsurancePlansYazisi, actualIPYazisi);
         System.out.println(actualIPYazisi);
         Thread.sleep(3000);
 
@@ -49,7 +57,7 @@ public class HomePageGeneralSteps {
     public void pediatric_services_yazisinin_gorunur_oldugunu_dogrular() throws InterruptedException {
         String expectedPediatricServiceYazisi = "Pediatric Services";
         String actualPSYazisi = homePageGeneralPage.pediatricServiceYazisi.getText();
-        Assert.assertEquals(expectedPediatricServiceYazisi, actualPSYazisi);
+        assertEquals(expectedPediatricServiceYazisi, actualPSYazisi);
         System.out.println(actualPSYazisi);
         Thread.sleep(3000);
     }
@@ -58,7 +66,7 @@ public class HomePageGeneralSteps {
     public void lab_testing_boardunun_gorunur_oldugunu_dogrular() throws InterruptedException {
         String expectedLabTesting = "Lab Testing";
         String actualLTYazisi = homePageGeneralPage.labTestingYazisi.getText();
-        Assert.assertEquals(expectedLabTesting, actualLTYazisi);
+        assertEquals(expectedLabTesting, actualLTYazisi);
         System.out.println(actualLTYazisi);
         Thread.sleep(3000);
     }
@@ -67,7 +75,7 @@ public class HomePageGeneralSteps {
     public void opening_hours_boardlarinin_gorunur_oldugunu_dogrular() throws InterruptedException {
         String expectedOpeningHours = "Opening Hours";
         String actualOpeningHours = homePageGeneralPage.openingHoursYazisi.getText();
-        Assert.assertEquals(expectedOpeningHours, actualOpeningHours);
+        assertEquals(expectedOpeningHours, actualOpeningHours);
         System.out.println(actualOpeningHours);
         Thread.sleep(3000);
 
@@ -82,7 +90,7 @@ public class HomePageGeneralSteps {
         homePageGeneralPage.insurancePlansReadMoreButonu.click();
         String expectedInsurancePlansKontrolYazisi = "Insurance Plans";
         String actualInsurancePlansKontrolYazisi = homePageGeneralPage.insurancePlansSayfasiKontrolYazisi.getText();
-        Assert.assertEquals(expectedInsurancePlansKontrolYazisi, actualInsurancePlansKontrolYazisi);
+        assertEquals(expectedInsurancePlansKontrolYazisi, actualInsurancePlansKontrolYazisi);
         System.out.println(actualInsurancePlansKontrolYazisi);
         Thread.sleep(3000);
 
@@ -94,7 +102,7 @@ public class HomePageGeneralSteps {
         homePageGeneralPage.pediatricServicesReadMoreButonu.click();
         String expectedPediatricServicesKontrolYazisi = "Our Pediatric Services:";
         String actualPediatrciServicesKontrolYazisi = homePageGeneralPage.pediatricServicesKontrolYazisi.getText();
-        Assert.assertEquals(expectedPediatricServicesKontrolYazisi, actualPediatrciServicesKontrolYazisi);
+        assertEquals(expectedPediatricServicesKontrolYazisi, actualPediatrciServicesKontrolYazisi);
         System.out.println(actualPediatrciServicesKontrolYazisi);
 
 
@@ -111,7 +119,7 @@ public class HomePageGeneralSteps {
         homePageGeneralPage.labTestingReadMoreButonu.click();
         String expectedLabTestingSayfasiYazisi = "Lab Testing Services:";
         String actualLabTestingSayfasiYazisi = homePageGeneralPage.labTestingSayfasiKontrolYazisi.getText();
-        Assert.assertEquals(expectedLabTestingSayfasiYazisi, actualLabTestingSayfasiYazisi);
+        assertEquals(expectedLabTestingSayfasiYazisi, actualLabTestingSayfasiYazisi);
         System.out.println(actualLabTestingSayfasiYazisi);
         Thread.sleep(3000);
 
@@ -141,7 +149,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_the_opd_button_is_enable() throws InterruptedException {
         String expectedOPDYazisi = "OPD";
         String actualOPDYazisi = homePageGeneralPage.dashboardaGirisdogrulamaButonu.getText();
-        Assert.assertEquals(expectedOPDYazisi, actualOPDYazisi);
+        assertEquals(expectedOPDYazisi, actualOPDYazisi);
         System.out.println(actualOPDYazisi);
         Thread.sleep(1000);
 
@@ -158,7 +166,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_the_opd_page_opens() throws InterruptedException {
         String expectedOverviewYazisi = "Overview";
         String actualOverviewYazisi = homePageGeneralPage.OPDDashboardDogrulamaYazisiOverview.getText();
-        Assert.assertEquals(expectedOverviewYazisi, actualOverviewYazisi);
+        assertEquals(expectedOverviewYazisi, actualOverviewYazisi);
         System.out.println(actualOverviewYazisi);
         Thread.sleep(1000);
 
@@ -171,7 +179,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_overview_button_is_enable() throws InterruptedException {
         String expectedOverviewYazisi = "Overview";
         String actualOverviewYazisi = homePageGeneralPage.OPDDashboardDogrulamaYazisiOverview.getText();
-        Assert.assertEquals(expectedOverviewYazisi, actualOverviewYazisi);
+        assertEquals(expectedOverviewYazisi, actualOverviewYazisi);
         System.out.println(actualOverviewYazisi);
         Thread.sleep(1000);
 
@@ -181,7 +189,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_visits_button_is_enable_and_click_it() throws InterruptedException {
         String expectedVisitsYazisi = "Visits";
         String actualVisitsYazisi = homePageGeneralPage.OPDVisitsButton.getText();
-        Assert.assertEquals(expectedVisitsYazisi, actualVisitsYazisi);
+        assertEquals(expectedVisitsYazisi, actualVisitsYazisi);
         System.out.println(actualVisitsYazisi);
         homePageGeneralPage.OPDVisitsButton.click();
         Thread.sleep(1000);
@@ -192,7 +200,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_lab_investigation_button_is_enable_and_click_it() throws InterruptedException {
         String expectedLabInvestigationYazisi = "Lab Investigation";
         String actualLabInvestigationYazisi = homePageGeneralPage.OPDLabInvestigationButton.getText();
-        Assert.assertEquals(expectedLabInvestigationYazisi, actualLabInvestigationYazisi);
+        assertEquals(expectedLabInvestigationYazisi, actualLabInvestigationYazisi);
         System.out.println(actualLabInvestigationYazisi);
         homePageGeneralPage.OPDLabInvestigationButton.click();
         Thread.sleep(1000);
@@ -202,7 +210,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_treatment_history_button_is_enable_and_click_it() throws InterruptedException {
         String expectedTreatmentHistoryYazisi = "Treatment History";
         String actualTreatmentHistoryYazisi = homePageGeneralPage.OPDtreatmentHistoryButton.getText();
-        Assert.assertEquals(expectedTreatmentHistoryYazisi, actualTreatmentHistoryYazisi);
+        assertEquals(expectedTreatmentHistoryYazisi, actualTreatmentHistoryYazisi);
         System.out.println(actualTreatmentHistoryYazisi);
         homePageGeneralPage.OPDtreatmentHistoryButton.click();
         Thread.sleep(1000);
@@ -212,7 +220,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_timeline_button_is_enable_and_click_it() throws InterruptedException {
         String expectedTimelineButton = "Timeline";
         String actualTimelineButton = homePageGeneralPage.OPDtimelineButton.getText();
-        Assert.assertEquals(expectedTimelineButton, actualTimelineButton);
+        assertEquals(expectedTimelineButton, actualTimelineButton);
         System.out.println(actualTimelineButton);
         homePageGeneralPage.OPDtimelineButton.click();
         Thread.sleep(1000);
@@ -225,7 +233,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_her_name_on_the_header() {
         String expectedOPDHeaderName = "RANA NUR ULKER (79)";
         String actualOPDHeaderName = homePageGeneralPage.OPDHeaderHastaAdi.getText();
-        Assert.assertEquals(expectedOPDHeaderName, actualOPDHeaderName);
+        assertEquals(expectedOPDHeaderName, actualOPDHeaderName);
         System.out.println("Hasta adinin dogru oldugu dogrulandi.");
 
     }
@@ -251,7 +259,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_that_can_be_seen_details_about_lab_investigetion_summary_under_the_lab_investigation_section() {
         String expectedLabInvestigation = "OPD No";
         String actualLabInvestigation = homePageGeneralPage.labInvestigationDetails.getText();
-        Assert.assertEquals(expectedLabInvestigation, actualLabInvestigation);
+        assertEquals(expectedLabInvestigation, actualLabInvestigation);
         System.out.println("Lab investigation details gorulur");
 
     }
@@ -260,7 +268,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_that_can_be_seen_details_about_treatments_under_the_treatments_history_section() {
         String expectedTreatmentsDetails = "OPD No";
         String actualTreatmentDetails = homePageGeneralPage.treatmentHistoryDetails.getText();
-        Assert.assertEquals(expectedTreatmentsDetails, actualTreatmentDetails);
+        assertEquals(expectedTreatmentsDetails, actualTreatmentDetails);
         System.out.println("Hasta ilac gecmisine bakar");
 
 
@@ -271,7 +279,7 @@ public class HomePageGeneralSteps {
         actions.scrollToElement(homePageGeneralPage.TimelineDetails);
         String expectedTimeLine = "Timeline deneme";
         String actualTimeLine = homePageGeneralPage.TimelineDetails.getText();
-        Assert.assertEquals(expectedTimeLine, actualTimeLine);
+        assertEquals(expectedTimeLine, actualTimeLine);
         System.out.println("Timeline akisi gozukur");
     }
 
@@ -281,7 +289,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_opd_no_header() {
         String expectedVisitsOPDNo = "OPD No";
         String actualVisitsOPDNo = homePageGeneralPage.visitsOPDNo.getText();
-        Assert.assertEquals(expectedVisitsOPDNo, actualVisitsOPDNo);
+        assertEquals(expectedVisitsOPDNo, actualVisitsOPDNo);
         System.out.println("OPD No goruldu");
     }
 
@@ -289,7 +297,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_case_i_dyi_on_the_header() {
         String expectedCaseId = "Case ID / Patient ID";
         String actualCaseId = homePageGeneralPage.caseID.getText();
-        Assert.assertEquals(expectedCaseId, actualCaseId);
+        assertEquals(expectedCaseId, actualCaseId);
         System.out.println("Case ID goruldu");
 
     }
@@ -298,7 +306,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_appointment_date_on_the_header() {
         String expectedAppointment = "Appointment Date";
         String actualAppointment = homePageGeneralPage.appointmentDate.getText();
-        Assert.assertEquals(expectedAppointment, actualAppointment);
+        assertEquals(expectedAppointment, actualAppointment);
         System.out.println("Appointment date goruldu");
     }
 
@@ -306,7 +314,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_consultant_on_the_header() {
         String expectedConsultant = "Consultant";
         String actualConsultant = homePageGeneralPage.consultant.getText();
-        Assert.assertEquals(expectedConsultant, actualConsultant);
+        assertEquals(expectedConsultant, actualConsultant);
         System.out.println("Consultant yazisi goruldu");
 
     }
@@ -315,7 +323,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_reference_on_the_header() {
         String expectedReference = "Reference";
         String actualReference = homePageGeneralPage.reference.getText();
-        Assert.assertEquals(expectedReference, actualReference);
+        assertEquals(expectedReference, actualReference);
         System.out.println("Reference yazisi goruldu");
 
     }
@@ -324,7 +332,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_symptoms_on_the_header() {
         String expectedSymptoms = "Symptoms";
         String actualSymptoms = homePageGeneralPage.sympthoms.getText();
-        Assert.assertEquals(expectedSymptoms, actualSymptoms);
+        assertEquals(expectedSymptoms, actualSymptoms);
         System.out.println("Syptoms yazisi goruldu");
 
     }
@@ -333,7 +341,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_action_on_the_header() {
         String expectedAction = "Action";
         String actualAction = homePageGeneralPage.action.getText();
-        Assert.assertEquals(actualAction, expectedAction);
+        assertEquals(actualAction, expectedAction);
         System.out.println("Action yazisi goruldu");
 
     }
@@ -350,7 +358,7 @@ public class HomePageGeneralSteps {
     public void patients_visit_s_details_and_medication_details_are_enable_under_the_action_header() {
         String expectedActionDetails = "Medication";
         String actualActionDetails = homePageGeneralPage.underTheAction.getText();
-        Assert.assertEquals(expectedActionDetails, actualActionDetails);
+        assertEquals(expectedActionDetails, actualActionDetails);
         System.out.println("Medication yazisi goruldu");
 
     }
@@ -362,7 +370,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_test_name_is_enable_on_the_header() {
         String expectedlabInvestigationTestName = "Test Name";
         String actualLabInvestigationTestName = homePageGeneralPage.labInvestigationTestName.getText();
-        Assert.assertEquals(expectedlabInvestigationTestName, actualLabInvestigationTestName);
+        assertEquals(expectedlabInvestigationTestName, actualLabInvestigationTestName);
         System.out.println("Test Name goruldu");
     }
 
@@ -371,7 +379,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_case_id_is_enable_on_the_header() {
         String expectedCaseID = "Case ID / Patient ID";
         String actualCaseID = homePageGeneralPage.labInvestigationCaseID.getText();
-        Assert.assertEquals(expectedCaseID, actualCaseID);
+        assertEquals(expectedCaseID, actualCaseID);
         System.out.println("Case ID goruldu");
 
     }
@@ -381,7 +389,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_lab_is_enable_on_the_header() {
         String expectedLab = "Lab";
         String actualLab = homePageGeneralPage.labInvestigationLab.getText();
-        Assert.assertEquals(expectedLab, actualLab);
+        assertEquals(expectedLab, actualLab);
         System.out.println("Lab goruldu");
     }
 
@@ -389,7 +397,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_sample_collected_is_enable_on_the_header() {
         String expectedSampleCollected = "Sample Collected";
         String actualSampleCollected = homePageGeneralPage.labInvestigationSampleCollected.getText();
-        Assert.assertEquals(expectedSampleCollected, actualSampleCollected);
+        assertEquals(expectedSampleCollected, actualSampleCollected);
         System.out.println("Sample collected goruldu");
     }
 
@@ -397,7 +405,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_expected_date_is_enable_on_the_header() {
         String expectedExpectedDate = "Expected Date";
         String actualExpectedDate = homePageGeneralPage.labInvestigationExpectedDate.getText();
-        Assert.assertEquals(expectedExpectedDate, actualExpectedDate);
+        assertEquals(expectedExpectedDate, actualExpectedDate);
         System.out.println("Expected Date");
     }
 
@@ -405,7 +413,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_approved_by_is_enable_on_the_header() {
         String expectedApproved = "Approved By";
         String actualApproved = homePageGeneralPage.labInvestigationApprovedBy.getText();
-        Assert.assertEquals(expectedApproved, actualApproved);
+        assertEquals(expectedApproved, actualApproved);
         System.out.println("Approved By goruldu");
     }
 
@@ -413,7 +421,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_action_is_enable_on_the_header() {
         String expectedAction = "Action";
         String actualAction = homePageGeneralPage.labInvestigationAction.getText();
-        Assert.assertEquals(expectedAction, actualAction);
+        assertEquals(expectedAction, actualAction);
         System.out.println("Action goruldu");
 
     }
@@ -435,7 +443,7 @@ public class HomePageGeneralSteps {
     public void patients_labs_details_enable_under_the_action_header() {
         String expectedlabInvestigationActionTable = "Action";
         String actuallabInvestigationActionTable = homePageGeneralPage.labinvestigationTable.getText();
-        Assert.assertEquals(expectedlabInvestigationActionTable, actuallabInvestigationActionTable);
+        assertEquals(expectedlabInvestigationActionTable, actuallabInvestigationActionTable);
         System.out.println("Tableda yazi liste kontrolu yapildi");
 
     }
@@ -445,7 +453,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_opd_no_is_enable_under_the_treatment_history_page() {
         String expectedTHOPD = "OPD No";
         String actualTHOPD = homePageGeneralPage.treatmentHistoryOPDNo.getText();
-        Assert.assertEquals(expectedTHOPD, actualTHOPD);
+        assertEquals(expectedTHOPD, actualTHOPD);
         System.out.println("OPD No yazisi goruldu");
 
 
@@ -455,7 +463,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_case_id_is_enable_under_the_treatment_history_page() {
         String expectedTHCaseID = "Case ID / Patient ID";
         String actualTHCaseID = homePageGeneralPage.treatmentHistoryCaseId.getText();
-        Assert.assertEquals(expectedTHCaseID, actualTHCaseID);
+        assertEquals(expectedTHCaseID, actualTHCaseID);
         System.out.println("Case ID basligi goruldu");
     }
 
@@ -463,7 +471,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_appointment_date_is_enable_under_the_treatment_history_page() {
         String expectedTHAppointmentDate = "Appointment Date";
         String actualTHAppointmentDate = homePageGeneralPage.treatmentHistoryAppointmentDate.getText();
-        Assert.assertEquals(expectedTHAppointmentDate, actualTHAppointmentDate);
+        assertEquals(expectedTHAppointmentDate, actualTHAppointmentDate);
         System.out.println("Appointment basligi goruldu");
 
     }
@@ -472,7 +480,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_syptomps_is_enable_under_the_treatment_history_page() {
         String expectedTHSympthoms = "Symptoms";
         String actualTHSymptoms = homePageGeneralPage.treatmentHistorySymptoms.getText();
-        Assert.assertEquals(expectedTHSympthoms, actualTHSymptoms);
+        assertEquals(expectedTHSympthoms, actualTHSymptoms);
         System.out.println("Symptoms basligi goruldu");
 
     }
@@ -490,7 +498,7 @@ public class HomePageGeneralSteps {
     public void patient_verifies_action_is_enable_under_the_treatment_history_page() {
         String expectedTHAction = "Action";
         String actualTHAction = homePageGeneralPage.treatmentHistoryAction.getText();
-        Assert.assertEquals(expectedTHAction, actualTHAction);
+        assertEquals(expectedTHAction, actualTHAction);
         System.out.println("Action basligi goruldu");
 
     }
@@ -505,7 +513,7 @@ public class HomePageGeneralSteps {
         Thread.sleep(2000);
         String expectedTHDataTable = "Syrup";
         String actualTHDataTable = homePageGeneralPage.THDataTable.getText();
-        Assert.assertEquals(expectedTHDataTable, actualTHDataTable);
+        assertEquals(expectedTHDataTable, actualTHDataTable);
 
 
     }
@@ -561,6 +569,72 @@ public class HomePageGeneralSteps {
     public void verification_of_the_surgery_page_is_clickable_and_forwarding_correct_link() {
 
     }
+
+    //US_018> TC001 Step definitions
+
+    @Then("Patient clicks to my appointments")
+    public void patientClicksToMyAppointments() {
+        homePageGeneralPage.myappointment.click();
+    }
+
+    @Then("Checking informations about patient")
+    public void checking_informations_about_patient(DataTable dataTable) {
+        List<String> expectedItems = dataTable.asList(String.class);
+        List<String> actualItems = Arrays.asList("Patient Id","Gender","Marital Status", "Phone","Email","Address","Age","Guardian Name","Username","Password");
+        assertEquals(expectedItems, actualItems);
+    }
+
+    @Then("Make a new appointment")
+    public void make_a_new_appointment() throws InterruptedException {
+        homePageGeneralPage.addAppointment.click();
+        Thread.sleep(2000);
+        homePageGeneralPage.date.click();
+        homePageGeneralPage.day30.click();
+        Select select=new Select(homePageGeneralPage.specialist);
+        select.selectByValue("1");
+        homePageGeneralPage.Doctor.click();
+        Select select1=new Select(homePageGeneralPage.Doctor);
+        select1.selectByValue("775");
+        Select select2=new Select(homePageGeneralPage.shift);
+        select2.selectByValue("1");
+        Select select3=new Select(homePageGeneralPage.slot);
+        select3.selectByValue("40");
+        Thread.sleep(3000);
+        homePageGeneralPage.messageToDoctor.sendKeys("hello, I will be there");
+        homePageGeneralPage.availableSlots.click();
+        homePageGeneralPage.appointmentSave.click();
+
+        Thread.sleep(2000);
+        homePageGeneralPage.pay.click();
+        homePageGeneralPage.paywithCard.click();
+        homePageGeneralPage.payEmail.sendKeys("rananurulker@gmail.com");
+        homePageGeneralPage.payCardNumber.sendKeys("4242 4242 4242 4242");
+        homePageGeneralPage.payCardMonthYear.sendKeys("122025");
+        homePageGeneralPage.payCardCVC.sendKeys("456");
+        homePageGeneralPage.zipCode.sendKeys("34567");
+        homePageGeneralPage.payButtoninCard.click();
+        homePageGeneralPage.goToHomeButton.click();
+
+
+
+    }
+
+    @Then("Click on show, pay and delete")
+    public void click_on_show_pay_and_delete() {
+
+    }
+
+    @Then("Search in appointments")
+    public void search_in_appointments() {
+
+    }
+    //US_018> TC002 Step definitions
+
+    @Then("User can use all filters and sorting menu")
+    public void user_can_use_all_filters_and_sorting_menu() {
+
+    }
+
 
 
 }
