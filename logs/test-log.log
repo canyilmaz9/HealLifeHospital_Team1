@@ -564,7 +564,6 @@
 2024-11-25 01:05:17 [main] INFO  stepdefinitions.HomePageGeneralSteps - Anasayfaya gidildi: https://qa.heallifehospital.com/
 2024-11-25 01:05:20 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: US_030>TC_013 Gallery sayfasinda farkli bölümler (Health & Wellness, Hospitals and Directions, Specialities, Recreation Centre, Your Health, Surgery) ile ilgili her bölüme ait sayfalarin  olmasi ve ustune tiklanildiginda dogru sayfaya yonlendirilmesi testi
 2024-11-25 01:05:21 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
-
 2024-11-25 16:24:19 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
 2024-11-25 16:24:19 [main] INFO  utils.LoggerHelper - Test Başlıyor: Verify that clicking on a patient's IPD No navigates to the detailed patient page.
 2024-11-25 16:24:22 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
@@ -882,35 +881,3 @@
 2024-11-26 02:49:13 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
 2024-11-26 02:49:28 [main] ERROR utils.LoggerHelper - Test başarısız oldu: 
 2024-11-26 02:49:29 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
-2024-11-26 11:16:10 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
-2024-11-26 11:16:11 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US02_TC03) Add Operation(Bug)
-2024-11-26 11:16:14 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
-2024-11-26 11:16:30 [main] ERROR utils.LoggerHelper - Test başarısız oldu: (US_053_US02_TC03) Add Operation(Bug)
-2024-11-26 11:16:30 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
-2024-11-26 11:16:30 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US01_TC04) Nurse Notes
-2024-11-26 11:16:30 [main] ERROR utils.LoggerHelper - Test başarısız oldu: (US_053_US01_TC04) Nurse Notes
-2024-11-26 11:16:30 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
-2024-11-26 11:23:28 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
-2024-11-26 11:23:28 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US01_TC04) Nurse Notes
-2024-11-26 11:23:31 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
-2024-11-26 11:23:38 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: (US_053_US01_TC04) Nurse Notes
-2024-11-26 11:23:39 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
-2024-11-26 11:48:36 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
-2024-11-26 11:48:37 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US01_TC04) Nurse Notes
-2024-11-26 11:48:39 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
-2024-11-26 11:48:47 [main] ERROR utils.LoggerHelper - Test başarısız oldu: (US_053_US01_TC04) Nurse Notes
-2024-11-26 11:48:48 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
-2024-11-26 11:58:09 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
-2024-11-26 11:58:10 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US01_TC04) Nurse Notes
-2024-11-26 11:58:12 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
-2024-11-26 11:58:20 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: (US_053_US01_TC04) Nurse Notes
-2024-11-26 11:58:21 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
-
-2024-11-26 13:16:18 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US01_TC05)
-2024-11-26 13:16:21 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
-2024-11-26 13:16:28 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: (US_053_US01_TC05)
-2024-11-26 13:16:28 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
-2024-11-26 13:28:22 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US01_TC05)
-2024-11-26 13:28:25 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
-2024-11-26 13:28:33 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: (US_053_US01_TC05)
-2024-11-26 13:28:34 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
