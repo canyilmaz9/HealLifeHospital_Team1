@@ -546,9 +546,16 @@ public class DoctorIDPPage extends BasePage {
     public void isExcelFileDownloaded(String filePath){
 
         Assert.assertTrue(Files.exists(Paths.get(filePath)));
+        ReusableMethods.hardWait(1);
 
 
 
+    }
+
+    public WebElement patientDataFromIPDList(int row, int column){
+        WebElement ipdPatient= driver.findElement(By.xpath("//tbody//tr[" + row + "]//td[" + column + "]"));
+        ReusableMethods.waitForElementVisibility(ipdPatient,20);
+        return ipdPatient;
     }
 
 
