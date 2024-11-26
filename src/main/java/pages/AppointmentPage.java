@@ -79,4 +79,75 @@ public class AppointmentPage extends BasePage{
 
     @FindBy(xpath = "//*[@id=\"submitButton\"]/span/span")
     public WebElement payment;
+
+    @FindBy(xpath = "//*[@id=\"email\"]")
+    public WebElement adminLogin;
+
+    @FindBy(xpath = " //*[@id=\"password\"]")
+    public WebElement passwordLogin;
+
+    @FindBy(xpath = "//*[@type='submit']")
+    public WebElement signInLogin;
+
+    @FindBy(xpath = "//*[@id=\"sibe-box\"]/ul[2]/li[19]/a")
+    public WebElement SetupButton;
+
+    @FindBy(xpath = "//*[@id=\"sibe-box\"]/ul[2]/li[15]/a")
+    public WebElement FinanceButton;
+
+    @FindBy(xpath = "//*[@id=\"sibe-box\"]/ul[2]/li[15]/ul/li[1]/a")
+    public WebElement Income;
+
+    @FindBy(xpath = "//*[@id=\"DataTables_Table_0_filter\"]/label/input")
+    public WebElement SearchBoxIncome;
+
+    @FindBy(xpath = "//a[@class='btn btn-primary btn-sm addincome']")
+    public WebElement AddIncome;
+
+    @FindBy(xpath = "//select[@name='inc_head_id']")
+    public WebElement IncomeHead;
+
+    @FindBy(xpath = "//input[@id='name']")
+    public WebElement IncomeName;
+
+    @FindBy(xpath = "//input[@id='amount']")
+    public WebElement IncomeAmount;
+
+    @FindBy(xpath = "//button[@id='add_incomebtn']")
+    public WebElement IncomeSave;
+
+    @FindBy(xpath = "/html/body/div[1]/aside/div/section/ul[2]/li[15]/ul/li[2]/a")
+    public WebElement Expence;
+
+    @FindBy(xpath = "//a[@class='btn btn-primary btn-sm addexpense']")
+    public WebElement AddExpence;
+
+    @FindBy(xpath = "//select[@name='exp_head_id']")
+    public WebElement ExpenceHead;
+
+    @FindBy(xpath = "//*[@id=\"exp_head_id\"]/option[2]")
+    public WebElement ExpenceSelect;
+
+    @FindBy(xpath = "//button[@id='addexpensebtn']")
+    public WebElement ExpenceSave;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
