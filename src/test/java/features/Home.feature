@@ -70,7 +70,7 @@ And    kullanici Testimonials  basligini gorur
 
 
 
-=======
+
   Scenario: TC_001 Accessibility to the homepage
     Given Kullanici browser acar ve url girer
     Then Anasayfanin tamamina basarili bir sekilde erisir

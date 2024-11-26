@@ -1158,3 +1158,8 @@
 2024-11-26 02:49:13 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
 2024-11-26 02:49:28 [main] ERROR utils.LoggerHelper - Test başarısız oldu:
 2024-11-26 02:49:29 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-26 22:23:13 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-26 22:23:14 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US01_TC05)
+2024-11-26 22:23:19 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-26 22:23:27 [main] ERROR utils.LoggerHelper - Test başarısız oldu: (US_053_US01_TC05)
+2024-11-26 22:23:28 [main] INFO  utils.LoggerHelper - Driver kapatıldı.

@@ -19,9 +19,9 @@ import org.junit.runner.RunWith;
 		},
 		monochrome = true,                         // Konsol çıktısını daha okunabilir hale getirir
 
-		tags = "@us24"                           // Yalnızca belirtilen etiketli senaryolar çalıştırılır
+		tags = "@us24"                        // Yalnızca belirtilen etiketli senaryolar çalıştırılır
 
-		tags = "@appointments"                           // Yalnızca belirtilen etiketli senaryolar çalıştırılır
+		                           // Yalnızca belirtilen etiketli senaryolar çalıştırılır
 
 )
 public class TestRunner {
