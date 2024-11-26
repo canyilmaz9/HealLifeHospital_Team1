@@ -69,6 +69,8 @@ And    kullanici Testimonials  basligini gorur
     And kullanici sayfada hastahanede tedavi gormus kisilerin yorumlarini gorur
 
 
+
+=======
   Scenario: TC_001 Accessibility to the homepage
     Given Kullanici browser acar ve url girer
     Then Anasayfanin tamamina basarili bir sekilde erisir
@@ -101,6 +103,7 @@ And    kullanici Testimonials  basligini gorur
     Then Anasayfanin tamamina basarili bir sekilde erisir
     When Anasayfada Featurerd Services başlığını görür
     And Featured Services başlığının altında Medical professionals panosuna erişir
+
 
   @homepagefooter
   Scenario: US_008> TC_001 Anasayfadaki footer kisminda bulunan basliklarin gorunur ve calisir olmasi testi.

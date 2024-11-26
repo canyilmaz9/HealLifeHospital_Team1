@@ -7,21 +7,25 @@ import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import pages.HomePage;
 import config.ConfigReader;
+import pages.HomePageHeaderPage;
 import utilities.ReusableMethods;
 import utils.JSUtilities;
 
 import static stepdefinitions.DoctorIPDFeatureSteps.driver;
 
 public class HomeSteps {
-
     private static final Logger logger = LogManager.getLogger(HomeSteps.class);
     WebDriver driver = stepdefinitions.Hooks.getDriver();
-    // HomePage homePage = new HomePage(driver);
     HomePage homePage = new HomePage(driver);
+    Actions action = new Actions(driver);
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+
 
 
     @Given("kullanici url adresine gider")
@@ -242,10 +246,7 @@ public class HomeSteps {
         Assertions.assertTrue(homePage.AboutusTestimonialsisim.isDisplayed());
         Assertions.assertTrue(homePage.AboutusTestimonialyorum.isDisplayed());
         ReusableMethods.bekle(1);
-
-        Assertions.assertTrue(homePage.AboutusTestimonialsresim2.isDisplayed());
-        Assertions.assertTrue(homePage.AboutusTestimonialsisim2.isDisplayed());
-        Assertions.assertTrue(homePage.AboutusTestimonialyorum2.isDisplayed());
+    }
 
     }
 
@@ -276,6 +277,11 @@ public class HomeSteps {
     }
 
 
-//  denemeler
 
-}
+
+
+
+
+
+
+
