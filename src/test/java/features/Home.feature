@@ -68,7 +68,7 @@ And    kullanici Testimonials  basligini gorur
     Then kullanici testimonials yazisina tiklayarak sayfaya ulasir
     And kullanici sayfada hastahanede tedavi gormus kisilerin yorumlarini gorur
 
-Feature: US_005 "Featured Services" section on the home page of the site
+
   Scenario: TC_001 Accessibility to the homepage
     Given Kullanici browser acar ve url girer
     Then Anasayfanin tamamina basarili bir sekilde erisir
@@ -101,5 +101,11 @@ Feature: US_005 "Featured Services" section on the home page of the site
     Then Anasayfanin tamamina basarili bir sekilde erisir
     When Anasayfada Featurerd Services başlığını görür
     And Featured Services başlığının altında Medical professionals panosuna erişir
+
+  @homepagefooter
+  Scenario: US_008> TC_001 Anasayfadaki footer kisminda bulunan basliklarin gorunur ve calisir olmasi testi.
+    Given kullanici anasayfada
+    And Anasayfa footer kismina iner ve Home, Academics, Gallery, About, Contact US basliklarini goruntulendigini dogrular.
+    Then Anasayfa footer kismindaki Home, Academics, Gallery, About, Contact US basliklarina tiklayip dogru adrese yonlendirdigini dogrular.
 
 

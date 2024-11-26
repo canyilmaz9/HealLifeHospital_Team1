@@ -193,4 +193,19 @@ public class HomePage extends BasePage {
     @FindBy (xpath = "//*[text()='Communication All Parties']")
     public WebElement medicalProfessionalsTitle;
 
+    @FindBy(xpath = "/html/body/footer/div[1]/div[1]/div[2]/ul/li[1]/a")
+    public WebElement homepageFooterHomeButton;
+
+    @FindBy(xpath = "/html/body/footer/div[1]/div[1]/div[2]/ul/li[3]/a")
+    public WebElement homepageFooterAcademicsButton;
+
+    @FindBy(xpath = "/html/body/footer/div[1]/div[1]/div[2]/ul/li[5]/a")
+    public WebElement homepageFooterContactUSButton;
+
+    @FindBy(xpath = "/html/body/footer/div[1]/div[1]/div[2]/ul/li[2]/a")
+    public WebElement homepageFooterAboutButton;
+
+    @FindBy(xpath = "/html/body/footer/div[1]/div[1]/div[2]/ul/li[4]/a")
+    public WebElement homepageFooterGalleryButton;
+
 }
