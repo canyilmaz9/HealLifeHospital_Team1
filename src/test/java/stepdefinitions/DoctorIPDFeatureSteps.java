@@ -11,12 +11,13 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import pages.DoctorIDPPage;
 import utilities.ReusableMethods;
+import utils.ExcelDataReader_Seren;
 
 
 public class DoctorIPDFeatureSteps {
 
     private static final Logger logger = LogManager.getLogger(DoctorIPDFeatureSteps.class);
-
+    ExcelDataReader_Seren excelDataReaderSeren=new ExcelDataReader_Seren(ConfigReader.getProperty("IPDPatient"),"Sheet1");
    static WebDriver driver = Hooks.getDriver();
    static Actions actions = new Actions(driver);
     DoctorIDPPage doctorIDPPage=new DoctorIDPPage(driver);
@@ -312,6 +313,8 @@ public class DoctorIPDFeatureSteps {
        }
        @Then("Verify that the first patient name in the downloaded Excel file equals the first patient name displayed in the IPD Patient List.")
        public void verify_that_the_first_patient_name_in_the_downloaded_excel_file_equals_the_first_patient_name_displayed_in_the_ipd_patient_list() {
+
+        Assert.assertEquals(excelDataReaderSeren.getCellData(3,3),doctorIDPPage.patientDataFromIPDList(1,3).getText());
 
        }
 
