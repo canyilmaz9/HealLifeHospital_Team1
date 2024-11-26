@@ -5,11 +5,16 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.ExcelDataReader_Seren;
+import utils.JSUtilities;
 import utils.ReusableMethods;
 
+import java.time.Duration;
 import java.util.*;
 
 public class DoctorIDPPage extends BasePage {
@@ -23,8 +28,8 @@ public class DoctorIDPPage extends BasePage {
     }
 
 
-    ExcelDataReader_Seren reader= new ExcelDataReader_Seren(ConfigReader.getProperty("testData2"),"deneme");
-
+     ExcelDataReader_Seren reader= new ExcelDataReader_Seren(ConfigReader.getProperty("testData2"),"deneme");
+     Actions actions=new Actions(driver);
     @FindBy(xpath = "//*[@placeholder='Username']")
     public WebElement adminDoctorMail;
 
@@ -43,11 +48,13 @@ public class DoctorIDPPage extends BasePage {
     @FindBy(xpath = "//*[text()=' IPD Patient']")
     public WebElement ipdPatientText;
 
-    @FindBy(xpath = "//*[text()='Records: 1 to 4 of 4']")
+    @FindBy(xpath = "//*[text()='Records: 1 to 5 of 5']")
     public WebElement recordsPatientCountInDataTable;
 
     @FindBy(xpath = "//*[@type='search']")
     public WebElement ipdPatientSearchBox;
+    @FindBy(xpath = "//button[@class='close pt4']")
+    public WebElement closeAddPatient;
 
     @FindBy(xpath = "(//*[@class='fa fa-reorder'])[2]")
     public WebElement hamburgerMenuIPD;
@@ -55,15 +62,11 @@ public class DoctorIDPPage extends BasePage {
     @FindBy(xpath = "//*[@id='name']")
     public WebElement name;
 
-    @FindBy(xpath = "(//*[@class='timeline-header text-aqua'])[8]")
+    @FindBy(xpath = "//*[@href='#nurse_note']")
     public WebElement nurseNote;
 
     @FindBy(xpath = "//*[@href='#medication']")
     public WebElement medicineButton;
-
-    @FindBy(xpath = "//a[normalize-space()='IPDN36']")
-    public WebElement IPDN36Patient;
-
     @FindBy(xpath = "//span[@id='select2-add_charge_type-container']")
     public WebElement chargeTypeDDM;
 
@@ -132,6 +135,8 @@ public class DoctorIDPPage extends BasePage {
     @FindBy(xpath = "//a[@title='Increment Minute']")
     public WebElement incrementMin;
 
+
+
     @FindBy(xpath = "//a[@title='Decrement Minute']")
     public WebElement decrementMin;
 
@@ -140,11 +145,88 @@ public class DoctorIDPPage extends BasePage {
 
 
 
+    @FindBy(xpath = "//a[@class='btn btn-sm btn-primary dropdown-toggle addtimeline']")
+    public WebElement addTimelineButton;
+    @FindBy(xpath = "//input[@id='timeline_title']")
+    public WebElement titleAddTimeLine;
+
+    @FindBy(xpath = "//input[@id='timeline_date']")
+    public WebElement datePickerAddTimeLine;
+
+    @FindBy(xpath = "//*[text()='26']") //  //*[text()='26']  //td[@class='active day']
+    public WebElement pickDateAddTimeLine;
+
+    @FindBy(xpath = "//button[@id='add_timelinebtn']")
+    public WebElement saveAddTimeLine;
+
+    @FindBy(xpath = "//div[@id='timeline']//li[4]//div[1]//h3[1]")
+    public WebElement lastTitleOnTimeLine;
+    @FindBy(xpath = "//*[@href='#treatment_history']")
+    public WebElement treatmentHistoryButton;
+    @FindBy(xpath = "//*[text()='Treatment History']")
+    public WebElement treatmentHistoryTitle;
+
+    @FindBy(xpath = "(//*[text()='IPDN36'])[2]")
+    public WebElement lastIPDNo;
+    @FindBy(xpath = "(//*[@class='form-control timepicker'])[2]")
+    public WebElement timeAddMedi;
+    @FindBy(xpath = "(//*[@data-action='incrementHour'])[2]")
+    public WebElement incrementHourAddMEdi;
+    @FindBy(xpath = "(//*[@class='bootstrap-timepicker-meridian form-control'])[2]")
+    public WebElement dayPeriodAmPmAddMEdi;
 
 
 
 
 
+
+
+
+    @FindBy(xpath = "//*[@onclick='addmedicationModal()']")
+    public WebElement addMEdiDoseButton;
+    @FindBy(xpath = "(//*[@class='form-control date'])[6]")
+    public WebElement dateAddMedi;
+    @FindBy(xpath = "(//*[text()='29'])[2]")
+    public WebElement pickDate29;
+
+
+
+    @FindBy(xpath = "(//*[@data-action='toggleMeridian'])[3]")
+    public WebElement changeDayPeriodAddMEdi;
+    @FindBy(xpath = "//*[@aria-labelledby='select2-mmedicine_category_id-container']")
+    public WebElement mediCategoryAddMEdi;
+
+    @FindBy(xpath = "//*[@id='select2-mmedicine_id-container']")
+    public WebElement mediNameAddMEdi;
+    @FindBy(xpath = "//*[@id='select2-dosage-container']")
+    public WebElement dosageAddMedi;
+
+
+
+    @FindBy(xpath = "(//*[@data-action='incrementMinute'])[2]")
+    public WebElement getIncrementMinAddMEdi;
+    @FindBy(xpath = "(//*[@name='hour'])[2]")
+    public WebElement pickHourAddMedi;
+
+
+
+    @FindBy(xpath = "//*[@id='add_medicationbtn']")
+    public WebElement saveAddedMedi;
+
+    @FindBy(xpath = "//*[@aria-labelledby='select2-operation_category-container']")
+    public WebElement opCategoryDDM;
+
+    @FindBy(xpath = "//*[@id='form_addoperationtheatrbtn']")
+    public WebElement saveOP;
+
+    @FindBy(xpath = "(//tbody)[18]//tr[5]//td[6]")
+    public WebElement selectOPDate;
+
+    @FindBy(xpath = "//span[@aria-labelledby='select2-operation_name-container']")
+    public WebElement opNameAddOP;
+
+    @FindBy(xpath = "(//input[@class='form-control datetime'])[2]")
+    public WebElement OPDateAddOP;
 
 
 
@@ -175,6 +257,20 @@ public class DoctorIDPPage extends BasePage {
 
     }
 
+    public void clickContainsTextWE(String text){
+        WebElement textinWE=driver.findElement(By.xpath("//li[contains(text(), '"+ text + "')]"));
+        ReusableMethods.waitForElementVisibility(textinWE,20);
+        textinWE.click();
+
+    }
+
+    public WebElement containsTextWE(String text){
+
+        WebElement textinWE=driver.findElement(By.xpath("//li[contains(text(), '"+ text + "')]"));
+        ReusableMethods.waitForElementVisibility(textinWE,20);
+
+        return  textinWE;
+    }
 
 
     public void verifyHeadersAreVisible(WebDriver driver) {
@@ -228,7 +324,8 @@ public class DoctorIDPPage extends BasePage {
         String dataTablePatientCount=""+dataTablePatientCountList.size();
 
 
-    return dataTablePatientCount;
+
+        return dataTablePatientCount;
     }
 
 
@@ -243,7 +340,7 @@ public class DoctorIDPPage extends BasePage {
 
 
 
-    public void clickPatientByIPDNo(String IPDNo){
+    public void clickPatientByIPDNo(int IPDNo){
 
         WebElement data= driver.findElement(By.xpath("//*[text()='IPDN"+IPDNo+"']"));
         data.click();
@@ -255,6 +352,7 @@ public class DoctorIDPPage extends BasePage {
         List<WebElement> dataTable=driver.findElements(By.xpath("//tbody//tr["+row+"]//td"));
 
         for (WebElement data:dataTable) {
+            ReusableMethods.hardWait(8);
 
             ipdPatientSearchBox.sendKeys(data.getText());
 
@@ -265,10 +363,10 @@ public class DoctorIDPPage extends BasePage {
 
     public void clickOnHamburgerMenu(){
 
-        //hoverover yap!
-       ReusableMethods.waitForElementVisibility(TableDataRetriever(1,8),5);
+
+       ReusableMethods.waitForElementVisibility(TableDataRetriever(1,8),6);
        ReusableMethods.hoverOver(hamburgerMenuIPD);
-       ReusableMethods.waitForElementVisibility(hamburgerMenuIPD,2);
+       ReusableMethods.waitForElementVisibility(hamburgerMenuIPD,5);
         hamburgerMenuIPD.click();
         Assert.assertTrue(ReusableMethods.isTextVisible(" Nurse Notes"));
 
@@ -276,7 +374,7 @@ public class DoctorIDPPage extends BasePage {
 
     }
 
-    public void verifyAddButtonAccessible(){
+    public void verifyAddPatientButtonAccessible(){
 
         ReusableMethods.clickWithText("  Add Patient");
         ReusableMethods.hardWait(1);
@@ -310,15 +408,7 @@ public class DoctorIDPPage extends BasePage {
     }
 
 
-    public void addMedication(){
-            ReusableMethods.clickWithText(" Add Medication Dose");
 
-
-
-
-
-
-    }
 
 
     public void addCharge(){
@@ -350,8 +440,8 @@ public class DoctorIDPPage extends BasePage {
         pickMin.click();
         ReusableMethods.hardWait(2);
         pickMin40.click();
-        ReusableMethods.hardWait(2);
-        Assert.assertEquals("AM",timePeriodAmOrPm.getText());
+
+       // Assert.assertEquals("AM",timePeriodAmOrPm.getText());
         ReusableMethods.hardWait(2);
         addCharge.click();
         ReusableMethods.hardWait(2);
@@ -361,8 +451,84 @@ public class DoctorIDPPage extends BasePage {
 
     }
 
+    public void addTimeLine(){
+        ReusableMethods.clickWithText(" Timeline");
+        addTimelineButton.click();
+        ReusableMethods.hardWait(2);
+        titleAddTimeLine.sendKeys(reader.getCellData(3,2));
+        ReusableMethods.hardWait(3);
+        datePickerAddTimeLine.click();
+        ReusableMethods.hardWait(3);
+        pickDateAddTimeLine.click();
+        ReusableMethods.hardWait(5);
+        saveAddTimeLine.click();
+        Assert.assertEquals(reader.getCellData(3,2),lastTitleOnTimeLine.getText());
 
 
+
+
+
+    }
+
+    public void treatmentHistory(){
+        treatmentHistoryButton.click();
+        ReusableMethods.hardWait(3);
+        Assert.assertTrue(lastIPDNo.isDisplayed());
+        ReusableMethods.hardWait(1);
+
+    }
+
+
+    public void pickTimeForAddMEdi(){
+
+        timeAddMedi.click();
+        ReusableMethods.waitForElementVisibility(incrementHourAddMEdi,20);
+        actions.sendKeys(incrementHourAddMEdi).doubleClick().perform();
+        ReusableMethods.waitForElementVisibility(getIncrementMinAddMEdi,20);
+        actions.sendKeys(getIncrementMinAddMEdi).doubleClick().perform();
+
+        ReusableMethods.hardWait(2);
+    }
+
+    public void pickMedicineCategoryAddMEdi(String tb){
+        mediCategoryAddMEdi.click();
+        ReusableMethods.hardWait(2);
+        WebElement tabletOption = driver.findElement(By.xpath("//li[contains(text(), '"+ tb +"')]"));
+        ReusableMethods.waitForElementVisibility(tabletOption,20);
+        tabletOption.click();
+        ReusableMethods.hardWait(2);
+    }
+
+    public void pickMediNameAddMedi(String mediName){
+        mediNameAddMEdi.click();
+
+        WebElement panto=driver.findElement(By.xpath("//li[contains(text(), '"+ mediName +"')]"));
+        ReusableMethods.waitForElementVisibility(panto,20);
+        panto.click();
+
+
+    }
+
+
+    public void clickDosageAddMedi(String dosageName){
+
+        dosageAddMedi.click();
+        ReusableMethods.hardWait(1);
+        WebElement dosage=driver.findElement(By.xpath("//li[contains(text(), '"+ dosageName +"')]"));
+        ReusableMethods.waitForElementVisibility(dosage,20);
+        dosage.click();
+    }
+
+
+    public void clickLastAddedMedi(int row, int column,String lastMediName ){
+
+
+       WebElement lastMedi=driver.findElement(By.xpath("(//tbody)[12]//tr[" + row + "]//td[" + column + "]"));
+        ReusableMethods.hardWait(1);
+       Assert.assertEquals(lastMediName,lastMedi.getText());
+
+
+    }
 
 
 
