@@ -15,6 +15,7 @@ import pages.HomePage;
 import config.ConfigReader;
 import pages.HomePageHeaderPage;
 import utilities.ReusableMethods;
+import utils.JSUtilities;
 
 import static stepdefinitions.DoctorIPDFeatureSteps.driver;
 
@@ -247,6 +248,32 @@ public class HomeSteps {
         ReusableMethods.bekle(1);
     }
 
+    }
+
+    @And("Anasayfa footer kismina iner ve Home, Academics, Gallery, About, Contact US basliklarini goruntulendigini dogrular.")
+    public void anasayfa_footer_kismina_iner_ve_home_academics_gallery_about_event_contact_us_basliklarini_goruntulendigini_dogrular() {
+        JSUtilities.scrollToBottom(driver);
+        Assert.assertTrue(homePage.homepageFooterHomeButton.isDisplayed());
+        Assert.assertTrue(homePage.homepageFooterAcademicsButton.isDisplayed());
+        Assert.assertTrue(homePage.homepageFooterGalleryButton.isDisplayed());
+        Assert.assertTrue(homePage.homepageFooterAboutButton.isDisplayed());
+        Assert.assertTrue(homePage.homepageFooterContactUSButton.isDisplayed());
+
+    }
+    @Then("Anasayfa footer kismindaki Home, Academics, Gallery, About, Contact US basliklarina tiklayip dogru adrese yonlendirdigini dogrular.")
+    public void anasayfa_footer_kismindaki_home_academics_gallery_about_event_contact_us_basliklarina_tiklayip_dogru_adrese_yonlendirdigini_dogrular() {
+        homePage.homepageFooterHomeButton.click();
+        JSUtilities.scrollToBottom(driver);
+        homePage.homepageFooterAcademicsButton.click();
+        driver.navigate().back();
+        JSUtilities.scrollToBottom(driver);
+        homePage.homepageFooterGalleryButton.click();
+        driver.navigate().back();
+        JSUtilities.scrollToBottom(driver);
+        homePage.homepageFooterAboutButton.click();
+        driver.navigate().back();
+        JSUtilities.scrollToBottom(driver);
+        homePage.homepageFooterContactUSButton.click();
     }
 
 
