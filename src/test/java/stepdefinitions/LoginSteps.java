@@ -125,4 +125,31 @@ public class LoginSteps {
 		loginPage.ufpasswordPageUserLoginBtn.isDisplayed();
 		loginPage.ufpasswordPageUserLoginBtn.click();
 	}
+
+	@And("Hasta girisini yapar")
+	public void hastaGirisiniYapar() {
+		loginPage.homePageLoginButton.click();
+		loginPage.setLogin("pat121","3odixh");
+	}
+
+	@And("Dashboard navbar'indaki HealLifeHospital logosuna tiklar ve tekrar Dashboard's geldigini dogrular")
+	public void dashboardNavbarIndakiHealLifeHospitalLogosunaTiklarVeTekrarDashboardSGeldiginiDogrular() {
+		loginPage.dashboardLogo.click();
+		String currentUrl = driver.getCurrentUrl();
+		String expectedUrl = "https://qa.heallifehospital.com/patient/dashboard";
+		Assert.assertEquals(expectedUrl, currentUrl);
+
+	}
+
+	@Then("Dashboard navbar'indaki bayrak simgesine tiklar ve dili degistirir mandarin dilin degistigini dogrular")
+	public void dashboardNavbarIndakiBayrakSimgesineTiklarVeDiliDegistirirMandarinDilinDegistiginiDogrular() {
+		String usAmbulance = loginPage.ambulance.getText();
+		loginPage.languageSwitcherButton.click();
+		loginPage.trLanguage.click();
+		String trAmbulans = loginPage.ambulans.getText();
+		Assert.assertEquals(trAmbulans,usAmbulance);
+
+
+	}
+
 }
