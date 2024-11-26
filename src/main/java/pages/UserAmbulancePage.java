@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class UserAmbulancePage extends  BasePage {
     public UserAmbulancePage(WebDriver driver) {
         super(driver);
@@ -17,7 +19,9 @@ public class UserAmbulancePage extends  BasePage {
     @FindBy(xpath="//*[text()=' Ambulance Bill']")
     public WebElement userAmbulanceText;
 
-    @FindBy (xpath = "//*[@id='DataTables_Table_0']/thead/tr/th[1]")
+    //@FindBy (xpath = "//*[@id='DataTables_Table_0']/thead/tr/th[1]")
+   // public WebElement billNoTitle;
+    @FindBy (xpath = "//*[@class='sorting_asc']")
     public WebElement billNoTitle;
 
     @FindBy (xpath = "//*[@id='DataTables_Table_0']/thead/tr/th[2]")
@@ -58,4 +62,10 @@ public class UserAmbulancePage extends  BasePage {
 
     @FindBy (xpath = "//*[@id='DataTables_Table_0']/tbody/tr/td[11]/button")
     public  WebElement payButton;
+
+    @FindBy(xpath = "//*[@class=\"sorting\"]")
+    public List<WebElement> ambulansBasliklarIlkList;
+
+    @FindBy(xpath = "//*[@class=\"text-right sorting\"]")
+    public List<WebElement> ambulansBasliklarIkinciList;
 }
