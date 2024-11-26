@@ -184,4 +184,49 @@ public class DoctorIPDFeatureSteps {
 
      }
 
+
+      @Then("Navigate to the Medication button.")
+      public void navigate_to_the_medication_button() {
+     ReusableMethods.clickWithText(" Medication");
+
+      }
+      @Then("Click on the Add Medication Dose button.")
+      public void click_on_the_button() {
+      doctorIDPPage.addMEdiDoseButton.click();
+      }
+      @Then("Enter {string} into the Date field.")
+      public void enter_into_the_date_field(String string) {
+       doctorIDPPage.dateAddMedi.sendKeys(string);
+      // doctorIDPPage.dateAddMedi.click();
+      //  doctorIDPPage.pickDate29.click();
+      }
+
+      @Then("Enter 14:45 into the Time field by increment Button.")
+      public void enter_into_the_time_field_by_increment_button() {
+       doctorIDPPage.pickTimeForAddMEdi();
+
+      }
+      @Then("Select tablet from the Medicine Category dropdown.")
+      public void select_from_the_medicine_category_dropdown() {
+      doctorIDPPage.pickMedicineCategoryAddMEdi( );
+      }
+      @Then("Select {string} from the Medicine Name dropdown.")
+      public void select_from_the_medicine_name_dropdown(String mediName) {
+      doctorIDPPage.pickMediNameAddMedi(mediName);
+      }
+      @Then("Select {string} from the Dosage dropdown.")
+      public void select_from_the_dosage_dropdown(String dosage) {
+      doctorIDPPage.clickDosageAddMedi(dosage);
+      }
+      @Then("Click the Save button on the Add Medication form.")
+      public void click_the_save_button_on_the_add_medication_form() {
+      doctorIDPPage.saveAddedMedi.click();
+      ReusableMethods.hardWait(3);
+      }
+      @Then("Verify that the Medication data table's row {int} , column {int} matches the entered {string} .")
+      public void verify_that_the_medication_data_table_s_row_column_matches_the_entered(Integer row, Integer column, String lastMediName) {
+       doctorIDPPage.clickLastAddedMedi(row, column, lastMediName);
+      }
+
+
 }

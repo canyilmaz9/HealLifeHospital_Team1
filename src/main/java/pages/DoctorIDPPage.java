@@ -5,11 +5,16 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.ExcelDataReader_Seren;
+import utils.JSUtilities;
 import utils.ReusableMethods;
 
+import java.time.Duration;
 import java.util.*;
 
 public class DoctorIDPPage extends BasePage {
@@ -23,8 +28,8 @@ public class DoctorIDPPage extends BasePage {
     }
 
 
-    ExcelDataReader_Seren reader= new ExcelDataReader_Seren(ConfigReader.getProperty("testData2"),"deneme");
-
+     ExcelDataReader_Seren reader= new ExcelDataReader_Seren(ConfigReader.getProperty("testData2"),"deneme");
+     Actions actions=new Actions(driver);
     @FindBy(xpath = "//*[@placeholder='Username']")
     public WebElement adminDoctorMail;
 
@@ -130,8 +135,14 @@ public class DoctorIDPPage extends BasePage {
     @FindBy(xpath = "//a[@title='Increment Minute']")
     public WebElement incrementMin;
 
+
+
     @FindBy(xpath = "//a[@title='Decrement Minute']")
     public WebElement decrementMin;
+
+
+
+
 
 
     @FindBy(xpath = "//a[@class='btn btn-sm btn-primary dropdown-toggle addtimeline']")
@@ -157,6 +168,66 @@ public class DoctorIDPPage extends BasePage {
 
     @FindBy(xpath = "(//*[text()='IPDN36'])[2]")
     public WebElement lastIPDNo;
+    @FindBy(xpath = "(//*[@class='form-control timepicker'])[2]")
+    public WebElement timeAddMedi;
+    @FindBy(xpath = "(//*[@data-action='incrementHour'])[2]")
+    public WebElement incrementHourAddMEdi;
+    @FindBy(xpath = "(//*[@class='bootstrap-timepicker-meridian form-control'])[2]")
+    public WebElement dayPeriodAmPmAddMEdi;
+
+
+
+
+
+
+
+
+    @FindBy(xpath = "//*[@onclick='addmedicationModal()']")
+    public WebElement addMEdiDoseButton;
+    @FindBy(xpath = "(//*[@class='form-control date'])[6]")
+    public WebElement dateAddMedi;
+    @FindBy(xpath = "(//*[text()='29'])[2]")
+    public WebElement pickDate29;
+
+
+
+    @FindBy(xpath = "(//*[@data-action='toggleMeridian'])[3]")
+    public WebElement changeDayPeriodAddMEdi;
+    @FindBy(xpath = "//*[@aria-labelledby='select2-mmedicine_category_id-container']")
+    public WebElement mediCategoryAddMEdi;
+
+    @FindBy(xpath = "//*[@id='select2-mmedicine_id-container']")
+    public WebElement mediNameAddMEdi;
+    @FindBy(xpath = "//*[@id='select2-dosage-container']")
+    public WebElement dosageAddMedi;
+
+
+
+
+
+
+
+
+
+
+    @FindBy(xpath = "(//*[@data-action='incrementMinute'])[2]")
+    public WebElement getIncrementMinAddMEdi;
+    @FindBy(xpath = "(//*[@name='hour'])[2]")
+    public WebElement pickHourAddMedi;
+
+
+
+    @FindBy(xpath = "//*[@id='add_medicationbtn']")
+    public WebElement saveAddedMedi;
+
+
+
+
+
+
+
+
+
 
 
 
@@ -270,7 +341,7 @@ public class DoctorIDPPage extends BasePage {
 
     public void clickOnHamburgerMenu(){
 
-        //hoverover yap!
+
        ReusableMethods.waitForElementVisibility(TableDataRetriever(1,8),6);
        ReusableMethods.hoverOver(hamburgerMenuIPD);
        ReusableMethods.waitForElementVisibility(hamburgerMenuIPD,5);
@@ -315,15 +386,7 @@ public class DoctorIDPPage extends BasePage {
     }
 
 
-    public void addMedication(){
-            ReusableMethods.clickWithText(" Add Medication Dose");
 
-
-
-
-
-
-    }
 
 
     public void addCharge(){
@@ -389,13 +452,61 @@ public class DoctorIDPPage extends BasePage {
         treatmentHistoryButton.click();
         ReusableMethods.hardWait(3);
         Assert.assertTrue(lastIPDNo.isDisplayed());
+        ReusableMethods.hardWait(1);
+
+    }
 
 
+    public void pickTimeForAddMEdi(){
 
+        timeAddMedi.click();
+        ReusableMethods.waitForElementVisibility(incrementHourAddMEdi,20);
+        actions.sendKeys(incrementHourAddMEdi).doubleClick().perform();
+        ReusableMethods.waitForElementVisibility(getIncrementMinAddMEdi,20);
+        actions.sendKeys(getIncrementMinAddMEdi).doubleClick().perform();
+
+        ReusableMethods.hardWait(2);
+    }
+
+    public void pickMedicineCategoryAddMEdi(){
+        mediCategoryAddMEdi.click();
+        ReusableMethods.hardWait(2);
+        WebElement tabletOption = driver.findElement(By.xpath("//li[contains(text(), 'Tablet')]"));
+        ReusableMethods.waitForElementVisibility(tabletOption,20);
+        tabletOption.click();
+        ReusableMethods.hardWait(2);
+    }
+
+    public void pickMediNameAddMedi(String mediName){
+        mediNameAddMEdi.click();
+
+        WebElement panto=driver.findElement(By.xpath("//li[contains(text(), '"+ mediName +"')]"));
+        ReusableMethods.waitForElementVisibility(panto,20);
+        panto.click();
 
 
     }
 
+
+    public void clickDosageAddMedi(String dosageName){
+
+        dosageAddMedi.click();
+        ReusableMethods.hardWait(1);
+        WebElement dosage=driver.findElement(By.xpath("//li[contains(text(), '"+ dosageName +"')]"));
+        ReusableMethods.waitForElementVisibility(dosage,20);
+        dosage.click();
+    }
+
+
+    public void clickLastAddedMedi(int row, int column,String lastMediName ){
+
+
+       WebElement lastMedi=driver.findElement(By.xpath("(//tbody)[12]//tr[" + row + "]//td[" + column + "]"));
+        ReusableMethods.hardWait(1);
+       Assert.assertEquals(lastMediName,lastMedi.getText());
+
+
+    }
 
 
 
