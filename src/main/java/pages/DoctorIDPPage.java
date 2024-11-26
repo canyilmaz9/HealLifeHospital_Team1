@@ -227,7 +227,13 @@ public class DoctorIDPPage extends BasePage {
 
     @FindBy(xpath = "(//input[@class='form-control datetime'])[2]")
     public WebElement OPDateAddOP;
+    @FindBy(xpath = "//*[@id='select2-nurse_field-container']")
+    public WebElement nurseNoteBox;
 
+    @FindBy(xpath = "(//button[@class='close close_button'])[2]")
+    public WebElement closeNurseNotPopUp;
+    @FindBy(xpath = "(//div[contains(text(), 'Note')])[5]")
+    public WebElement nurseNotesNoteText;
 
 
 
