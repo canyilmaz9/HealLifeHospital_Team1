@@ -152,4 +152,52 @@ public class LoginSteps {
 
 	}
 
+	@And("Dashboard navbar'indaki profil resmine tiklayip kullanici ismi, title ve profil resminin bulundugunu dogrular")
+	public void dashboardNavbarIndakiProfilResmineTiklayipKullaniciIsmiTitleVeProfilResmininBulundugunuDogrular() {
+		String currentUrl = driver.getCurrentUrl();
+		String expectedUrl = "https://qa.heallifehospital.com/patient/dashboard";
+		Assert.assertEquals(expectedUrl, currentUrl);
+		loginPage.profil.click();
+		loginPage.profilResim.isDisplayed();
+		loginPage.profilTitle.isDisplayed();
+		loginPage.profilIsim.isDisplayed();
+
+	}
+
+	@Then("Dashboard navbar'indaki profil resmindeki change password baglantisini kullanarak sifreyi degisitirip cikis yapar")
+	public void dashboardNavbarIndakiProfilResmindekiChangePasswordBaglantisiniKullanarakSifreyiDegisitiripCikisYapar() {
+		loginPage.changePasswordButton.click();
+		loginPage.currentPassword.sendKeys(ConfigReader.getProperty("patientPassword"));
+		loginPage.newPassword.sendKeys("newPW");
+		loginPage.confirmPassword.sendKeys("newPW");
+		loginPage.changePassword.click();
+		ReusableMethods.bekle(1);
+		loginPage.passwordChangedAlert.isDisplayed();
+		loginPage.currentPassword.sendKeys("newPW");
+		loginPage.newPassword.sendKeys(ConfigReader.getProperty("patientPassword"));
+		loginPage.confirmPassword.sendKeys(ConfigReader.getProperty("patientPassword"));
+		loginPage.changePassword.click();
+		ReusableMethods.bekle(1);
+		loginPage.passwordChangedAlert.isDisplayed();
+		loginPage.passwordChangedAlertX.click();
+		loginPage.profil.click();
+		loginPage.logoutButton.click();
+
+	}
+
+
+	@And("Navbardaki Heal Life Hospital & Research Center textini goruntuler")
+	public void navbardakiHealLifeHospitalResearchCenterTextiniGoruntuler() {
+		String expectedTitle="Heal Life Hospital & Research Center";
+		Assert.assertEquals(expectedTitle,loginPage.hastaSayfaTitle.getText());
+
+	}
+
+	@Then("Menu isaretine \\(alt alta uc cizgi) tikladiginda basliklarin sembollerine gectigini dogrular")
+	public void menuIsaretineAltAltaUcCizgiTikladigindaBasliklarinSembollerineGectiginiDogrular() {
+		loginPage.myAppoTitle.isDisplayed();
+		loginPage.menuIsareti.click();
+		Assert.assertFalse(loginPage.myAppoTitle.isDisplayed());
+
+	}
 }

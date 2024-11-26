@@ -38,3 +38,11 @@ Feature: Admin Panel Tests
       | Messaging            |
       | Inventory            |
       | Certificate          |
+
+  @adminDashboardMenu
+  Scenario: US_049> TC_001 Doktor panelinde sol tarafta bir dashboard Sidebar'i olup sayfa baslik linkleri bulunmali Dashboard Sidebar'da Birth&DeathDay menü linkine tiklaninca Birth Record ve Death Record  sayfa linklerini görüntülenmeli Menu iconuna basildiginda basliklar kapatilip acilabilmeli ve sadece ikonlari gozukmeli
+    Given Admin, Admin Login sayfasinda
+    And Doktor hesabina giris yapar
+    And Dashboard sol tarafindaki sidebar'i goruntuler ve basliklarin bulundugunu dogrular
+    And Sidebar'da Birth&DeathDay menü linkine tiklaninca Birth Record ve Death Record sayfa linklerinin görüntülendigini dogrular
+    Then Sidebar'in ustundeki menu iconuna basildiginda basliklar gizlenip iconlar gozukmeli

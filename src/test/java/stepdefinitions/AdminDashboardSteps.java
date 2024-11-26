@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -92,15 +93,35 @@ public class AdminDashboardSteps {
     }
 
 
+    @Given("Display the title of Dashboard on the admin panel")
+    public void displayTheTitleOfDashboardOnTheAdminPanel() {
+    }
 
+    @And("Doktor hesabina giris yapar")
+    public void doktorHesabinaGirisYapar() {
+            adminDashboardPage.adminUsername.sendKeys("bunyamin.doctor@heallifehospital.com");
+            adminDashboardPage.adminPassword.sendKeys("o6*d@fko3PXL1");
+            adminDashboardPage.submitButton.click();
+    }
 
+    @And("Dashboard sol tarafindaki sidebar'i goruntuler ve basliklarin bulundugunu dogrular")
+    public void dashboardSolTarafindakiSidebarIGoruntulerVeBasliklarinBulundugunuDogrular() {
+        adminDashboardPage.adminDashboardSidebar.isDisplayed();
+        adminDashboardPage.BDRecordTitle.isDisplayed();
+    }
 
+    @And("Sidebar'da Birth&DeathDay menü linkine tiklaninca Birth Record ve Death Record sayfa linklerinin görüntülendigini dogrular")
+    public void sidebarDaBirthDeathDayMenüLinkineTiklanincaBirthRecordVeDeathRecordSayfaLinklerininGörüntülendiginiDogrular() {
+        adminDashboardPage.BDRecordTitle.click();
+        adminDashboardPage.BRecord.isDisplayed();
+        adminDashboardPage.DRecord.isDisplayed();
+    }
 
-
-
-
-
-
-
+    @Then("Sidebar'in ustundeki menu iconuna basildiginda basliklar gizlenip iconlar gozukmeli")
+    public void sidebarInUstundekiMenuIconunaBasildigindaBasliklarGizlenipIconlarGozukmeli() {
+        adminDashboardPage.billingTitleText.isDisplayed();
+        adminDashboardPage.adminMenu.click();
+        Assert.assertFalse(adminDashboardPage.billingTitleText.isDisplayed());
+    }
 
 }

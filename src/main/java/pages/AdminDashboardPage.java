@@ -63,6 +63,32 @@ public class AdminDashboardPage extends BasePage{
         @FindBy(xpath = "//span[text()=' Certificate'")
         public WebElement certificateTitle;
 
+        @FindBy(xpath = "//*[@id=\"alert2\"]/div")
+        public WebElement adminDashboardSidebar;
+
+        @FindBy(xpath = "//*[@id=\"sibe-box\"]/ul[2]/li[11]/a/i[1]")
+        public WebElement BDRecordTitle;
+
+        @FindBy(xpath = "//*[@id=\"sibe-box\"]/ul[2]/li[11]/ul/li[1]/a")
+        public WebElement BRecord;
+
+        @FindBy(xpath = "//*[@id=\"sibe-box\"]/ul[2]/li[11]/ul/li[2]/a")
+        public WebElement DRecord;
+
+        @FindBy(xpath = "//*[@id=\"alert\"]/nav/a")
+        public WebElement adminMenu;
+
+        @FindBy(xpath = "//*[@id=\"sibe-box\"]/ul[2]/li[2]/a/span")
+        public WebElement billingTitleText;
+
+        @FindBy(xpath = "//*[@id=\"email\"]")
+        public WebElement adminUsername;
+
+        @FindBy(xpath = "//*[@id=\"password\"]")
+        public WebElement adminPassword;
+
+        @FindBy(xpath = "/html/body/div[1]/div/div/div/div[1]/div/div[2]/form/button")
+        public WebElement submitButton;
 
 
 

@@ -95,6 +95,50 @@ public class LoginPage extends BasePage {
 	@FindBy(xpath = "//*[@rel=\"1\"]")
 	public WebElement trLanguage;
 
+	@FindBy(xpath = "//*[@class=\"dropdown-toggle\"]")
+	public WebElement profil;
+
+	@FindBy(xpath = "//*[@id=\"alert\"]/nav/div[2]/div/div/ul/li/ul/li/div/div[1]/a/img")
+	public WebElement profilResim;
+
+	@FindBy(xpath = "//*[@id=\"alert\"]/nav/div[2]/div/div/ul/li/ul/li/div/div[2]/h5")
+	public WebElement profilTitle;
+
+	@FindBy(xpath = "//*[@id=\"alert\"]/nav/div[2]/div/div/ul/li/ul/li/div/div[2]/h4")
+	public WebElement profilIsim;
+
+	@FindBy(xpath = "//*[@id=\"alert\"]/nav/div[2]/div/div/ul/li/ul/li/div/div[4]/a[1]")
+	public WebElement changePasswordButton;
+
+	@FindBy(xpath = "//*[@id=\"passwordform\"]/div[1]/div/input")
+	public WebElement currentPassword;
+
+	@FindBy(xpath = "//*[@id=\"passwordform\"]/div[2]/div/input")
+	public WebElement newPassword;
+
+	@FindBy(xpath = "//*[@id=\"confirm_pass\"]")
+	public WebElement confirmPassword;
+
+	@FindBy(xpath = "//*[@type='submit']")
+	public WebElement changePassword;
+
+	@FindBy(xpath = "//*[@id=\"alert\"]/nav/div[2]/div/div/ul/li/ul/li/div/div[4]/a[2]")
+	public WebElement logoutButton;
+
+	@FindBy(xpath = "//*[@id=\"toast-container\"]/div")
+	public WebElement passwordChangedAlert;
+
+	@FindBy(xpath = "//*[@id=\"toast-container\"]/div/button")
+	public WebElement passwordChangedAlertX;
+
+	@FindBy(xpath = "//*[@id=\"alert\"]/nav/div[1]/span")
+	public WebElement hastaSayfaTitle;
+
+	@FindBy(xpath = "//*[@class='sidebar-toggle']")
+	public WebElement menuIsareti;
+
+	@FindBy(xpath = "//*[@id=\"sibe-box\"]/ul/li[2]/a/span")
+	public WebElement myAppoTitle;
 
 }
 

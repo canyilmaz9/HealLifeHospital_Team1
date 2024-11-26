@@ -39,3 +39,18 @@ Feature: Login Functionality
     And Hasta girisini yapar
     And Dashboard navbar'indaki HealLifeHospital logosuna tiklar ve tekrar Dashboard's geldigini dogrular
     Then Dashboard navbar'indaki bayrak simgesine tiklar ve dili degistirir mandarin dilin degistigini dogrular
+
+  @changepw
+  Scenario: US_016> TC_003 Dashboard navbar'indaki profil resmine tiklaninca kullanici ismi, title, profil resmi görüntülenip ve  kayitli sifre degistirilip sistemden çıkış yapabilmek için test
+    Given kullanici anasayfada
+    And Hasta girisini yapar
+    And Dashboard navbar'indaki profil resmine tiklayip kullanici ismi, title ve profil resminin bulundugunu dogrular
+    Then Dashboard navbar'indaki profil resmindeki change password baglantisini kullanarak sifreyi degisitirip cikis yapar
+
+  @dashboardmenu
+  Scenario: US_016> TC_004 Dashboard navbar'inda "Heal Life Hospital & Research Center" text'i bulunmali ve menu ikonu'na tiklaninca dashboard sidebar kapanip acildigi dogrulanmali
+    Given kullanici anasayfada
+    And Hasta girisini yapar
+    And Navbardaki Heal Life Hospital & Research Center textini goruntuler
+    Then Menu isaretine (alt alta uc cizgi) tikladiginda basliklarin sembollerine gectigini dogrular
+
