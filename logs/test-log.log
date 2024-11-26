@@ -906,3 +906,11 @@
 2024-11-26 11:58:20 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: (US_053_US01_TC04) Nurse Notes
 2024-11-26 11:58:21 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
 
+2024-11-26 13:16:18 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US01_TC05)
+2024-11-26 13:16:21 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-26 13:16:28 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: (US_053_US01_TC05)
+2024-11-26 13:16:28 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-26 13:28:22 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US01_TC05)
+2024-11-26 13:28:25 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-26 13:28:33 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: (US_053_US01_TC05)
+2024-11-26 13:28:34 [main] INFO  utils.LoggerHelper - Driver kapatıldı.

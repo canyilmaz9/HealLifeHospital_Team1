@@ -302,4 +302,17 @@ public class DoctorIPDFeatureSteps {
 
        }
 
+       @Then("Click on the Excel File Upload button.")
+       public void click_on_the_excel_file_upload_button() {
+        doctorIDPPage.excelFileUploadButton.click();
+       }
+       @Then("Verify that the Excel file containing the patient list is downloaded successfully.")
+       public void verify_that_the_excel_file_containing_the_patient_list_is_downloaded_successfully() {
+        doctorIDPPage.isExcelFileDownloaded(ConfigReader.getProperty("idpPatientExcellFilePath"));
+       }
+       @Then("Verify that the first patient name in the downloaded Excel file equals the first patient name displayed in the IPD Patient List.")
+       public void verify_that_the_first_patient_name_in_the_downloaded_excel_file_equals_the_first_patient_name_displayed_in_the_ipd_patient_list() {
+
+       }
+
 }
