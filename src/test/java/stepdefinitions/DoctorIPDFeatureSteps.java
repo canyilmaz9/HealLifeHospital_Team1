@@ -7,10 +7,7 @@ import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import pages.DoctorIDPPage;
 import utilities.ReusableMethods;
@@ -275,6 +272,47 @@ public class DoctorIPDFeatureSteps {
        public void verify_the_last_entered_operation_from_the_op_name_column(WebElement opName) {
        Assert.assertTrue(opName.isDisplayed());
        logger.error("Doktor olarak IPD hasta icin yeni ameliyat kaydi (Add Operation) yapilamiyor. ");
+       }
+
+       @Then("The user clicks the Add Nurse Note button as a doctor.")
+       public void the_user_clicks_the_add_nurse_note_button_as_a_doctor() {
+        ReusableMethods.clickWithText(" Add Nurse Note");
+       }
+       @Then("The Nurse box is not clickable.")
+       public void the_nurse_box_is_not_clickable() {
+        try {
+
+         doctorIDPPage.nurseNoteBox.sendKeys("Test Input");
+         Assert.fail("Test Failed: The Nurse box should not be writable, but it is writable.");
+        } catch (InvalidElementStateException e) {
+
+        } catch (NoSuchElementException e) {
+
+        }
+
+       }
+
+       @Then("The user closes the opened pop-up page.")
+       public void the_user_closes_the_opened_pop_up_page() {
+       doctorIDPPage.closeNurseNotPopUp.click();
+       }
+       @Then("The user verifies the visibility of the most recently added note in the Nurse Notes list.")
+       public void the_user_verifies_the_visibility_of_the_most_recently_added_note_in_the_nurse_notes_list() {
+       Assert.assertTrue( doctorIDPPage.nurseNotesNoteText.isDisplayed());
+
+       }
+
+       @Then("Click on the Excel File Upload button.")
+       public void click_on_the_excel_file_upload_button() {
+        doctorIDPPage.excelFileUploadButton.click();
+       }
+       @Then("Verify that the Excel file containing the patient list is downloaded successfully.")
+       public void verify_that_the_excel_file_containing_the_patient_list_is_downloaded_successfully() {
+        doctorIDPPage.isExcelFileDownloaded(ConfigReader.getProperty("idpPatientExcellFilePath"));
+       }
+       @Then("Verify that the first patient name in the downloaded Excel file equals the first patient name displayed in the IPD Patient List.")
+       public void verify_that_the_first_patient_name_in_the_downloaded_excel_file_equals_the_first_patient_name_displayed_in_the_ipd_patient_list() {
+
        }
 
 }

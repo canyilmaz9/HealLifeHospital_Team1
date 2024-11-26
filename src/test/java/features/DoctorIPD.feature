@@ -9,7 +9,7 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
 
 
 
-  Scenario: Verify that the patient list on the IPD page displayed
+  Scenario:(US_053_US01_TC01) Verify that the patient list on the IPD page displayed
 
 
 
@@ -29,7 +29,7 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
 
 
 
-    Scenario: Verify that clicking on a patient's IPD No navigates to the detailed patient page.
+    Scenario:(US_053_US02_TC01) Verify that clicking on a patient's IPD No navigates to the detailed patient page.
     *  Clicking on the IPD No 47 navigates to the patient's details page.
     *  As a doctor, verify that the page displays and click the Nurse Notes.
     *  The Medication page displays medication history correctly.
@@ -47,7 +47,7 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
     *  The Treatment History page lists all past treatments accurately.
 
 
-    Scenario:Verify that a medication order can be successfully added to a patient's record.
+    Scenario:(US_053_US02_TC02)Add Medication Dose
     * Clicking on the IPD No 47 navigates to the patient's details page.
     * Navigate to the Medication button.
     * Click on the Add Medication Dose button.
@@ -60,8 +60,8 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
     * Verify that the Medication data table's row 1 , column 2 matches the entered "Panto" .
 
 
-  @ac
-    Scenario:
+
+    Scenario:(US_053_US02_TC03) Add Operation(Bug)
     *  Clicking on the IPD No 47 navigates to the patient's details page.
     *  Click the Operation button.
     *  Click the Add Operation button.
@@ -72,6 +72,20 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
     *  Click the Save button.
     *  Verify the last entered operation from the "Dilation and curettage" Operation Name column.
 
+
+  Scenario:(US_053_US01_TC04) Nurse Notes
+    * Clicking on the IPD No 47 navigates to the patient's details page.
+    * As a doctor, verify that the page displays and click the Nurse Notes.
+    * The user clicks the Add Nurse Note button as a doctor.
+    * The Nurse box is not clickable.
+    * The user closes the opened pop-up page.
+    * The user verifies the visibility of the most recently added note in the Nurse Notes list.
+
+  @ac
+  Scenario: (US_053_US01_TC05)
+    * Click on the Excel File Upload button.
+    * Verify that the Excel file containing the patient list is downloaded successfully.
+    * Verify that the first patient name in the downloaded Excel file equals the first patient name displayed in the IPD Patient List.
 
 
 
