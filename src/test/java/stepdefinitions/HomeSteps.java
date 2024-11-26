@@ -247,41 +247,10 @@ public class HomeSteps {
         ReusableMethods.bekle(1);
     }
 
-    @Given("Kullanici browser acar ve url girer")
-    public void kullanici_browser_acar_ve_url_girer() {
-        String url= ConfigReader.getProperty("homePageUrl");
-        driver.get(url);
-        ReusableMethods.bekle(2);
-    }
-    @Then("Anasayfada Featured Services başlığını görür")
-    public void anasayfada_featured_services_başlığını_görür() throws InterruptedException {
-        js.executeScript("window.scrollBy(1920,1080)", "");
-
-        //action.scrollByAmount(2500,2500);
-        ReusableMethods.bekle(2);
-        String expectedFeaturedServices = "Featured Services";
-        String actualFSYazisi = homePage.featuredServicesTitle.getText();
-        Assert.assertEquals(expectedFeaturedServices, actualFSYazisi);
-        System.out.println(actualFSYazisi);
-        Thread.sleep(3000);
-
-        Assertions.assertTrue(homePage.AboutusTestimonialsresim2.isDisplayed());
-        Assertions.assertTrue(homePage.AboutusTestimonialsisim2.isDisplayed());
-        Assertions.assertTrue(homePage.AboutusTestimonialyorum2.isDisplayed());
-
-
     }
 
 
-//  denemeler
-    @When("Featured Services başlığının altında Medical professionals panosuna erişir")
-    public void featured_services_başlığının_altında_medical_professionals_panosuna_erişir() throws InterruptedException {
-        String expectedMedicalProfessionals = "Medical Professionals";
-        String actualMPYazisi = homePage.medicalProfessionalsTitle.getText();
-        Assert.assertEquals(expectedMedicalProfessionals, actualMPYazisi);
-        System.out.println(actualMPYazisi);
-        Thread.sleep(3000);
-    }}
+
 
 
 
