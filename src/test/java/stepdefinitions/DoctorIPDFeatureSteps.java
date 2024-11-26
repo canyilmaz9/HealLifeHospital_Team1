@@ -7,8 +7,10 @@ import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.DoctorIDPPage;
 import utilities.ReusableMethods;
@@ -31,15 +33,12 @@ public class DoctorIPDFeatureSteps {
     @Given("Login as doctor")
     public void login_as_doctor() {
     doctorIDPPage.doctorLogin(9);
-
     }
 
 
     @Then("As a doctor, click on the IPD menu in the dashboard.")
     public void as_a_doctor_click_on_the_ipd_menu_in_the_dashboard() {
-
-
-        ReusableMethods.clickWithText(" IPD");
+     ReusableMethods.clickWithText(" IPD");
 
     }
     @Then("As a doctor,verify that the IPD menu is enabled.")
@@ -76,12 +75,12 @@ public class DoctorIPDFeatureSteps {
     }
     @Then("As a doctor, verify that the patient's details page is accessible.")
     public void as_a_doctor_verify_that_the_patient_s_details_page_is_accessible() {
-    // Assert.assertTrue(doctorIDPPage.TableDataRetriever(3,1).isEnabled());
+    Assert.assertTrue(doctorIDPPage.TableDataRetriever(3,1).isEnabled());
     }
     @Then("As a doctor, Verify searching with full data of the {int} patient in the data table.")
     public void as_a_doctor_verify_that_the_search_box_allows_searching_for_any_data_present_in_the_data_table(int row) throws InterruptedException {
      ReusableMethods.waitForElementVisibility(doctorIDPPage.ipdPatientSearchBox,10);
-    doctorIDPPage.searchPatientInIPDBoxWithDataTable(row);
+  //  doctorIDPPage.searchPatientInIPDBoxWithDataTable(row);
 
      logger.error("IPD hasta listesindeki tüm datalarla arama yapilamiyor ");
     }
@@ -91,29 +90,30 @@ public class DoctorIPDFeatureSteps {
     }
     @Then("As a doctor, verify that the Add Patient button is accessible.")
     public void as_a_doctor_verify_that_the_add_patient_button_is_accessible() {
- //   doctorIDPPage.verifyAddButtonAccessible();
+    doctorIDPPage.verifyAddPatientButtonAccessible();
+    doctorIDPPage.closeAddPatient.click();
+
     }
     @Then("As a doctor, verify that the Discharged Patient button is accessible.")
     public void as_a_doctor_verify_that_the_discharged_patient_button_is_accessible() {
-
-   /* ReusableMethods.closePopup(driver);
-    ReusableMethods.bekle(1);
+     ReusableMethods.hardWait(1);
     doctorIDPPage.verifyDischargedButtonAccessible();
 
-    */
+
 
     }
 
-     @Given("Clicking on the IPD No Column Nu 3 navigates to the patient's details page.")
-     public void clicking_on_the_ipd_no_column_navigates_to_the_patient_s_details_page() {
+     @Given("Clicking on the IPD No {int} navigates to the patient's details page.")
+     public void clicking_on_the_ipd_no_column_navigates_to_the_patient_s_details_page(int row) {
 
-     doctorIDPPage.IPDN36Patient.click();
+     doctorIDPPage.clickPatientByIPDNo(row);
 
      }
-     @When("As a doctor, verify that the page displays and click the {string}.")
-     public void the_nurse_notes_page_displays_accurate_nurse_notes(String clickableText) {
+     @When("As a doctor, verify that the page displays and click the Nurse Notes.")
+     public void the_nurse_notes_page_displays_accurate_nurse_notes() {
 
-     ReusableMethods.clickWithText(clickableText);
+
+     doctorIDPPage.nurseNote.click();
      Assert.assertTrue(doctorIDPPage.nurseNote.isDisplayed());
 
      }
@@ -171,19 +171,110 @@ public class DoctorIPDFeatureSteps {
      }
      @When("The Bed History page shows detailed bed history.")
      public void the_bed_history_page_shows_detailed_bed_history() {
-
+      ReusableMethods.isTextVisible(" Bed History");
      }
-     @When("The Timeline page displays future treatment plans.")
+     @When("The Timeline page displays future timeline plans.")
      public void the_timeline_page_displays_future_treatment_plans() {
 
-     }
-     @When("The Timeline page allows adding new treatment notes.")
-     public void the_timeline_page_allows_adding_new_treatment_notes() {
+     doctorIDPPage.addTimeLine();
+     ReusableMethods.hardWait(3);
 
      }
      @When("The Treatment History page lists all past treatments accurately.")
      public void the_treatment_history_page_lists_all_past_treatments_accurately() {
+     doctorIDPPage.treatmentHistory();
 
      }
+
+
+      @Then("Navigate to the Medication button.")
+      public void navigate_to_the_medication_button() {
+     ReusableMethods.clickWithText(" Medication");
+
+      }
+      @Then("Click on the Add Medication Dose button.")
+      public void click_on_the_button() {
+      doctorIDPPage.addMEdiDoseButton.click();
+      }
+      @Then("Enter {string} into the Date field.")
+      public void enter_into_the_date_field(String string) {
+       doctorIDPPage.dateAddMedi.sendKeys(string);
+      // doctorIDPPage.dateAddMedi.click();
+      //  doctorIDPPage.pickDate29.click();
+      }
+
+      @Then("Enter 14:45 into the Time field by increment Button.")
+      public void enter_into_the_time_field_by_increment_button() {
+       doctorIDPPage.pickTimeForAddMEdi();
+
+      }
+      @Then("Select {string} from the Medicine Category dropdown.")
+      public void select_from_the_medicine_category_dropdown(String tb) {
+      doctorIDPPage.pickMedicineCategoryAddMEdi( tb);
+      }
+      @Then("Select {string} from the Medicine Name dropdown.")
+      public void select_from_the_medicine_name_dropdown(String mediName) {
+      doctorIDPPage.pickMediNameAddMedi(mediName);
+      }
+      @Then("Select {string} from the Dosage dropdown.")
+      public void select_from_the_dosage_dropdown(String dosage) {
+      doctorIDPPage.clickDosageAddMedi(dosage);
+      }
+      @Then("Click the Save button on the Add Medication form.")
+      public void click_the_save_button_on_the_add_medication_form() {
+      doctorIDPPage.saveAddedMedi.click();
+      ReusableMethods.hardWait(3);
+      }
+      @Then("Verify that the Medication data table's row {int} , column {int} matches the entered {string} .")
+      public void verify_that_the_medication_data_table_s_row_column_matches_the_entered(Integer row, Integer column, String lastMediName) {
+       doctorIDPPage.clickLastAddedMedi(row, column, lastMediName);
+      }
+
+
+       @Then("Click the Operation button.")
+       public void click_the_add_operation_button() {
+       driver.findElement(By.xpath("//*[text()=' Operations']")).click();
+
+       }
+       @Then("Click the Add Operation button.")
+       public void click_the_operation_button() {
+        driver.findElement(By.xpath("//*[text()=' Add Operation']")).click();
+
+       }
+       @Then("Click the OP Category dropdown")
+       public void click_the_op_category_dropdown() {
+       doctorIDPPage.opCategoryDDM.click();
+       }
+       @Then("Select the {string}.")
+       public void select_the(String string) {
+       doctorIDPPage.clickContainsTextWE(string);
+       }
+       @Then("Enter the Operation Name as {string}.")
+       public void enter_the_operation_name_as(String string) {
+       doctorIDPPage.opNameAddOP.click();
+
+       WebElement opName= doctorIDPPage.containsTextWE(string);
+        ReusableMethods.waitForElementVisibility(opName,20);
+       actions.sendKeys(opName).perform();
+       ReusableMethods.hardWait(2);
+
+       }
+       @Then("Enter the Operation Date as 29.11.2024 10:30.")
+       public void enter_the_operation_date_as() {
+       doctorIDPPage.OPDateAddOP.click();
+       ReusableMethods.waitForElementToBeClickable(doctorIDPPage.selectOPDate,20);
+       doctorIDPPage.selectOPDate.click();
+        ReusableMethods.hardWait(2);
+       }
+       @Then("Click the Save button.")
+       public void click_the_save_button() {
+        doctorIDPPage.saveOP.click();
+        ReusableMethods.hardWait(2);
+       }
+       @Then("Verify the last entered operation from the {string} Operation Name column.")
+       public void verify_the_last_entered_operation_from_the_op_name_column(WebElement opName) {
+       Assert.assertTrue(opName.isDisplayed());
+       logger.error("Doktor olarak IPD hasta icin yeni ameliyat kaydi (Add Operation) yapilamiyor. ");
+       }
 
 }

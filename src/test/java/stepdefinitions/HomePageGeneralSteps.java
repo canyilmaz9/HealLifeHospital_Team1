@@ -589,7 +589,7 @@ public class HomePageGeneralSteps {
         homePageGeneralPage.addAppointment.click();
         Thread.sleep(2000);
         homePageGeneralPage.date.click();
-        homePageGeneralPage.day30.click();
+        homePageGeneralPage.day29.click();
         Select select=new Select(homePageGeneralPage.specialist);
         select.selectByValue("1");
         homePageGeneralPage.Doctor.click();
