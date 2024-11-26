@@ -7,8 +7,10 @@ import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.DoctorIDPPage;
 import utilities.ReusableMethods;
@@ -206,9 +208,9 @@ public class DoctorIPDFeatureSteps {
        doctorIDPPage.pickTimeForAddMEdi();
 
       }
-      @Then("Select tablet from the Medicine Category dropdown.")
-      public void select_from_the_medicine_category_dropdown() {
-      doctorIDPPage.pickMedicineCategoryAddMEdi( );
+      @Then("Select {string} from the Medicine Category dropdown.")
+      public void select_from_the_medicine_category_dropdown(String tb) {
+      doctorIDPPage.pickMedicineCategoryAddMEdi( tb);
       }
       @Then("Select {string} from the Medicine Name dropdown.")
       public void select_from_the_medicine_name_dropdown(String mediName) {
@@ -228,5 +230,51 @@ public class DoctorIPDFeatureSteps {
        doctorIDPPage.clickLastAddedMedi(row, column, lastMediName);
       }
 
+
+       @Then("Click the Operation button.")
+       public void click_the_add_operation_button() {
+       driver.findElement(By.xpath("//*[text()=' Operations']")).click();
+
+       }
+       @Then("Click the Add Operation button.")
+       public void click_the_operation_button() {
+        driver.findElement(By.xpath("//*[text()=' Add Operation']")).click();
+
+       }
+       @Then("Click the OP Category dropdown")
+       public void click_the_op_category_dropdown() {
+       doctorIDPPage.opCategoryDDM.click();
+       }
+       @Then("Select the {string}.")
+       public void select_the(String string) {
+       doctorIDPPage.clickContainsTextWE(string);
+       }
+       @Then("Enter the Operation Name as {string}.")
+       public void enter_the_operation_name_as(String string) {
+       doctorIDPPage.opNameAddOP.click();
+
+       WebElement opName= doctorIDPPage.containsTextWE(string);
+        ReusableMethods.waitForElementVisibility(opName,20);
+       actions.sendKeys(opName).perform();
+       ReusableMethods.hardWait(2);
+
+       }
+       @Then("Enter the Operation Date as 29.11.2024 10:30.")
+       public void enter_the_operation_date_as() {
+       doctorIDPPage.OPDateAddOP.click();
+       ReusableMethods.waitForElementToBeClickable(doctorIDPPage.selectOPDate,20);
+       doctorIDPPage.selectOPDate.click();
+        ReusableMethods.hardWait(2);
+       }
+       @Then("Click the Save button.")
+       public void click_the_save_button() {
+        doctorIDPPage.saveOP.click();
+        ReusableMethods.hardWait(2);
+       }
+       @Then("Verify the last entered operation from the {string} Operation Name column.")
+       public void verify_the_last_entered_operation_from_the_op_name_column(WebElement opName) {
+       Assert.assertTrue(opName.isDisplayed());
+       logger.error("Doktor olarak IPD hasta icin yeni ameliyat kaydi (Add Operation) yapilamiyor. ");
+       }
 
 }
