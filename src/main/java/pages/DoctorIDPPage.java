@@ -298,10 +298,24 @@ public class DoctorIDPPage extends BasePage {
     public WebElement bedGroupAddPAt; //select value 2 -> private Ward
     @FindBy(xpath = "//span[@id='select2-bed_no-container']")
     public WebElement bedNumberAddPAt;
-    @FindBy(xpath = "//li[contains(text(), '151')]")
+    @FindBy(xpath = "//li[contains(text(), '150')]")
     public WebElement option151BedNumAddPAt;
     @FindBy(xpath = "//button[@id='formaddbtn']")
     public WebElement saveAddPAt2;
+
+    @FindBy(xpath = "(//span[@class='select2-selection select2-selection--single'])[1]")
+    public WebElement addOldPatientDDM;
+    @FindBy(xpath = "(//input[@name='height'])[1]")
+    public WebElement heightBox;
+    @FindBy(xpath = "//input[@class='form-control filterinput']")
+    public WebElement symptomsTitleAddPat;
+
+    @FindBy(xpath = "//input[@name='symptoms_title']")
+    public WebElement symptomTitleCheckBoxAddPAt;
+
+    @FindBy(xpath = "//li[contains(text(),'Emily Houston (192)')]")
+    public WebElement addedPAtIDText;
+
 
 
 
