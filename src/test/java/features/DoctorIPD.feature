@@ -105,11 +105,9 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
     * Add a new element to the timeline that the patient cannot see using the "Add Timeline" button,and verify that the last added element is visible on the doctor's timeline.
 
 
-  @ac
+
 Scenario: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
     * As a doctor, verify that the Add Patient button is accessible.
-
-
     * Click on the New Patient button.
     * Click on the Name box.
     * Enter "Emily Houston" in the Name box.
@@ -129,6 +127,29 @@ Scenario: (US_053_US03_TC01) Verify that the doctor can admit a new patient to a
     * Click on the Save button.
     * Verify that the Patient Added Successfully message is displayed.
     * Verify that the data in row 1, column 3 of the IPD Patient table equals the name of the last registered patient.
+
+  @ac
+  Scenario:[US_053_03>TC_02] Verify that the doctor can admit an existing registered patient in the system.
+    * As a doctor, verify that the Add Patient button is accessible.
+    * Click on the dropdown menu in the pop-up page.
+    * Enter Patient ID as "192" in the dropdown menu.
+    * Click on the Height box.
+    * Enter "180" in the Height box,"90" in the Weight box, "120-70" in the Blood Pressure box,"72" in the Pulse box,"36" in the Temperature box,"22" in the Respiration box.
+    * Enter Cramps and injuries in the Symptoms Title field.
+    * Click on the Admission Date box.
+    * Enter today's date in the Admission Date box.
+    * Verify that the Credit Limit box text is not null.
+    * Verify that the Consultant Doctor box text is not null.
+    * Click on the Bed Group box.
+    * Select "2" as the patient private ward in the Bed Group box.
+    * Click on the Bed Number box.
+    * Select 151 as the bed number.
+    * Click on the Save button.
+    * Verify that the Patient Added Successfully message is displayed.
+    * Verify that the data in row 1, column 3 of the IPD Patient table equals the name of the last registered patient.
+
+
+
 
 
 

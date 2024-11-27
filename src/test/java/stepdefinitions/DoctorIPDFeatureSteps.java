@@ -486,6 +486,43 @@ public class DoctorIPDFeatureSteps {
         }
 
 
+    @Then("Click on the dropdown menu in the pop-up page.")
+    public void click_on_the_dropdown_menu_in_the_pop_up_page() {
+        ReusableMethods.waitForElementVisibility(doctorIDPPage.addOldPatientDDM,20);
+        doctorIDPPage.addOldPatientDDM.click();
+        ReusableMethods.hardWait(2);
+    }
+    @Then("Enter Patient ID as {string} in the dropdown menu.")
+    public void enter_patient_id_as_in_the_dropdown_menu(String string) {
+        ReusableMethods.waitForElementToBeClickable(doctorIDPPage.addOldPatientDDM,20);
+        actions.click(doctorIDPPage.addOldPatientDDM).perform();
+         actions.sendKeys(doctorIDPPage.addOldPatientDDM,string).perform();
+          ReusableMethods.waitForElementVisibility(doctorIDPPage.addedPAtIDText,20);
+          actions.click(doctorIDPPage.addedPAtIDText).perform();
+    }
+    @Then("Click on the Height box.")
+    public void click_on_the_height_box() {
+        ReusableMethods.waitForElementVisibility(doctorIDPPage.heightBox,20);
+            doctorIDPPage.heightBox.click();
+            ReusableMethods.hardWait(5);
+    }
+    @Then("Enter {string} in the Height box,{string} in the Weight box, {string} in the Blood Pressure box,{string} in the Pulse box,{string} in the Temperature box,{string} in the Respiration box.")
+    public void enter_in_the_height_box(String string1, String string2, String string3, String string4,String string5,String string6) {
+            actions.click(doctorIDPPage.heightBox).sendKeys(string1).sendKeys(Keys.TAB).sendKeys(string2).sendKeys(Keys.TAB)
+                    .sendKeys(string3).sendKeys(Keys.TAB).sendKeys(string4).sendKeys(Keys.TAB).sendKeys(string5).sendKeys(Keys.TAB)
+                    .sendKeys(string6).sendKeys(Keys.TAB).sendKeys(Keys.ENTER).sendKeys(Keys.DOWN).sendKeys(Keys.DOWN).sendKeys(Keys.DOWN)
+                    .sendKeys(Keys.ENTER).sendKeys(Keys.TAB).perform();
+    }
+
+    @Then("Enter Cramps and injuries in the Symptoms Title field.")
+    public void enter_in_the_symptoms_title_field() {
+        ReusableMethods.waitForElementVisibility(doctorIDPPage.symptomsTitleAddPat,20);
+            doctorIDPPage.symptomsTitleAddPat.click();
+            ReusableMethods.hardWait(5);
+            ReusableMethods.waitForElementVisibility(doctorIDPPage.symptomTitleCheckBoxAddPAt,20);
+            actions.click(doctorIDPPage.symptomTitleCheckBoxAddPAt).perform();
+    }
+
 
 
 
