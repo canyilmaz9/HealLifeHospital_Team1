@@ -22,9 +22,8 @@ Feature:Doctor Panel Tests
     Given Display the forget password link on the login page
     When Click on the link and verify that forget password page opens
     Then Enter an valid e-mail address in the textbox and reset password and verify that an email is sent
-    And Return to the login page
     And Display the admin login link on the forget password page
-    And Click on the link and verify that admin login page opens
+    And Click on the link and return to the admin login page
 
 
 
