@@ -92,15 +92,7 @@ public class AdminDashboardSteps {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
+    @Given("Display the title of Dashboard on the admin panel")
+    public void displayTheTitleOfDashboardOnTheAdminPanel() {
+    }
 }

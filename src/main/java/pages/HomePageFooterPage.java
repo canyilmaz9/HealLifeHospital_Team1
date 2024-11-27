@@ -15,7 +15,6 @@ public class HomePageFooterPage extends BasePage{
 
 
     @FindBy(xpath = "//*[@class='complain']/a")
-    //@FindBy(xpath ="//*[@class='complain']" )
     public WebElement complainTitleLink;
 
     @FindBy(xpath = "//*[@class='fa fa-pencil-square']")
