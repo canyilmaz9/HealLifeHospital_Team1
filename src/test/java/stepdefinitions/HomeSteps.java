@@ -8,6 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
 import config.ConfigReader;
@@ -248,7 +249,32 @@ public class HomeSteps {
 
     }
 
+    @Then("kullanici gallery butununa tiklar")
+    public void kullanici_gallery_butununa_tiklar() {
 
-//  denemeler
+        homePage.homepagegallery.click();
+    }
+    @Then("gallery sayfasinda hastane resimlerinin oldugunu dogrular")
+    public void gallery_sayfasinda_hastane_resimlerinin_oldugunu_dogrular() {
+
+        Assertions.assertTrue(homePage.homepagegalleryimg.isDisplayed());
+    }
+
+
+    @When("gallery sayfasindaki herhangi bir resmin uzerine gelerek ortasindaki mercek kismina tıklar ve resmin sayfada buyudugunu gorur")
+    public void gallery_sayfasindaki_herhangi_bir_resmin_uzerine_gelerek_ortasindaki_mercek_kismina_tıklar_ve_resmin_sayfada_buyudugunu_gorur() {
+
+
+        homePage.homapagegalleryHealtWelnes.click();
+        ReusableMethods.bekle(1);
+        homePage.homepegegalleryimgbuyutec.click();
+
+    }
+    @Then("buyuyen resmin sag ok kismini tiklayarak slider in oldugunu görür ve bir sonraki resme gectigini dogrular")
+    public void buyuyen_resmin_sag_ok_kismini_tiklayarak_slider_in_oldugunu_görür_ve_bir_sonraki_resme_gectigini_dogrular() {
+
+    }
+
+
 
 }
