@@ -1,5 +1,5 @@
 Feature: Admin Appointment Page
-  @appointments
+
   Scenario: US_034_TC_001
     Given Admin, Admin Login sayfasinda
     Then Onceden belirlenmis admin bilgileri ile sisteme giris yapar

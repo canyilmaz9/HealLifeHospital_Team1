@@ -70,3 +70,11 @@ Feature: Login Functionality
               When kullanici sayfanin body bolumunda top 10 findings grafigini gordugunu dogrular
               And kullanici sayfanin body bolumunde top 10 Symptoms grafiğini gorur
 
+
+
+  @language
+  Scenario: US_016> TC_001 Dashboard navbar'ındaki heallifehospital logosuna tıklandığında anasayfasına yönlendirmeli ve bayrak simgesine tıklandığında panelin dilini değiştirebilmesi
+    Given kullanici anasayfada
+    And Hasta girisini yapar
+    And Dashboard navbar'indaki HealLifeHospital logosuna tiklar ve tekrar Dashboard's geldigini dogrular
+    Then Dashboard navbar'indaki bayrak simgesine tiklar ve dili degistirir mandarin dilin degistigini dogrular

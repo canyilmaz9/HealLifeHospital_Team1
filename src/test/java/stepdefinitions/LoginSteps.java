@@ -39,36 +39,36 @@ public class LoginSteps {
 	public void kullaniciAnasayfada() {
 		driver.get(ConfigReader.getProperty("homePageUrl"));
 		String homePageUrl = ConfigReader.getProperty("homePageUrl");
-		logger.info("Heal Life Hospital ana sayfasına gidildi: " + homePageUrl);
-		Assert.assertEquals(ConfigReader.getProperty("homePageUrl"), driver.getCurrentUrl());
-		logger.info("Heal Life Hospital ana sayfasında oldugu dogrulandi");
+		logger.info("Heal Life Hospital ana sayfasına gidildi: " + homePageUrl );
+		Assert.assertEquals(ConfigReader.getProperty("homePageUrl"),driver.getCurrentUrl());
+		logger.info("Heal Life Hospital ana sayfasında oldugu dogrulandi" );
 	}
 
 	@When("login butonu gorunur ve tiklanabilir oldugu dogrulanir ve tiklanir. tiklandiktan sonra userlogin sayfasinda oldugu dogrulanir")
 	public void loginButonuGorunurVeTiklanabilirOlduguDogrulanirVeTiklanirTiklandiktanSonraUserloginSayfasindaOlduguDogrulanir() {
 		Assert.assertTrue(loginPage.homePageLoginButton.isDisplayed());
-		logger.info("Ana sayfada login butonu goruntulendi");
+		logger.info("Ana sayfada login butonu goruntulendi" );
 		Assert.assertTrue(loginPage.homePageLoginButton.isEnabled());
-		logger.info("Ana sayfada login butonu tiklanabilirligi dogrulandi");
+		logger.info("Ana sayfada login butonu tiklanabilirligi dogrulandi" );
 		loginPage.homePageLoginButton.click();
-		logger.info("Ana sayfada login butonu tiklandi");
+		logger.info("Ana sayfada login butonu tiklandi" );
 		String loginPageUrl = ConfigReader.getProperty("loginPageUrl");
-		Assert.assertEquals(ConfigReader.getProperty("loginPageUrl"), loginPageUrl);
-		logger.info("Login page sayfasına gidildigi dogrulandi: " + loginPageUrl);
+		Assert.assertEquals(ConfigReader.getProperty("loginPageUrl"),loginPageUrl);
+		logger.info("Login page sayfasına gidildigi dogrulandi: " + loginPageUrl );
 	}
 
 	@And("user login sayfasinda sagda login penceresi solda latest new bilgileri bulunur")
 	public void userLoginSayfasindaSagdaLoginPenceresiSoldaLatestNewBilgileriBulunur() {
 		loginPage.loginPageBoxes();
-		logger.info("user login sayfasinda sagda login penceresi solda latest new bilgileri bulundu");
+		logger.info("user login sayfasinda sagda login penceresi solda latest new bilgileri bulundu" );
 	}
 
 	@Then("user login sayfasinda \\(sisteme daha önceden kayitli) bilgiler girilerek dashboard panele login olunur.")
 	public void userLoginSayfasindaSistemeDahaÖncedenKayitliBilgilerGirilerekDashboardPaneleLoginOlunur() {
-		loginPage.setLogin(ConfigReader.getProperty("patientUsername"), ConfigReader.getProperty("patientPassword"));
+		loginPage.setLogin(ConfigReader.getProperty("patientUsername"),ConfigReader.getProperty("patientPassword"));
 
-		String patientDashboardUrl = ConfigReader.getProperty("patientDashboardUrl");
-		Assert.assertEquals(patientDashboardUrl, driver.getCurrentUrl());
+		String patientDashboardUrl=ConfigReader.getProperty("patientDashboardUrl");
+		Assert.assertEquals(patientDashboardUrl,driver.getCurrentUrl());
 		ReusableMethods.bekle(2);
 
 
@@ -76,7 +76,7 @@ public class LoginSteps {
 
 	@And("username kutusuna dogru email, password kutusuna yanlis sifre girilerek sign in butonuna tiklanir.")
 	public void usernameKutusunaDogruEmailPasswordKutusunaYanlisSifreGirilerekSignInButonunaTiklanir() {
-		loginPage.setLogin(ConfigReader.getProperty("patientUsername"), "yanlisSifre");
+		loginPage.setLogin(ConfigReader.getProperty("patientUsername"),"yanlisSifre");
 	}
 
 	@Then("Kullanicinin giris yapamadigi dogrulanir")
@@ -86,25 +86,25 @@ public class LoginSteps {
 
 	@And("username kutusuna yanlis email, password kutusuna dogru sifre girilerek sign in butonuna tiklanir.")
 	public void usernameKutusunaYanlisEmailPasswordKutusunaDogruSifreGirilerekSignInButonunaTiklanir() {
-		loginPage.setLogin("yanlisKullaniciadi", ConfigReader.getProperty("patientPassword"));
+		loginPage.setLogin("yanlisKullaniciadi",ConfigReader.getProperty("patientPassword"));
 	}
 
 
 	@And("username kutusuna yanlis email, password kutusuna yanlis sifre girilerek sign in butonuna tiklanir.")
 	public void usernameKutusunaYanlisEmailPasswordKutusunaYanlisSifreGirilerekSignInButonunaTiklanir() {
-		loginPage.setLogin("yanlisKullaniciadi", "yanlisSifre");
+		loginPage.setLogin("yanlisKullaniciadi","yanlisSifre");
 
 	}
 
 	@Then("User Login sayfasinda forget password linki bulunmali ve bu linke tiklaninca ufpassword sayfasina yönlendirmeli.")
 	public void userLoginSayfasindaForgetPasswordLinkiBulunmaliVeBuLinkeTiklanincaSayfasinaYönlendirmeli() {
 		loginPage.forgotPasswordBox.isDisplayed();
-		logger.info("user login sayfasinda Forgot Password butonu goruntulendi");
+		logger.info("user login sayfasinda Forgot Password butonu goruntulendi" );
 		loginPage.forgotPasswordBox.click();
-		logger.info("Forgot Password butonu tiklandi");
+		logger.info("Forgot Password butonu tiklandi" );
 		String exceptedUrl = "https://qa.heallifehospital.com/site/ufpassword";
-		Assert.assertEquals(exceptedUrl, driver.getCurrentUrl());
-		logger.info("ufpassword sayfasina yönlendirildigi dogrulandi");
+		Assert.assertEquals(exceptedUrl,driver.getCurrentUrl());
+		logger.info("ufpassword sayfasina yönlendirildigi dogrulandi" );
 	}
 
 	@And("Forgot password sayfasinda parola sifirlama islemi icin ilgili textBox'a mail adresi girilebilmeli")
@@ -216,6 +216,34 @@ public class LoginSteps {
 	Assert.assertTrue(loginPage.DashboardOPD.isDisplayed());
 
 	}
+
+	@And("Hasta girisini yapar")
+	public void hastaGirisiniYapar() {
+		loginPage.homePageLoginButton.click();
+		loginPage.setLogin("pat121","3odixh");
+	}
+
+	@And("Dashboard navbar'indaki HealLifeHospital logosuna tiklar ve tekrar Dashboard's geldigini dogrular")
+	public void dashboardNavbarIndakiHealLifeHospitalLogosunaTiklarVeTekrarDashboardSGeldiginiDogrular() {
+		loginPage.dashboardLogo.click();
+		String currentUrl = driver.getCurrentUrl();
+		String expectedUrl = "https://qa.heallifehospital.com/patient/dashboard";
+		Assert.assertEquals(expectedUrl, currentUrl);
+
+	}
+
+	@Then("Dashboard navbar'indaki bayrak simgesine tiklar ve dili degistirir mandarin dilin degistigini dogrular")
+	public void dashboardNavbarIndakiBayrakSimgesineTiklarVeDiliDegistirirMandarinDilinDegistiginiDogrular() {
+		String usAmbulance = loginPage.ambulance.getText();
+		loginPage.languageSwitcherButton.click();
+		loginPage.trLanguage.click();
+		String trAmbulans = loginPage.ambulans.getText();
+		Assert.assertEquals(trAmbulans,usAmbulance);
+
+
+	}
+
+}
 
 
 	@Then("kullanici sayfayi body bolumune gelir")

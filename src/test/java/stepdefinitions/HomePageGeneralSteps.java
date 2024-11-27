@@ -13,12 +13,17 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.HomePageGeneralPage;
 import utilities.ReusableMethods;
 
 import javax.sound.midi.Soundbank;
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.security.Key;
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 
@@ -594,33 +599,67 @@ public class HomePageGeneralSteps {
         select.selectByValue("1");
         homePageGeneralPage.Doctor.click();
         Select select1=new Select(homePageGeneralPage.Doctor);
-        select1.selectByValue("775");
+        select1.selectByValue("792");
         Select select2=new Select(homePageGeneralPage.shift);
         select2.selectByValue("1");
         Select select3=new Select(homePageGeneralPage.slot);
-        select3.selectByValue("40");
+        select3.selectByValue("132");
         Thread.sleep(3000);
         homePageGeneralPage.messageToDoctor.sendKeys("hello, I will be there");
         homePageGeneralPage.availableSlots.click();
         homePageGeneralPage.appointmentSave.click();
 
-        Thread.sleep(2000);
-        homePageGeneralPage.pay.click();
-        homePageGeneralPage.paywithCard.click();
-        homePageGeneralPage.payEmail.sendKeys("rananurulker@gmail.com");
-        homePageGeneralPage.payCardNumber.sendKeys("4242 4242 4242 4242");
-        homePageGeneralPage.payCardMonthYear.sendKeys("122025");
-        homePageGeneralPage.payCardCVC.sendKeys("456");
-        homePageGeneralPage.zipCode.sendKeys("34567");
-        homePageGeneralPage.payButtoninCard.click();
-        homePageGeneralPage.goToHomeButton.click();
-
 
 
     }
 
-    @Then("Click on show, pay and delete")
-    public void click_on_show_pay_and_delete() {
+    @Then("Click on show, pay")
+    public void click_on_show_pay_and_delete() throws InterruptedException {
+        Thread.sleep(2000);
+        homePageGeneralPage.pay.click();
+        homePageGeneralPage.paywithCard.click();
+        WebElement anIframeElement=driver.findElement(By.xpath("/html/body/iframe"));
+        driver.switchTo().frame(anIframeElement);
+        homePageGeneralPage.payEmail.sendKeys("rananurulker@gmail.com");
+        Thread.sleep(2000);
+        homePageGeneralPage.payCardNumber.click();
+       //try {
+       //    Robot robot = new Robot();
+       //
+       //    Thread.sleep(3000);
+
+       //
+       //    int[] sequence = {KeyEvent.VK_4, KeyEvent.VK_2, KeyEvent.VK_4, KeyEvent.VK_2, KeyEvent.VK_4, KeyEvent.VK_2, KeyEvent.VK_4, KeyEvent.VK_2, KeyEvent.VK_4, KeyEvent.VK_2, KeyEvent.VK_4, KeyEvent.VK_2, KeyEvent.VK_4, KeyEvent.VK_2, KeyEvent.VK_4, KeyEvent.VK_2};
+
+       //    for (int key : sequence) {
+       //        robot.keyPress(key);   // Press the key
+       //        robot.keyRelease(key); // Release the key
+       //        Thread.sleep(100);     // Add a small delay between key presses for realism
+       //    }
+
+       //} catch (Exception e) {
+       //    e.printStackTrace();
+       //}
+        ReusableMethods.waitForElementVisibility(homePageGeneralPage.payCardNumber,20);
+        homePageGeneralPage.payCardNumber.sendKeys("4242");
+        homePageGeneralPage.payCardNumber.sendKeys("4242");
+        homePageGeneralPage.payCardNumber.sendKeys("4242");
+        homePageGeneralPage.payCardNumber.sendKeys("4242");
+        //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        //wait.until(ExpectedConditions.textToBePresentInElement(homePageGeneralPage.payCardNumber,"4242424242424242"));
+        ReusableMethods.waitForElementVisibility(homePageGeneralPage.payCardMonthYear,20);
+        homePageGeneralPage.payCardMonthYear.click();
+        homePageGeneralPage.payCardMonthYear.sendKeys("12");
+        homePageGeneralPage.payCardMonthYear.sendKeys("25");
+        Thread.sleep(2000);
+        homePageGeneralPage.payCardCVC.click();
+        homePageGeneralPage.payCardCVC.sendKeys("456");
+        Thread.sleep(2000);
+        homePageGeneralPage.zipCode.click();
+        homePageGeneralPage.zipCode.sendKeys("34567");
+        Thread.sleep(2000);
+        homePageGeneralPage.payButtoninCard.click();
+        homePageGeneralPage.goToHomeButton.click();
 
     }
 
@@ -636,5 +675,8 @@ public class HomePageGeneralSteps {
     }
 
 
+    @Then("Click on delete")
+    public void clickOnDelete() {
 
+    }
 }

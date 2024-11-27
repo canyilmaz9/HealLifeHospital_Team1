@@ -174,8 +174,16 @@ Scenario: US_019>TC_006 Visits sayfasinda Visits List'te (OPD No, Case ID, Appoi
     | Password        |
 
     Then Make a new appointment
-    Then Click on show, pay and delete
+    Then Click on show, pay
     Then Search in appointments
+
+    Scenario: US_018>TC003
+      Given Kullanici Anasayfa adresine gider
+      When Patient clicks the login button
+      And Patient logins to patient dashboard
+      Then Patient clicks to my appointments
+      Then Make a new appointment
+      Then Click on delete
 
 
   Scenario: US_018>TC002 Checking appointments in appointment page

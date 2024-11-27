@@ -7,23 +7,27 @@ import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import pages.DoctorIDPPage;
 import utilities.ReusableMethods;
+import utils.ExcelDataReader_Seren;
+import utils.JSUtilities;
+
+import javax.print.Doc;
 
 
 public class DoctorIPDFeatureSteps {
 
-    private static final Logger logger = LogManager.getLogger(DoctorIPDFeatureSteps.class);
 
    static WebDriver driver = Hooks.getDriver();
    static Actions actions = new Actions(driver);
     DoctorIDPPage doctorIDPPage=new DoctorIDPPage(driver);
 
+
+   static ExcelDataReader_Seren excelDataReaderSeren=new ExcelDataReader_Seren(ConfigReader.getProperty("IPDPatient"),"Sheet1");
+ private static final Logger logger = LogManager.getLogger(DoctorIPDFeatureSteps.class);
 
     @Given("Enters the {string}")
     public void enters_the(String url) {
@@ -91,11 +95,13 @@ public class DoctorIPDFeatureSteps {
     @Then("As a doctor, verify that the Add Patient button is accessible.")
     public void as_a_doctor_verify_that_the_add_patient_button_is_accessible() {
     doctorIDPPage.verifyAddPatientButtonAccessible();
-    doctorIDPPage.closeAddPatient.click();
+
 
     }
     @Then("As a doctor, verify that the Discharged Patient button is accessible.")
     public void as_a_doctor_verify_that_the_discharged_patient_button_is_accessible() {
+     doctorIDPPage.closeAddPatient.click();
+
      ReusableMethods.hardWait(1);
     doctorIDPPage.verifyDischargedButtonAccessible();
 
@@ -175,9 +181,8 @@ public class DoctorIPDFeatureSteps {
      }
      @When("The Timeline page displays future timeline plans.")
      public void the_timeline_page_displays_future_treatment_plans() {
-
-     doctorIDPPage.addTimeLine();
-     ReusableMethods.hardWait(3);
+     utils.ReusableMethods.clickWithText(" Timeline");
+     Assert.assertTrue(doctorIDPPage.addTimelineButton.isDisplayed());
 
      }
      @When("The Treatment History page lists all past treatments accurately.")
@@ -276,5 +281,250 @@ public class DoctorIPDFeatureSteps {
        Assert.assertTrue(opName.isDisplayed());
        logger.error("Doktor olarak IPD hasta icin yeni ameliyat kaydi (Add Operation) yapilamiyor. ");
        }
+
+       @Then("The user clicks the Add Nurse Note button as a doctor.")
+       public void the_user_clicks_the_add_nurse_note_button_as_a_doctor() {
+        ReusableMethods.clickWithText(" Add Nurse Note");
+       }
+       @Then("The Nurse box is not clickable.")
+       public void the_nurse_box_is_not_clickable() {
+        try {
+
+         doctorIDPPage.nurseNoteBox.sendKeys("Test Input");
+         Assert.fail("Test Failed: The Nurse box should not be writable, but it is writable.");
+        } catch (InvalidElementStateException e) {
+
+        } catch (NoSuchElementException e) {
+
+        }
+
+       }
+
+       @Then("The user closes the opened pop-up page.")
+       public void the_user_closes_the_opened_pop_up_page() {
+       doctorIDPPage.closeNurseNotPopUp.click();
+       }
+       @Then("The user verifies the visibility of the most recently added note in the Nurse Notes list.")
+       public void the_user_verifies_the_visibility_of_the_most_recently_added_note_in_the_nurse_notes_list() {
+       Assert.assertTrue( doctorIDPPage.nurseNotesNoteText.isDisplayed());
+
+       }
+
+       @Then("Click on the Excel File Download button.")
+       public void click_on_the_excel_file_download_button() {
+     ReusableMethods.waitForElementToBeClickable(doctorIDPPage.excelFileUploadButton,20);
+        doctorIDPPage.excelFileUploadButton.click();
+        ReusableMethods.hardWait(3);
+       }
+       @Then("Verify that the Excel file containing the patient list is downloaded successfully.")
+       public void verify_that_the_excel_file_containing_the_patient_list_is_downloaded_successfully() {
+        doctorIDPPage.isExcelFileDownloaded(ConfigReader.getProperty("IPDPatient"));
+       }
+       @Then("Verify that the first patient name in the downloaded Excel file equals the first patient name displayed in the IPD Patient List.")
+       public void verify_that_the_first_patient_name_in_the_downloaded_excel_file_equals_the_first_patient_name_displayed_in_the_ipd_patient_list() {
+
+       Assert.assertEquals(excelDataReaderSeren.getCellData(2,2),doctorIDPPage.patientDataFromIPDList(1,3).getText());
+
+       }
+
+
+        @Then("Click on Add Prescription.")
+        public void click_on_add_prescription() {
+        doctorIDPPage.addPrescriptionButton.click();
+        }
+        @Then("Select Doctor Name from the Prescribe By dropdown menu.")
+        public void select_from_the_prescribe_by_dropdown_menu() {
+
+         ReusableMethods.waitForElementVisibility(doctorIDPPage.prescriptByBox,20);
+         doctorIDPPage.prescriptByBox.click();
+          ReusableMethods.waitForElementVisibility(doctorIDPPage.containsTextWE("1021"),20);
+          doctorIDPPage.clickContainsTextWE("1021");
+        }
+        @Then("Select {string} from the Pathology dropdown menu.")
+        public void select_from_the_pathology_dropdown_menu(String string) {
+        doctorIDPPage.pathologyDDM.click();
+        ReusableMethods.waitForElementVisibility(doctorIDPPage.containsTextWE(string),20);
+        doctorIDPPage.clickContainsTextWE(string);
+
+        }
+        @Then("Select MRI from the Radiology dropdown menu.")
+        public void select_from_the_radiology_dropdown_menu() {
+
+         doctorIDPPage.radiologyDDM.click();
+
+         doctorIDPPage.MRIOption.click();
+         doctorIDPPage.nursePresc.click();
+         ReusableMethods.hardWait(3);
+
+
+        }
+        @Then("Click the Pathologist and Radiologist radio buttons.")
+        public void click_the_and_radio_buttons() {
+        ReusableMethods.waitForElementVisibility(doctorIDPPage.patho,20);
+        doctorIDPPage.patho.click();
+        ReusableMethods.waitForElementVisibility(doctorIDPPage.radio,20);
+        doctorIDPPage.radio.click();
+        ReusableMethods.hardWait(3);
+
+        }
+        @Then("Click the Save button on Prescription Page.")
+        public void click_the_save_button_on_prescription_page() {
+         doctorIDPPage.savePrescription.click();
+         ReusableMethods.hardWait(3);
+        }
+        @Then("Verify that the Prescription number is displayed on the Prescription Page.")
+        public void verify_that_the_prescription_number_is_displayed_on_the_prescription_page() {
+        Assert.assertEquals(doctorIDPPage.lastPrescriptionDate.getText(),doctorIDPPage.getTodayDate("dd.MM.yyyy"));
+         System.out.println(doctorIDPPage.getTodayDate("dd.MM.yyyy"));
+        }
+
+        @Then("Add a new element to the timeline that the patient cannot see using the {string} button,and verify that the last added element is visible on the doctor's timeline.")
+        public void add_a_new_element_to_the_timeline_that_the_patient_cannot_see_using_the_button_and_verify_that_the_last_added_element_is_visible_on_the_doctor_s_timeline(String string) {
+         doctorIDPPage.addTimeLine();
+        }
+
+        @Then("Click on the Name box.")
+        public void click_on_the_name_box() {
+         doctorIDPPage.name.click();
+        }
+        @Then("Click on the New Patient button.")
+        public void click_on_the_new_patient_button() {
+        ReusableMethods.clickWithText("New Patient");
+        }
+        @Then("Enter {string} in the Name box.")
+        public void enter_in_the_name_box(String string) {
+         doctorIDPPage.name.sendKeys(string);
+        }
+        @Then("Click on the Gender button.")
+        public void click_on_the_gender_button() {
+        doctorIDPPage.genderDDM.click();
+        }
+        @Then("Select {string} from the Gender dropdown.")
+        public void select_from_the_gender_dropdown(String string) {
+        ReusableMethods.waitForElementVisibility(doctorIDPPage.femaleGenderNewPat,20);
+        doctorIDPPage.femaleGenderNewPat.click();
+        }
+        @Then("Click on the Date of Birth box.")
+        public void click_on_the_date_of_birth_box() {
+        doctorIDPPage.dateOfBirthAddPAt.click();
+        }
+        @Then("Enter {string} in the Date of Birth box.")
+        public void enter_in_the_date_of_birth_box(String string) {
+
+        doctorIDPPage.dateOfBirthAddPAt.sendKeys(string);
+        }
+        @Then("Click on the Save button on the Add Patient Page.")
+        public void click_on_the_save_button_on_the_add_patient_page() {
+         doctorIDPPage.saveAddPAt.click();
+         Assert.assertTrue(doctorIDPPage.successAddPatMessage.isDisplayed());
+        }
+        @Then("Click on the Admission Date box.")
+        public void click_on_the_admission_date_box() {
+          doctorIDPPage.admissionDateAddPAt.click();
+
+
+        }
+        @Then("Enter today's date in the Admission Date box.")
+        public void enter_today_s_date_in_the_admission_date_box() {
+     ReusableMethods.waitForElementVisibility(doctorIDPPage.admissionDate29AddPAt,20);
+          doctorIDPPage.admissionDate29AddPAt.click();
+
+
+         actions.sendKeys(Keys.TAB).perform();
+          ReusableMethods.hardWait(5);
+         System.out.println("buraya yazdim    "+doctorIDPPage.consultantDocAddPAtText.getText());
+
+
+        }
+        @Then("Verify that the Credit Limit box text is not null.")
+        public void verify_that_the_credit_limit_box_text_is_not_null() {
+            ReusableMethods.waitForElementVisibility(doctorIDPPage.creditLimitAddPat20000,20);
+            Assert.assertTrue(doctorIDPPage.creditLimitAddPat20000.isDisplayed());
+        }
+        @Then("Verify that the Consultant Doctor box text is not null.")
+        public void verify_that_the_consultant_doctor_box_text_is_not_null() {
+         Assert.assertFalse(doctorIDPPage.consultantDocAddPAtText.getText().isEmpty());
+        }
+        @Then("Click on the Bed Group box.")
+        public void click_on_the_bed_group_box() {
+          doctorIDPPage.bedGroupAddPAt.click();
+
+
+        }
+        @Then("Select {string} as the patient private ward in the Bed Group box.")
+        public void select_as_the_patient_ward_private_ward_in_the_bed_group_box(String string) {
+         Select select =new Select(doctorIDPPage.bedGroupAddPAt);
+         select.selectByValue(string);
+         utils.ReusableMethods.hardWait(3);
+        }
+        @Then("Click on the Bed Number box.")
+        public void click_on_the_bed_number_box() {
+     ReusableMethods.waitForElementVisibility(doctorIDPPage.bedNumberAddPAt,20);
+          doctorIDPPage.bedNumberAddPAt.click();
+        }
+        @Then("Select 151 as the bed number.")
+        public void select_as_the_bed_number() {
+     ReusableMethods.waitForElementVisibility(doctorIDPPage.option151BedNumAddPAt,20);
+          doctorIDPPage.option151BedNumAddPAt.click();
+         ReusableMethods.hardWait(3);
+        }
+        @Then("Click on the Save button.")
+        public void click_on_the_save_button() {
+        doctorIDPPage.saveAddPAt2.click();
+        }
+        @Then("Verify that the Patient Added Successfully message is displayed.")
+        public void verify_that_the_patient_added_successfully_message_is_displayed() {
+     ReusableMethods.waitForElementVisibility(doctorIDPPage.successAddPatMessage,20);
+          Assert.assertTrue( doctorIDPPage.successAddPatMessage.isDisplayed());
+        }
+
+
+        @Then("Verify that the data in row {int}, column {int} of the IPD Patient table equals the name of the last registered patient.")
+        public void verify_that_the_data_in_row_column_of_the_ipd_patient_table_equals_the_name_of_the_last_registered_patient(Integer int1, Integer int2) {
+       ReusableMethods.hardWait(3);
+     Assert.assertTrue( doctorIDPPage.TableDataRetriever(1,3).getText().contains("Emily Houston"));
+        }
+
+
+    @Then("Click on the dropdown menu in the pop-up page.")
+    public void click_on_the_dropdown_menu_in_the_pop_up_page() {
+        ReusableMethods.waitForElementVisibility(doctorIDPPage.addOldPatientDDM,20);
+        doctorIDPPage.addOldPatientDDM.click();
+        ReusableMethods.hardWait(2);
+    }
+    @Then("Enter Patient ID as {string} in the dropdown menu.")
+    public void enter_patient_id_as_in_the_dropdown_menu(String string) {
+        ReusableMethods.waitForElementToBeClickable(doctorIDPPage.addOldPatientDDM,20);
+        actions.click(doctorIDPPage.addOldPatientDDM).perform();
+         actions.sendKeys(doctorIDPPage.addOldPatientDDM,string).perform();
+          ReusableMethods.waitForElementVisibility(doctorIDPPage.addedPAtIDText,20);
+          actions.click(doctorIDPPage.addedPAtIDText).perform();
+    }
+    @Then("Click on the Height box.")
+    public void click_on_the_height_box() {
+        ReusableMethods.waitForElementVisibility(doctorIDPPage.heightBox,20);
+            doctorIDPPage.heightBox.click();
+            ReusableMethods.hardWait(5);
+    }
+    @Then("Enter {string} in the Height box,{string} in the Weight box, {string} in the Blood Pressure box,{string} in the Pulse box,{string} in the Temperature box,{string} in the Respiration box.")
+    public void enter_in_the_height_box(String string1, String string2, String string3, String string4,String string5,String string6) {
+            actions.click(doctorIDPPage.heightBox).sendKeys(string1).sendKeys(Keys.TAB).sendKeys(string2).sendKeys(Keys.TAB)
+                    .sendKeys(string3).sendKeys(Keys.TAB).sendKeys(string4).sendKeys(Keys.TAB).sendKeys(string5).sendKeys(Keys.TAB)
+                    .sendKeys(string6).sendKeys(Keys.TAB).sendKeys(Keys.ENTER).sendKeys(Keys.DOWN).sendKeys(Keys.DOWN).sendKeys(Keys.DOWN)
+                    .sendKeys(Keys.ENTER).sendKeys(Keys.TAB).perform();
+    }
+
+    @Then("Enter Cramps and injuries in the Symptoms Title field.")
+    public void enter_in_the_symptoms_title_field() {
+        ReusableMethods.waitForElementVisibility(doctorIDPPage.symptomsTitleAddPat,20);
+            doctorIDPPage.symptomsTitleAddPat.click();
+            ReusableMethods.hardWait(5);
+            ReusableMethods.waitForElementVisibility(doctorIDPPage.symptomTitleCheckBoxAddPAt,20);
+            actions.click(doctorIDPPage.symptomTitleCheckBoxAddPAt).perform();
+    }
+
+
+
+
 
 }

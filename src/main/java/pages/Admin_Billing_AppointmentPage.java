@@ -60,11 +60,50 @@ public class Admin_Billing_AppointmentPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"DataTables_Table_0\"]")
     public WebElement appointmentDetailsTable;
 
-    @FindBy(xpath = "//*[@data-original-title=\"Show\"]")
+    @FindBy(xpath = "(//i[@class='fa fa-reorder'])[3]")
     public WebElement appointmentStatusShowBtn;
 
     @FindBy(xpath = "(//*[@class=\"label label-success\"])[1]")
     public WebElement appointmentStatusApprovedBox;
+
+    @FindBy(xpath = "/html/body/div[1]/div[4]/div/div/div[1]/h4")
+    public WebElement appointmentDetailsWindowTitle;
+
+    @FindBy(xpath = "/html/body/div[1]/div[1]/section/div/div/div/div[1]/div/a[1]")
+    public WebElement appointmentDoctorWiseBtn;
+
+    @FindBy(xpath = "//*[@id=\"select2-doctor-container\"]")
+    public WebElement appointmentDoctorWiseDoctorSelect;
+
+    @FindBy(xpath = "//*[@id=\"select2-doctor-results\"]")
+    public WebElement appointmentDoctorWiseDoctorBunyamin;
+
+    @FindBy(xpath = "//*[@name=\"date\"]")
+    public WebElement appointmentDoctorWiseDateSelect;
+
+    @FindBy(xpath = "/html/body/div[6]/div[1]/table/tbody")
+    public WebElement appointmentDoctorWiseDateDayTable;
+
+    @FindBy(xpath = "/html/body/div[1]/div[1]/section/div/div/div/div[2]/form/button")
+    public WebElement appointmentDoctorWiseSearchBox;
+
+    @FindBy(xpath = "/html/body/div[1]/div[1]/section/div/div/div/div[1]/div/a[2]")
+    public WebElement appointmentDoctorQueueBtn;
+
+    @FindBy(xpath = "//*[@id=\"doctor\"]")
+    public WebElement appointmentDoctorQueueDoctorSelect;
+
+    @FindBy(xpath = "//*[@id=\"global_shift\"]")
+    public WebElement appointmentDoctorQueueShiftSelect;
+
+    @FindBy(xpath = "//*[@id=\"slot\"]")
+    public WebElement appointmentDoctorQueueSlotSelect;
+
+    @FindBy(xpath = "/html/body/div[1]/div[1]/section/div/div/div/div[2]/form/div[2]/button")
+    public WebElement appointmentDoctorQueueSearchBox;
+
+    @FindBy(xpath = "//*[@id=\"23\"]/td[1]")
+    public WebElement appointmentDoctorQueueSearchResult;
 
 
 }
