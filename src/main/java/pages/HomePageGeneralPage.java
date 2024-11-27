@@ -234,10 +234,10 @@ public class HomePageGeneralPage extends BasePage{
     @FindBy (xpath = "//*[@id=\"formaddbtn\"]")
     public WebElement appointmentSave;
 
-    @FindBy (xpath = "//*[@id=\"slot_1\"]")
+    @FindBy (xpath = "//*[@id=\"slot_2\"]")
     public WebElement availableSlots;
 
-    @FindBy (xpath = "//*[@id=\"DataTables_Table_0\"]/tbody/tr[1]/td[8]/a[1]")
+    @FindBy (xpath = "//*[@class='btn btn-info btn-xs']")
     public WebElement pay;
 
     @FindBy (xpath = "/html/body/div/div/div/div[2]/div/div[2]/form/table/tbody/tr[4]/td[2]/button/span")
@@ -246,25 +246,26 @@ public class HomePageGeneralPage extends BasePage{
     @FindBy (xpath = "(//*[@class='control'])[1]")
     public WebElement payEmail;
 
-    @FindBy (xpath = "(//*[@class='control'])[2]")
+    @FindBy (xpath = "//*[@id='card_number']")
     public WebElement payCardNumber;
 
-    @FindBy (xpath = "(//*[@class='control'])[3]")
+    @FindBy (xpath = "//*[@id='cc-exp']")
     public WebElement payCardMonthYear;
 
-    @FindBy (xpath = "(//*[@class='control'])[4]")
+    @FindBy (xpath = "//*[@id='cc-csc']")
     public WebElement payCardCVC;
 
-    @FindBy (xpath = "//*[@id=\"billing-zip\"]")
+    @FindBy (xpath = "//*[@id='billing-zip']")
     public WebElement zipCode;
 
-    @FindBy (xpath = "//*[@id=\"submitButton\"]/span/span")
+    @FindBy (xpath = "//*[@id='submitButton']")
     public WebElement payButtoninCard;
 
-    @FindBy (xpath = "/html/body/div/div/div/div/div/a")
+    @FindBy (xpath = "//*[@class='btn btn-primary mt20']")
     public WebElement goToHomeButton;
 
-
+    @FindBy (xpath = "/html/body/iframe")
+    public WebElement iframe;
 
 
 

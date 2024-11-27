@@ -27,8 +27,7 @@ And    kullanici Testimonials  basligini gorur
     When  kullanici sayfanin our specialist kisminda hastane doktorlarin resimlerini isimlerini ve title larını gorur
 
 
-  Scenario: US012  heallifehospital.com About Us menusunun olmasi testi
-  TC03 Bir kullanici olarak hastaneye ait bilgilere erisebilmek icin bir About Us menusunden meert our doctor sayfasına yonlendırme testi
+  Scenario: US012  heallifehospital.com About Us menusunun olmasi testi TC03 Bir kullanici olarak hastaneye ait bilgilere erisebilmek icin bir About Us menusunden meert our doctor sayfasına yonlendırme testi
 
     Given kullanici url gelir
     Then kullanici about us menusunun uzerine gelerek acilan pencerede about hospitals, meet our doctors, FAQ'S ,departments, testimonials sayfalarinin oldugunu dogrular
@@ -41,8 +40,7 @@ And    kullanici Testimonials  basligini gorur
     And kullanici neurologist yazisina tiklayarak bu bolumde calisan doktorlari ve bilgilerini gorur
 
 
-  Scenario:  US012  heallifehospital.com About Us menusunun olmasi testi
-  TC04  Bir kullanici olarak hastaneye ait bilgilere erisebilmek icin bir About Us menusunden FAQ sayfasına yonlendırme testi
+  Scenario:  US012  heallifehospital.com About Us menusunun olmasi testi TC04  Bir kullanici olarak hastaneye ait bilgilere erisebilmek icin bir About Us menusunden FAQ sayfasına yonlendırme testi
 
     Given kullanici url gelir
     Then kullanici about us menusunun uzerine gelerek acilan pencerede about hospitals, meet our doctors, FAQ'S ,departments, testimonials sayfalarinin oldugunu dogrular
@@ -51,8 +49,7 @@ And    kullanici Testimonials  basligini gorur
     And  kullanici sayfadaki sorulardan herhangi birini tikladiginda cevabini gorur
 
    @mervenur
-  Scenario:  US012  heallifehospital.com About Us menusunun olmasi testi
-  TC05 Bir kullanici olarak hastaneye ait bilgilere erisebilmek icin bir About Us menusunden departments sayfasına yönlendırme testi
+  Scenario:  US012  heallifehospital.com About Us menusunun olmasi testi TC05 Bir kullanici olarak hastaneye ait bilgilere erisebilmek icin bir About Us menusunden departments sayfasına yönlendırme testi
 
     Given kullanici url gelir
     Then kullanici about us menusunun uzerine gelerek acilan pencerede about hospitals, meet our doctors, FAQ'S ,departments, testimonials sayfalarinin oldugunu dogrular
@@ -60,15 +57,14 @@ And    kullanici Testimonials  basligini gorur
     And kullanici sayfada hastahane departmanlarini resimleri ve kucuk aciklama yazisiyla birlikte gorur
 
 
-  Scenario: US012  heallifehospital.com About Us menusunun olmasi testi
-  TC06 Bir kullanici olarak hastaneye ait bilgilere erisebilmek icin bir About Us menusunden testimonials sayfasına yonlendirme testi
+  Scenario: US012  heallifehospital.com About Us menusunun olmasi testi TC06 Bir kullanici olarak hastaneye ait bilgilere erisebilmek icin bir About Us menusunden testimonials sayfasına yonlendirme testi
 
     Given kullanici url gelir
     Then kullanici about us menusunun uzerine gelerek acilan pencerede about hospitals, meet our doctors, FAQ'S ,departments, testimonials sayfalarinin oldugunu dogrular
     Then kullanici testimonials yazisina tiklayarak sayfaya ulasir
     And kullanici sayfada hastahanede tedavi gormus kisilerin yorumlarini gorur
 
-Feature: US_005 "Featured Services" section on the home page of the site
+
   Scenario: TC_001 Accessibility to the homepage
     Given Kullanici browser acar ve url girer
     Then Anasayfanin tamamina basarili bir sekilde erisir
