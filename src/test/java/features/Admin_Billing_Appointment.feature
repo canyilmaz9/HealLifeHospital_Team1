@@ -15,7 +15,7 @@ Feature: Admin Appointment Page
     And Sisteme giris yaptigini dogruladiktan sonra, sidebar'da Appointment basligini goruntuler ve tiklar.
     When Appointment sayfasindan doktor secerek ilgili doktordan alinmis randevularinin görüntülenebilecegi bir sayfaya (ilgili islemleri yapabilmek icin) yönlendirme olmali.
     Then Doctor Wise Appointment sayfasinda Doctor ve Date secilerek filtrelemeye uygun randevu verileri listelenebilmeli.
-  @appointments
+
   Scenario: US_034_TC_003 Appointments sayfasi Queue sayfasi islev testi
     Given Admin, Admin Login sayfasinda
     Then Onceden belirlenmis admin bilgileri ile sisteme giris yapar
