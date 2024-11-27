@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
 		},
 		monochrome = true,                         // Konsol çıktısını daha okunabilir hale getirir
 
-		tags = "@doctorLoginLogoutFunction"                        // Yalnızca belirtilen etiketli senaryolar çalıştırılır
+		tags = "@forgotPasswordFunction"                        // Yalnızca belirtilen etiketli senaryolar çalıştırılır
 
 		                           // Yalnızca belirtilen etiketli senaryolar çalıştırılır
 
