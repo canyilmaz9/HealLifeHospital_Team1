@@ -17,6 +17,7 @@ import utils.ReusableMethods;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.*;
 
@@ -185,6 +186,7 @@ public class DoctorIDPPage extends BasePage {
 
 
 
+
     @FindBy(xpath = "//*[@onclick='addmedicationModal()']")
     public WebElement addMEdiDoseButton;
     @FindBy(xpath = "(//*[@class='form-control date'])[6]")
@@ -239,7 +241,32 @@ public class DoctorIDPPage extends BasePage {
     public WebElement nurseNotesNoteText;
     @FindBy (xpath = "//*[@class='fa fa-file-excel-o']")
     public WebElement excelFileUploadButton;
+    @FindBy(xpath = "//*[text()=' Add Prescription']")
+    public WebElement addPrescriptionButton;
 
+
+    @FindBy(xpath = "//span[contains(text(),' Select')]")
+    public WebElement prescriptByBox;
+
+    @FindBy(xpath = "(//input[@class='select2-search__field'])[2]")
+    public WebElement pathologyDDM;
+    @FindBy(xpath = "//*[@id='select2-pathologyOpt-result-r317-4']")
+    public WebElement cardiacMRIOption;
+    @FindBy(xpath = "(//*[@class='select2-search select2-search--inline'])[3]")
+    public WebElement radiologyDDM;
+    @FindBy(xpath = "(//*[contains(text(),'MRI')])[4]")
+    public WebElement MRIOption;
+    @FindBy(xpath = "(//i[@class='fa fa-check-circle'])[9]")
+    public WebElement savePrescription;
+    @FindBy(xpath = "(//tbody)[9]//tr[5]//td[2]")
+    public WebElement lastPrescriptionDate;
+    @FindBy(xpath = "//*[contains(text(),'Pathologist')]")
+    public WebElement patho;
+
+@FindBy(xpath = "//*[contains(text(),'Radiologist')]")
+public WebElement radio;
+@FindBy(xpath = "(//*[contains(text(),'Nurse')])[7]")
+public WebElement nursePresc;
 
 
 
@@ -556,6 +583,16 @@ public class DoctorIDPPage extends BasePage {
         WebElement ipdPatient= driver.findElement(By.xpath("//tbody//tr[" + row + "]//td[" + column + "]"));
         ReusableMethods.waitForElementVisibility(ipdPatient,20);
         return ipdPatient;
+    }
+
+    public String getTodayDate(String format){
+        SimpleDateFormat formatter= new SimpleDateFormat(format);
+        Date today=new Date();
+        return formatter.format(today);
+
+
+
+
     }
 
 
