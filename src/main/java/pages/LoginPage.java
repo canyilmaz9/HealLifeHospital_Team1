@@ -76,5 +76,25 @@ public class LoginPage extends BasePage {
 
 	@FindBy(className = "forgot")
 	public WebElement ufpasswordPageUserLoginBtn;
+
+	@FindBy(xpath = "//*[@id=\"alert\"]/a/span[2]/img")
+	public WebElement dashboardLogo;
+
+	@FindBy(xpath = "//*[@id=\"alert\"]/nav/div[2]/div/div/div/div/button")
+	public WebElement languageSwitcherButton;
+
+	@FindBy(xpath = "//*[@id=\"alert\"]/nav/div[2]/div/div/div/div/div/ul")
+	public WebElement languageDropdownMenu;
+
+	@FindBy(xpath = "//*[@id=\"sibe-box\"]/ul/li[8]/a/span")
+	public WebElement ambulance;
+
+	@FindBy(xpath = "//*[@id=\"sibe-box\"]/ul/li[8]/a/span")
+	public WebElement ambulans;
+
+	@FindBy(xpath = "//*[@rel=\"1\"]")
+	public WebElement trLanguage;
+
+
 }
 

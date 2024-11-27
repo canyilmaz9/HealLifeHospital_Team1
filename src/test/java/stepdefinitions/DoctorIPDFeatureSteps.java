@@ -7,23 +7,23 @@ import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import pages.DoctorIDPPage;
 import utilities.ReusableMethods;
+import utils.ExcelDataReader_Seren;
+import utils.JSUtilities;
 
 
 public class DoctorIPDFeatureSteps {
 
-    private static final Logger logger = LogManager.getLogger(DoctorIPDFeatureSteps.class);
 
    static WebDriver driver = Hooks.getDriver();
    static Actions actions = new Actions(driver);
     DoctorIDPPage doctorIDPPage=new DoctorIDPPage(driver);
 
+   static ExcelDataReader_Seren excelDataReaderSeren=new ExcelDataReader_Seren(ConfigReader.getProperty("IPDPatient"),"Sheet1");
+ private static final Logger logger = LogManager.getLogger(DoctorIPDFeatureSteps.class);
 
     @Given("Enters the {string}")
     public void enters_the(String url) {
@@ -276,5 +276,103 @@ public class DoctorIPDFeatureSteps {
        Assert.assertTrue(opName.isDisplayed());
        logger.error("Doktor olarak IPD hasta icin yeni ameliyat kaydi (Add Operation) yapilamiyor. ");
        }
+
+       @Then("The user clicks the Add Nurse Note button as a doctor.")
+       public void the_user_clicks_the_add_nurse_note_button_as_a_doctor() {
+        ReusableMethods.clickWithText(" Add Nurse Note");
+       }
+       @Then("The Nurse box is not clickable.")
+       public void the_nurse_box_is_not_clickable() {
+        try {
+
+         doctorIDPPage.nurseNoteBox.sendKeys("Test Input");
+         Assert.fail("Test Failed: The Nurse box should not be writable, but it is writable.");
+        } catch (InvalidElementStateException e) {
+
+        } catch (NoSuchElementException e) {
+
+        }
+
+       }
+
+       @Then("The user closes the opened pop-up page.")
+       public void the_user_closes_the_opened_pop_up_page() {
+       doctorIDPPage.closeNurseNotPopUp.click();
+       }
+       @Then("The user verifies the visibility of the most recently added note in the Nurse Notes list.")
+       public void the_user_verifies_the_visibility_of_the_most_recently_added_note_in_the_nurse_notes_list() {
+       Assert.assertTrue( doctorIDPPage.nurseNotesNoteText.isDisplayed());
+
+       }
+
+       @Then("Click on the Excel File Upload button.")
+       public void click_on_the_excel_file_upload_button() {
+     ReusableMethods.waitForElementToBeClickable(doctorIDPPage.excelFileUploadButton,20);
+        doctorIDPPage.excelFileUploadButton.click();
+        ReusableMethods.hardWait(3);
+       }
+       @Then("Verify that the Excel file containing the patient list is downloaded successfully.")
+       public void verify_that_the_excel_file_containing_the_patient_list_is_downloaded_successfully() {
+        doctorIDPPage.isExcelFileDownloaded(ConfigReader.getProperty("IPDPatient"));
+       }
+       @Then("Verify that the first patient name in the downloaded Excel file equals the first patient name displayed in the IPD Patient List.")
+       public void verify_that_the_first_patient_name_in_the_downloaded_excel_file_equals_the_first_patient_name_displayed_in_the_ipd_patient_list() {
+
+       Assert.assertEquals(excelDataReaderSeren.getCellData(2,2),doctorIDPPage.patientDataFromIPDList(1,3).getText());
+
+       }
+
+
+        @Then("Click on Add Prescription.")
+        public void click_on_add_prescription() {
+        doctorIDPPage.addPrescriptionButton.click();
+        }
+        @Then("Select Doctor Name from the Prescribe By dropdown menu.")
+        public void select_from_the_prescribe_by_dropdown_menu() {
+
+         ReusableMethods.waitForElementVisibility(doctorIDPPage.prescriptByBox,20);
+         doctorIDPPage.prescriptByBox.click();
+          ReusableMethods.waitForElementVisibility(doctorIDPPage.containsTextWE("1021"),20);
+          doctorIDPPage.clickContainsTextWE("1021");
+        }
+        @Then("Select {string} from the Pathology dropdown menu.")
+        public void select_from_the_pathology_dropdown_menu(String string) {
+        doctorIDPPage.pathologyDDM.click();
+        ReusableMethods.waitForElementVisibility(doctorIDPPage.containsTextWE(string),20);
+        doctorIDPPage.clickContainsTextWE(string);
+
+        }
+        @Then("Select MRI from the Radiology dropdown menu.")
+        public void select_from_the_radiology_dropdown_menu() {
+
+         doctorIDPPage.radiologyDDM.click();
+
+         doctorIDPPage.MRIOption.click();
+         doctorIDPPage.nursePresc.click();
+         ReusableMethods.hardWait(3);
+
+
+        }
+        @Then("Click the Pathologist and Radiologist radio buttons.")
+        public void click_the_and_radio_buttons() {
+        ReusableMethods.waitForElementVisibility(doctorIDPPage.patho,20);
+        doctorIDPPage.patho.click();
+        ReusableMethods.waitForElementVisibility(doctorIDPPage.radio,20);
+        doctorIDPPage.radio.click();
+        ReusableMethods.hardWait(3);
+        }
+        @Then("Click the Save button on Prescription Page.")
+        public void click_the_save_button_on_prescription_page() {
+         doctorIDPPage.savePrescription.click();
+         ReusableMethods.hardWait(3);
+        }
+        @Then("Verify that the Prescription number is displayed on the Prescription Page.")
+        public void verify_that_the_prescription_number_is_displayed_on_the_prescription_page() {
+        Assert.assertEquals(doctorIDPPage.lastPrescriptionDate.getText(),doctorIDPPage.getTodayDate("dd.MM.yyyy"));
+         System.out.println(doctorIDPPage.getTodayDate("dd.MM.yyyy"));
+        }
+
+
+
 
 }
