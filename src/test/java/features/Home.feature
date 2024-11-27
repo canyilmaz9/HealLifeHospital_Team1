@@ -1,6 +1,5 @@
 Feature: US_001 Hasta verilen (URL) ile anasayfaya gidebilmeliyim
 
-Feature:
 
 
 Scenario:  US012  heallifehospital.com About Us menusunun olmasi testi
