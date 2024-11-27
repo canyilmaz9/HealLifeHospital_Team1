@@ -263,10 +263,54 @@ public class DoctorIDPPage extends BasePage {
     @FindBy(xpath = "//*[contains(text(),'Pathologist')]")
     public WebElement patho;
 
-@FindBy(xpath = "//*[contains(text(),'Radiologist')]")
-public WebElement radio;
-@FindBy(xpath = "(//*[contains(text(),'Nurse')])[7]")
-public WebElement nursePresc;
+    @FindBy(xpath = "//*[contains(text(),'Radiologist')]")
+    public WebElement radio;
+    @FindBy(xpath = "(//*[contains(text(),'Nurse')])[7]")
+    public WebElement nursePresc;
+    @FindBy(xpath = "//*[@id='visible_check']")
+    public WebElement visibleToPersonCheckBox;
+    @FindBy(xpath = "//*[@id='name']")
+    public WebElement nameBox;
+    @FindBy(xpath = "//*[@id='addformgender']")
+    public WebElement genderDDM;
+    @FindBy(xpath = "(//option[@value='Male'])[2]")
+    public WebElement maleGenderNewPat;
+    @FindBy(xpath = "(//option[@value='Female'])[2]")
+    public WebElement femaleGenderNewPat;
+    @FindBy(xpath = "//*[@id='birth_date']")
+    public WebElement dateOfBirthAddPAt;
+    @FindBy(xpath = "//*[@id='formaddpabtn']")
+    public WebElement saveAddPAt;
+    @FindBy(xpath = "//*[@class='toast-message']")
+    public WebElement successAddPatMessage;
+    @FindBy(xpath = "//*[@id='admission_date']")
+    public WebElement admissionDateAddPAt;
+    @FindBy(xpath = "//td[@data-day='11/29/2024']")
+    public WebElement admissionDate29AddPAt;
+
+
+    @FindBy(xpath = "//input[@value='20000']")
+    public WebElement creditLimitAddPat20000;
+    @FindBy(xpath = "//span[@id='select2-consultant_doctor-container']")
+    public WebElement consultantDocAddPAtText;
+
+    @FindBy(xpath = "//select[@name='bed_group_id']")
+    public WebElement bedGroupAddPAt; //select value 2 -> private Ward
+    @FindBy(xpath = "//span[@id='select2-bed_no-container']")
+    public WebElement bedNumberAddPAt;
+    @FindBy(xpath = "//li[contains(text(), '151')]")
+    public WebElement option151BedNumAddPAt;
+    @FindBy(xpath = "//button[@id='formaddbtn']")
+    public WebElement saveAddPAt2;
+
+
+
+
+
+
+
+
+
 
 
 
@@ -492,7 +536,7 @@ public WebElement nursePresc;
     }
 
     public void addTimeLine(){
-        ReusableMethods.clickWithText(" Timeline");
+
         addTimelineButton.click();
         ReusableMethods.hardWait(2);
         titleAddTimeLine.sendKeys(reader.getCellData(3,2));
@@ -500,13 +544,11 @@ public WebElement nursePresc;
         datePickerAddTimeLine.click();
         ReusableMethods.hardWait(3);
         pickDateAddTimeLine.click();
+        ReusableMethods.hardWait(2);
+        visibleToPersonCheckBox.click();
         ReusableMethods.hardWait(5);
         saveAddTimeLine.click();
         Assert.assertEquals(reader.getCellData(3,2),lastTitleOnTimeLine.getText());
-
-
-
-
 
     }
 
