@@ -1,5 +1,3 @@
-
-
 Feature:As a doctor, they should be able to list data about inpatients from the IPD page and perform IPD patient procedures.
   Background: Common Steps
     Given Enters the "adminURL"
@@ -10,8 +8,6 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
 
 
   Scenario:(US_053_US01_TC01) Verify that the patient list on the IPD page displayed
-
-
 
     * As a doctor,verify that the IPD menu is enabled.
     * As a doctor, verify that the page displays the " IPD Patient".
@@ -73,7 +69,7 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
     *  Verify the last entered operation from the "Dilation and curettage" Operation Name column.
 
 
-  Scenario:(US_053_US01_TC04) Nurse Notes
+  Scenario:(US_053_US02_TC04) Nurse Notes
     * Clicking on the IPD No 47 navigates to the patient's details page.
     * As a doctor, verify that the page displays and click the Nurse Notes.
     * The user clicks the Add Nurse Note button as a doctor.
@@ -82,14 +78,14 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
     * The user verifies the visibility of the most recently added note in the Nurse Notes list.
 
 
-  Scenario: (US_053_US01_TC05)
+  Scenario: (US_053_US02_TC05)
 
-    * Click on the Excel File Upload button.
+    * Click on the Excel File Download button.
     * Verify that the Excel file containing the patient list is downloaded successfully.
     * Verify that the first patient name in the downloaded Excel file equals the first patient name displayed in the IPD Patient List.
 
-  @ac
-    Scenario: (US_053_US01_TC06) Add Prescription Func
+
+    Scenario: (US_053_US02_TC06) Add Prescription Func
     * Clicking on the IPD No 47 navigates to the patient's details page.
     * The Prescription page displays patient prescriptions.
     * Click on Add Prescription.
@@ -103,9 +99,36 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
 
 
 
+  Scenario:(US_053_US02_TC07) Verify that the doctor can add patient notes using the Timeline button on the IPD page.
+    * Clicking on the IPD No 47 navigates to the patient's details page.
+    * The Timeline page displays future timeline plans.
+    * Add a new element to the timeline that the patient cannot see using the "Add Timeline" button,and verify that the last added element is visible on the doctor's timeline.
 
 
+  @ac
+Scenario: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+    * As a doctor, verify that the Add Patient button is accessible.
 
+
+    * Click on the New Patient button.
+    * Click on the Name box.
+    * Enter "Emily Houston" in the Name box.
+    * Click on the Gender button.
+    * Select "Female" from the Gender dropdown.
+    * Click on the Date of Birth box.
+    * Enter "18.05.1972" in the Date of Birth box.
+    * Click on the Save button on the Add Patient Page.
+    * Click on the Admission Date box.
+    * Enter today's date in the Admission Date box.
+    * Verify that the Credit Limit box text is not null.
+    * Verify that the Consultant Doctor box text is not null.
+    * Click on the Bed Group box.
+    * Select "2" as the patient private ward in the Bed Group box.
+    * Click on the Bed Number box.
+    * Select 151 as the bed number.
+    * Click on the Save button.
+    * Verify that the Patient Added Successfully message is displayed.
+    * Verify that the data in row 1, column 3 of the IPD Patient table equals the name of the last registered patient.
 
 
 

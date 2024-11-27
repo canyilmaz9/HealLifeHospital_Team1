@@ -9,10 +9,13 @@ import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import pages.DoctorIDPPage;
 import utilities.ReusableMethods;
 import utils.ExcelDataReader_Seren;
 import utils.JSUtilities;
+
+import javax.print.Doc;
 
 
 public class DoctorIPDFeatureSteps {
@@ -21,6 +24,7 @@ public class DoctorIPDFeatureSteps {
    static WebDriver driver = Hooks.getDriver();
    static Actions actions = new Actions(driver);
     DoctorIDPPage doctorIDPPage=new DoctorIDPPage(driver);
+
 
    static ExcelDataReader_Seren excelDataReaderSeren=new ExcelDataReader_Seren(ConfigReader.getProperty("IPDPatient"),"Sheet1");
  private static final Logger logger = LogManager.getLogger(DoctorIPDFeatureSteps.class);
@@ -91,11 +95,13 @@ public class DoctorIPDFeatureSteps {
     @Then("As a doctor, verify that the Add Patient button is accessible.")
     public void as_a_doctor_verify_that_the_add_patient_button_is_accessible() {
     doctorIDPPage.verifyAddPatientButtonAccessible();
-    doctorIDPPage.closeAddPatient.click();
+
 
     }
     @Then("As a doctor, verify that the Discharged Patient button is accessible.")
     public void as_a_doctor_verify_that_the_discharged_patient_button_is_accessible() {
+     doctorIDPPage.closeAddPatient.click();
+
      ReusableMethods.hardWait(1);
     doctorIDPPage.verifyDischargedButtonAccessible();
 
@@ -175,9 +181,8 @@ public class DoctorIPDFeatureSteps {
      }
      @When("The Timeline page displays future timeline plans.")
      public void the_timeline_page_displays_future_treatment_plans() {
-
-     doctorIDPPage.addTimeLine();
-     ReusableMethods.hardWait(3);
+     utils.ReusableMethods.clickWithText(" Timeline");
+     Assert.assertTrue(doctorIDPPage.addTimelineButton.isDisplayed());
 
      }
      @When("The Treatment History page lists all past treatments accurately.")
@@ -305,8 +310,8 @@ public class DoctorIPDFeatureSteps {
 
        }
 
-       @Then("Click on the Excel File Upload button.")
-       public void click_on_the_excel_file_upload_button() {
+       @Then("Click on the Excel File Download button.")
+       public void click_on_the_excel_file_download_button() {
      ReusableMethods.waitForElementToBeClickable(doctorIDPPage.excelFileUploadButton,20);
         doctorIDPPage.excelFileUploadButton.click();
         ReusableMethods.hardWait(3);
@@ -360,6 +365,7 @@ public class DoctorIPDFeatureSteps {
         ReusableMethods.waitForElementVisibility(doctorIDPPage.radio,20);
         doctorIDPPage.radio.click();
         ReusableMethods.hardWait(3);
+
         }
         @Then("Click the Save button on Prescription Page.")
         public void click_the_save_button_on_prescription_page() {
@@ -371,6 +377,115 @@ public class DoctorIPDFeatureSteps {
         Assert.assertEquals(doctorIDPPage.lastPrescriptionDate.getText(),doctorIDPPage.getTodayDate("dd.MM.yyyy"));
          System.out.println(doctorIDPPage.getTodayDate("dd.MM.yyyy"));
         }
+
+        @Then("Add a new element to the timeline that the patient cannot see using the {string} button,and verify that the last added element is visible on the doctor's timeline.")
+        public void add_a_new_element_to_the_timeline_that_the_patient_cannot_see_using_the_button_and_verify_that_the_last_added_element_is_visible_on_the_doctor_s_timeline(String string) {
+         doctorIDPPage.addTimeLine();
+        }
+
+        @Then("Click on the Name box.")
+        public void click_on_the_name_box() {
+         doctorIDPPage.name.click();
+        }
+        @Then("Click on the New Patient button.")
+        public void click_on_the_new_patient_button() {
+        ReusableMethods.clickWithText("New Patient");
+        }
+        @Then("Enter {string} in the Name box.")
+        public void enter_in_the_name_box(String string) {
+         doctorIDPPage.name.sendKeys(string);
+        }
+        @Then("Click on the Gender button.")
+        public void click_on_the_gender_button() {
+        doctorIDPPage.genderDDM.click();
+        }
+        @Then("Select {string} from the Gender dropdown.")
+        public void select_from_the_gender_dropdown(String string) {
+        ReusableMethods.waitForElementVisibility(doctorIDPPage.femaleGenderNewPat,20);
+        doctorIDPPage.femaleGenderNewPat.click();
+        }
+        @Then("Click on the Date of Birth box.")
+        public void click_on_the_date_of_birth_box() {
+        doctorIDPPage.dateOfBirthAddPAt.click();
+        }
+        @Then("Enter {string} in the Date of Birth box.")
+        public void enter_in_the_date_of_birth_box(String string) {
+
+        doctorIDPPage.dateOfBirthAddPAt.sendKeys(string);
+        }
+        @Then("Click on the Save button on the Add Patient Page.")
+        public void click_on_the_save_button_on_the_add_patient_page() {
+         doctorIDPPage.saveAddPAt.click();
+         Assert.assertTrue(doctorIDPPage.successAddPatMessage.isDisplayed());
+        }
+        @Then("Click on the Admission Date box.")
+        public void click_on_the_admission_date_box() {
+          doctorIDPPage.admissionDateAddPAt.click();
+
+
+        }
+        @Then("Enter today's date in the Admission Date box.")
+        public void enter_today_s_date_in_the_admission_date_box() {
+     ReusableMethods.waitForElementVisibility(doctorIDPPage.admissionDate29AddPAt,20);
+          doctorIDPPage.admissionDate29AddPAt.click();
+
+
+         actions.sendKeys(Keys.TAB).perform();
+          ReusableMethods.hardWait(5);
+         System.out.println("buraya yazdim    "+doctorIDPPage.consultantDocAddPAtText.getText());
+
+
+        }
+        @Then("Verify that the Credit Limit box text is not null.")
+        public void verify_that_the_credit_limit_box_text_is_not_null() {
+            ReusableMethods.waitForElementVisibility(doctorIDPPage.creditLimitAddPat20000,20);
+            Assert.assertTrue(doctorIDPPage.creditLimitAddPat20000.isDisplayed());
+        }
+        @Then("Verify that the Consultant Doctor box text is not null.")
+        public void verify_that_the_consultant_doctor_box_text_is_not_null() {
+         Assert.assertFalse(doctorIDPPage.consultantDocAddPAtText.getText().isEmpty());
+        }
+        @Then("Click on the Bed Group box.")
+        public void click_on_the_bed_group_box() {
+          doctorIDPPage.bedGroupAddPAt.click();
+
+
+        }
+        @Then("Select {string} as the patient private ward in the Bed Group box.")
+        public void select_as_the_patient_ward_private_ward_in_the_bed_group_box(String string) {
+         Select select =new Select(doctorIDPPage.bedGroupAddPAt);
+         select.selectByValue(string);
+         utils.ReusableMethods.hardWait(3);
+        }
+        @Then("Click on the Bed Number box.")
+        public void click_on_the_bed_number_box() {
+     ReusableMethods.waitForElementVisibility(doctorIDPPage.bedNumberAddPAt,20);
+          doctorIDPPage.bedNumberAddPAt.click();
+        }
+        @Then("Select 151 as the bed number.")
+        public void select_as_the_bed_number() {
+     ReusableMethods.waitForElementVisibility(doctorIDPPage.option151BedNumAddPAt,20);
+          doctorIDPPage.option151BedNumAddPAt.click();
+         ReusableMethods.hardWait(3);
+        }
+        @Then("Click on the Save button.")
+        public void click_on_the_save_button() {
+        doctorIDPPage.saveAddPAt2.click();
+        }
+        @Then("Verify that the Patient Added Successfully message is displayed.")
+        public void verify_that_the_patient_added_successfully_message_is_displayed() {
+     ReusableMethods.waitForElementVisibility(doctorIDPPage.successAddPatMessage,20);
+          Assert.assertTrue( doctorIDPPage.successAddPatMessage.isDisplayed());
+        }
+
+
+        @Then("Verify that the data in row {int}, column {int} of the IPD Patient table equals the name of the last registered patient.")
+        public void verify_that_the_data_in_row_column_of_the_ipd_patient_table_equals_the_name_of_the_last_registered_patient(Integer int1, Integer int2) {
+       ReusableMethods.hardWait(3);
+     Assert.assertTrue( doctorIDPPage.TableDataRetriever(1,3).getText().contains("Emily Houston"));
+        }
+
+
 
 
 

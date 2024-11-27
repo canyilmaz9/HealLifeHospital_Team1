@@ -1362,3 +1362,123 @@
 2024-11-27 01:24:13 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
 2024-11-27 01:24:32 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: (US_053_US01_TC06) Add Prescription Func
 2024-11-27 01:24:32 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 09:12:56 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 09:12:57 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US01_TC06) Add Prescription Func
+2024-11-27 09:13:01 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 09:13:20 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: (US_053_US01_TC06) Add Prescription Func
+2024-11-27 09:13:21 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 10:56:58 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 10:56:59 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US01_TC07) Verify that the doctor can add patient notes using the Timeline button on the IPD page.
+2024-11-27 10:57:01 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 10:57:24 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: (US_053_US01_TC07) Verify that the doctor can add patient notes using the Timeline button on the IPD page.
+2024-11-27 10:57:24 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 12:18:45 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 12:18:46 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US02_TC01) Verify that clicking on a patient's IPD No navigates to the detailed patient page.
+2024-11-27 12:18:48 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 12:19:38 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: (US_053_US02_TC01) Verify that clicking on a patient's IPD No navigates to the detailed patient page.
+2024-11-27 12:19:38 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 12:55:12 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 12:55:13 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US01_TC07) Verify that the doctor can add patient notes using the Timeline button on the IPD page.
+2024-11-27 12:55:15 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 12:55:22 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: (US_053_US01_TC07) Verify that the doctor can add patient notes using the Timeline button on the IPD page.
+2024-11-27 12:55:22 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 12:58:28 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 12:58:28 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US01_TC07) Verify that the doctor can add patient notes using the Timeline button on the IPD page.
+2024-11-27 12:58:30 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 12:58:53 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: (US_053_US01_TC07) Verify that the doctor can add patient notes using the Timeline button on the IPD page.
+2024-11-27 12:58:53 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 13:32:06 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 13:32:06 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US01_TC01) Verify that the patient list on the IPD page displayed
+2024-11-27 13:32:08 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 13:32:15 [main] INFO  stepdefinitions.DoctorIPDFeatureSteps - IPD sayfasindaki hasta sayisi Sayfa altinda Record textinde görünürdür. 
+2024-11-27 13:32:15 [main] ERROR stepdefinitions.DoctorIPDFeatureSteps - IPD hasta listesindeki tüm datalarla arama yapilamiyor 
+2024-11-27 13:32:19 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: (US_053_US01_TC01) Verify that the patient list on the IPD page displayed
+2024-11-27 13:32:19 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 14:30:57 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 14:30:58 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 14:31:00 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 14:31:11 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 14:31:12 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 15:25:12 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 15:25:12 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:25:15 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 15:27:44 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 15:27:44 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:27:46 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 15:28:04 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:28:04 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 15:31:45 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 15:31:46 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:31:48 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 15:32:11 [main] ERROR utils.LoggerHelper - Test başarısız oldu: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:32:12 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 15:32:49 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 15:32:50 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:32:52 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 15:33:04 [main] ERROR utils.LoggerHelper - Test başarısız oldu: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:33:04 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 15:34:49 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 15:34:50 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:34:52 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 15:35:04 [main] ERROR utils.LoggerHelper - Test başarısız oldu: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:35:04 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 15:35:56 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 15:35:57 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:35:59 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 15:36:09 [main] ERROR utils.LoggerHelper - Test başarısız oldu: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:36:10 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 15:36:27 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 15:36:28 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:36:30 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 15:36:42 [main] ERROR utils.LoggerHelper - Test başarısız oldu: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:36:42 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 15:39:11 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 15:39:11 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:39:13 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 15:39:25 [main] ERROR utils.LoggerHelper - Test başarısız oldu: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:39:26 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 15:39:54 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 15:39:54 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:39:56 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 15:40:07 [main] ERROR utils.LoggerHelper - Test başarısız oldu: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:40:08 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 15:40:17 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 15:40:18 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:40:20 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 15:40:32 [main] ERROR utils.LoggerHelper - Test başarısız oldu: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:40:32 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 15:41:57 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 15:41:58 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:42:00 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 15:42:18 [main] ERROR utils.LoggerHelper - Test başarısız oldu: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:42:18 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 15:43:02 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 15:43:03 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:43:05 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 15:43:20 [main] ERROR utils.LoggerHelper - Test başarısız oldu: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:43:20 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 15:45:02 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 15:45:02 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:45:05 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 15:45:18 [main] ERROR utils.LoggerHelper - Test başarısız oldu: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:45:18 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 15:45:31 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 15:45:31 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:45:33 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 15:45:49 [main] ERROR utils.LoggerHelper - Test başarısız oldu: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:45:49 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 15:48:08 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 15:48:09 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:48:11 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 15:49:15 [main] ERROR utils.LoggerHelper - Test başarısız oldu: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:49:15 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 15:50:40 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 15:50:40 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:50:42 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 15:51:29 [main] ERROR utils.LoggerHelper - Test başarısız oldu: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:51:29 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 15:54:19 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 15:54:20 [main] INFO  utils.LoggerHelper - Test Başlıyor: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:54:22 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 15:54:47 [main] ERROR utils.LoggerHelper - Test başarısız oldu: (US_053_US03_TC01) Verify that the doctor can admit a new patient to an appropriate ward on the IPD page.
+2024-11-27 15:54:47 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
