@@ -81,13 +81,24 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
     * The user closes the opened pop-up page.
     * The user verifies the visibility of the most recently added note in the Nurse Notes list.
 
-  @ac
+
   Scenario: (US_053_US01_TC05)
+
     * Click on the Excel File Upload button.
     * Verify that the Excel file containing the patient list is downloaded successfully.
     * Verify that the first patient name in the downloaded Excel file equals the first patient name displayed in the IPD Patient List.
 
-
+  @ac
+    Scenario: (US_053_US01_TC06) Add Prescription Func
+    * Clicking on the IPD No 47 navigates to the patient's details page.
+    * The Prescription page displays patient prescriptions.
+    * Click on Add Prescription.
+    * Select Doctor Name from the Prescribe By dropdown menu.
+    * Select "Cardiac MRI" from the Pathology dropdown menu.
+    * Select MRI from the Radiology dropdown menu.
+    * Click the Pathologist and Radiologist radio buttons.
+    * Click the Save button on Prescription Page.
+    * Verify that the Prescription number is displayed on the Prescription Page.
 
 
 
