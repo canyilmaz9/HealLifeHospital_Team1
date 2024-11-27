@@ -14,6 +14,10 @@ import utils.ExcelDataReader_Seren;
 import utils.JSUtilities;
 import utils.ReusableMethods;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.*;
 
@@ -182,6 +186,7 @@ public class DoctorIDPPage extends BasePage {
 
 
 
+
     @FindBy(xpath = "//*[@onclick='addmedicationModal()']")
     public WebElement addMEdiDoseButton;
     @FindBy(xpath = "(//*[@class='form-control date'])[6]")
@@ -227,6 +232,99 @@ public class DoctorIDPPage extends BasePage {
 
     @FindBy(xpath = "(//input[@class='form-control datetime'])[2]")
     public WebElement OPDateAddOP;
+    @FindBy(xpath = "//*[@id='select2-nurse_field-container']")
+    public WebElement nurseNoteBox;
+
+    @FindBy(xpath = "(//button[@class='close close_button'])[2]")
+    public WebElement closeNurseNotPopUp;
+    @FindBy(xpath = "(//div[contains(text(), 'Note')])[5]")
+    public WebElement nurseNotesNoteText;
+    @FindBy (xpath = "//*[@class='fa fa-file-excel-o']")
+    public WebElement excelFileUploadButton;
+    @FindBy(xpath = "//*[text()=' Add Prescription']")
+    public WebElement addPrescriptionButton;
+
+
+    @FindBy(xpath = "//span[contains(text(),' Select')]")
+    public WebElement prescriptByBox;
+
+    @FindBy(xpath = "(//input[@class='select2-search__field'])[2]")
+    public WebElement pathologyDDM;
+    @FindBy(xpath = "//*[@id='select2-pathologyOpt-result-r317-4']")
+    public WebElement cardiacMRIOption;
+    @FindBy(xpath = "(//*[@class='select2-search select2-search--inline'])[3]")
+    public WebElement radiologyDDM;
+    @FindBy(xpath = "(//*[contains(text(),'MRI')])[4]")
+    public WebElement MRIOption;
+    @FindBy(xpath = "(//i[@class='fa fa-check-circle'])[9]")
+    public WebElement savePrescription;
+    @FindBy(xpath = "(//tbody)[9]//tr[5]//td[2]")
+    public WebElement lastPrescriptionDate;
+    @FindBy(xpath = "//*[contains(text(),'Pathologist')]")
+    public WebElement patho;
+
+    @FindBy(xpath = "//*[contains(text(),'Radiologist')]")
+    public WebElement radio;
+    @FindBy(xpath = "(//*[contains(text(),'Nurse')])[7]")
+    public WebElement nursePresc;
+    @FindBy(xpath = "//*[@id='visible_check']")
+    public WebElement visibleToPersonCheckBox;
+    @FindBy(xpath = "//*[@id='name']")
+    public WebElement nameBox;
+    @FindBy(xpath = "//*[@id='addformgender']")
+    public WebElement genderDDM;
+    @FindBy(xpath = "(//option[@value='Male'])[2]")
+    public WebElement maleGenderNewPat;
+    @FindBy(xpath = "(//option[@value='Female'])[2]")
+    public WebElement femaleGenderNewPat;
+    @FindBy(xpath = "//*[@id='birth_date']")
+    public WebElement dateOfBirthAddPAt;
+    @FindBy(xpath = "//*[@id='formaddpabtn']")
+    public WebElement saveAddPAt;
+    @FindBy(xpath = "//*[@class='toast-message']")
+    public WebElement successAddPatMessage;
+    @FindBy(xpath = "//*[@id='admission_date']")
+    public WebElement admissionDateAddPAt;
+    @FindBy(xpath = "//td[@data-day='11/29/2024']")
+    public WebElement admissionDate29AddPAt;
+
+
+    @FindBy(xpath = "//input[@value='20000']")
+    public WebElement creditLimitAddPat20000;
+    @FindBy(xpath = "//span[@id='select2-consultant_doctor-container']")
+    public WebElement consultantDocAddPAtText;
+
+    @FindBy(xpath = "//select[@name='bed_group_id']")
+    public WebElement bedGroupAddPAt; //select value 2 -> private Ward
+    @FindBy(xpath = "//span[@id='select2-bed_no-container']")
+    public WebElement bedNumberAddPAt;
+    @FindBy(xpath = "//li[contains(text(), '150')]")
+    public WebElement option151BedNumAddPAt;
+    @FindBy(xpath = "//button[@id='formaddbtn']")
+    public WebElement saveAddPAt2;
+
+    @FindBy(xpath = "(//span[@class='select2-selection select2-selection--single'])[1]")
+    public WebElement addOldPatientDDM;
+    @FindBy(xpath = "(//input[@name='height'])[1]")
+    public WebElement heightBox;
+    @FindBy(xpath = "//input[@class='form-control filterinput']")
+    public WebElement symptomsTitleAddPat;
+
+    @FindBy(xpath = "//input[@name='symptoms_title']")
+    public WebElement symptomTitleCheckBoxAddPAt;
+
+    @FindBy(xpath = "//li[contains(text(),'Emily Houston (192)')]")
+    public WebElement addedPAtIDText;
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -452,7 +550,7 @@ public class DoctorIDPPage extends BasePage {
     }
 
     public void addTimeLine(){
-        ReusableMethods.clickWithText(" Timeline");
+
         addTimelineButton.click();
         ReusableMethods.hardWait(2);
         titleAddTimeLine.sendKeys(reader.getCellData(3,2));
@@ -460,13 +558,11 @@ public class DoctorIDPPage extends BasePage {
         datePickerAddTimeLine.click();
         ReusableMethods.hardWait(3);
         pickDateAddTimeLine.click();
+        ReusableMethods.hardWait(2);
+        visibleToPersonCheckBox.click();
         ReusableMethods.hardWait(5);
         saveAddTimeLine.click();
         Assert.assertEquals(reader.getCellData(3,2),lastTitleOnTimeLine.getText());
-
-
-
-
 
     }
 
@@ -526,6 +622,31 @@ public class DoctorIDPPage extends BasePage {
        WebElement lastMedi=driver.findElement(By.xpath("(//tbody)[12]//tr[" + row + "]//td[" + column + "]"));
         ReusableMethods.hardWait(1);
        Assert.assertEquals(lastMediName,lastMedi.getText());
+
+
+    }
+
+    public void isExcelFileDownloaded(String filePath){
+
+        Assert.assertTrue(Files.exists(Paths.get(filePath)));
+        ReusableMethods.hardWait(1);
+
+
+
+    }
+
+    public WebElement patientDataFromIPDList(int row, int column){
+        WebElement ipdPatient= driver.findElement(By.xpath("//tbody//tr[" + row + "]//td[" + column + "]"));
+        ReusableMethods.waitForElementVisibility(ipdPatient,20);
+        return ipdPatient;
+    }
+
+    public String getTodayDate(String format){
+        SimpleDateFormat formatter= new SimpleDateFormat(format);
+        Date today=new Date();
+        return formatter.format(today);
+
+
 
 
     }
