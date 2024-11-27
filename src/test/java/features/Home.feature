@@ -1,6 +1,13 @@
 Feature: US_001 Hasta verilen (URL) ile anasayfaya gidebilmeliyim
+  @anasayfa
+  Scenario: US_001 > TC_01  Anasayfaya ulasim testi
+    Given Hasta anasayfaya gider
+    And   Sayfaya erisebildigini test eder
 
-Feature:
+  Scenario: US_001 > TC_02 Anasayfaya ulasim testi
+    Given Hasta anasayfaya ulasir
+    And   "Insurance Plans" yazisinin gorundugunu test eder.
+
 
 
 Scenario:  US012  heallifehospital.com About Us menusunun olmasi testi
@@ -75,14 +82,7 @@ And    kullanici Testimonials  basligini gorur
     Then Anasayfanin tamamina basarili bir sekilde erisir
     When Anasayfada Featurerd Services başlığını görür
 
-  @anasayfa
-  Scenario: US_001 > TC_01  Anasayfaya ulasim testi
-    Given Hasta anasayfaya gider
-    And   Sayfaya erisebildigini test eder
 
-  Scenario: US_001 > TC_02 Anasayfaya ulasim testi
-    Given Hasta anasayfaya ulasir
-    And   "Insurance Plans" yazisinin gorundugunu test eder.
   Scenario: TC_004 Access to relevant Emergency help board under the "Featured services" title
     Given Kullanici browser acar ve url girer
     Then Anasayfanin tamamina basarili bir sekilde erisir
