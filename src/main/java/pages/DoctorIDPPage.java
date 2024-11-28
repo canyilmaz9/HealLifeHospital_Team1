@@ -315,6 +315,28 @@ public class DoctorIDPPage extends BasePage {
 
     @FindBy(xpath = "//li[contains(text(),'Emily Houston (192)')]")
     public WebElement addedPAtIDText;
+    @FindBy(xpath = "//div[@class='col-lg-6 col-md-6 col-sm-6']//input[@name='guardian_name']")
+    public WebElement guardianNameAddPat;
+    @FindBy(xpath = "(//select[@name='blood_group'])[2]")
+    public WebElement bloodGroupDDMAddPat;
+    @FindBy(xpath = "(//option[@value='4'])[4]")
+    public WebElement ABPozBloodAddPAt;
+    @FindBy(xpath = "(//select[@name='marital_status'])[2]")
+    public WebElement maritalStatusAddPAt;
+    @FindBy(xpath = "(//option[contains(text(),'Married')])[2]")
+    public WebElement marriedAddPAt;
+
+    @FindBy(xpath = "(//*[@class='dropify-errors-container'])[2]")
+    public WebElement patientPhotoUploadButton;
+
+
+
+
+
+
+
+
+
 
 
 
