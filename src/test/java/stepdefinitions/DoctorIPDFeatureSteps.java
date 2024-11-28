@@ -564,39 +564,26 @@ public class DoctorIPDFeatureSteps {
         ReusableMethods.hardWait(2);
 
     }
-    @Then("Click on the Marital Status dropdown menu.")
-    public void click_on_the_marital_status_dropdown_menu() {
 
-
-
-
-    }
     @Then("Select {string} from the Marital Status dropdown menu.")
     public void select_from_the_marital_status_dropdown_menu(String string) {
        actions.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).sendKeys(Keys.DOWN).sendKeys(Keys.DOWN).sendKeys(Keys.ENTER).perform();
        ReusableMethods.waitForElementVisibility(  doctorIDPPage.marriedAddPAt,20);
        doctorIDPPage.marriedAddPAt.click();
        ReusableMethods.hardWait(3);
+       actions.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
+       ReusableMethods.hardWait(5);
     }
-    @Then("Click on the Patient Photo Upload button.")
-    public void click_on_the_patient_photo_upload_button() {
 
-    }
-    @Then("Select {string} from the PC.")
+    @Then("Upload {string} from the PC.")
     public void select_from_the_pc(String string) throws AWTException {
-        String filePath = "/Users/User/IdeaProjects/HealLifeHospital_Team1/src/test/resources/PatientPhoto.jpg";
-        ReusableMethods.waitForElementToBeClickable(doctorIDPPage.patientPhotoUploadButton,50);
-      //  JavascriptExecutor js = (JavascriptExecutor) driver;
-       // js.executeScript("arguments[0].value=arguments[1];", doctorIDPPage.patientPhotoUploadButton, "C:/Users/User/IdeaProjects/HealLifeHospital_Team1/src/test/resources/PatientPhoto.jpg");
-
-        doctorIDPPage.patientPhotoUploadButton.sendKeys(filePath);
-
-
+        String filePath = "C:\\Users\\User\\Desktop\\Heal Life Project\\PatientPhoto.jpg";
+                 ReusableMethods.uploadFileWithRobot(filePath);
 
     }
     @Then("Click on the Any Known Allergies box.")
     public void click_on_the_any_known_allergies_box() {
-        for (int i = 0; i <7 ; i++) {
+        for (int i = 0; i <5 ; i++) {
             actions.sendKeys(Keys.TAB).perform();
         }
         ReusableMethods.hardWait(2);
@@ -606,6 +593,13 @@ public class DoctorIPDFeatureSteps {
     public void enter_in_the_any_known_allergies_box(String string) {
         actions.sendKeys(string).perform();
         ReusableMethods.hardWait(2);
+    }
+
+    @Then("Click on the Save button on the Add Patient.")
+    public void click_on_the_save_button_on_the_add_patient() {
+            ReusableMethods.waitForElementVisibility(doctorIDPPage.saveButtonAddPAt,20);
+            doctorIDPPage.saveButtonAddPAt.click();
+
     }
 
 

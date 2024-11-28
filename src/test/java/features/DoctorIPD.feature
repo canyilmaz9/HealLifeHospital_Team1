@@ -162,15 +162,23 @@ Scenario: (US_053_US03_TC01) Verify that the doctor can admit a new patient to a
     * Enter "30.11.2024" in the Date of Birth box.
     * Click on the Blood Group dropdown menu.
     * Select AB+ from the Blood Group dropdown menu.
-    * Click on the Marital Status dropdown menu.
     * Select "Married" from the Marital Status dropdown menu.
-    * Click on the Patient Photo Upload button.
-    * Select "PatientPhoto" from the PC.
+    * Upload "PatientPhoto" from the PC.
     * Click on the Any Known Allergies box.
     * Enter "Penisilin" in the Any Known Allergies box.
+    * Click on the Save button on the Add Patient.
+    * Click on the Admission Date box.
+    * Enter today's date in the Admission Date box.
+    * Verify that the Credit Limit box text is not null.
+    * Verify that the Consultant Doctor box text is not null.
+    * Click on the Bed Group box.
+    * Select "2" as the patient private ward in the Bed Group box.
+    * Click on the Bed Number box.
+    * Select 151 as the bed number.
     * Click on the Save button.
     * Verify that the Patient Added Successfully message is displayed.
     * Verify that the data in row 1, column 3 of the IPD Patient table equals the name of the last registered patient.
+    * Verify that the Patient Added Successfully message is displayed.
 
 
 
