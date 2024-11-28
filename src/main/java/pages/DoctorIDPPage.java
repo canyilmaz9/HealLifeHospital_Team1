@@ -298,7 +298,7 @@ public class DoctorIDPPage extends BasePage {
     public WebElement bedGroupAddPAt; //select value 2 -> private Ward
     @FindBy(xpath = "//span[@id='select2-bed_no-container']")
     public WebElement bedNumberAddPAt;
-    @FindBy(xpath = "//li[contains(text(), '153')]")
+    @FindBy(xpath = "//li[contains(text(), '152')]")
     public WebElement option151BedNumAddPAt;
     @FindBy(xpath = "//button[@id='formaddbtn']")
     public WebElement saveAddPAt2;
@@ -330,6 +330,15 @@ public class DoctorIDPPage extends BasePage {
 
     @FindBy(xpath = "(//*[@class='filestyle form-control'])[2]")
     public WebElement patientPhotoUploadButton;
+    @FindBy(xpath = "//i[@class='fa fa-hospital-o']")
+    public WebElement dischargePattButton;
+    @FindBy(xpath = "//input[@name='discharge_date']")
+    public WebElement dischargeDate;
+    @FindBy(xpath = "(//button[@id='add_paymentbtn'])[1]")
+    public WebElement saveDischargeButton;
+
+
+
 
 
 
@@ -448,6 +457,23 @@ public class DoctorIDPPage extends BasePage {
 
 
         return dataTablePatientCount;
+    }
+
+    public  boolean isPatientNamePresent(WebDriver driver, String patientName) {
+
+        List<WebElement> rows = driver.findElements(By.xpath("//tbody//tr"));
+
+
+        List<String> nameColumnData = new ArrayList<>();
+
+
+        for (int i = 1; i <= rows.size(); i++) {
+            String name = driver.findElement(By.xpath("//tbody//tr[" + i + "]//td[3]")).getText();
+            nameColumnData.add(name);
+        }
+
+
+        return nameColumnData.contains(patientName);
     }
 
 
@@ -643,7 +669,7 @@ public class DoctorIDPPage extends BasePage {
     public void clickLastAddedMedi(int row, int column,String lastMediName ){
 
 
-       WebElement lastMedi=driver.findElement(By.xpath("(//tbody)[12]//tr[" + row + "]//td[" + column + "]"));
+       WebElement lastMedi=driver.findElement(By.xpath("(//tbody)[11]//tr[" + row + "]//td[" + column + "]"));
         ReusableMethods.hardWait(1);
        Assert.assertEquals(lastMediName,lastMedi.getText());
 

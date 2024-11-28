@@ -212,7 +212,7 @@ public class HomePageGeneralPage extends BasePage{
     @FindBy (xpath = "/html/body/div[1]/div[1]/section/div/div[2]/div/div[1]/div/a")
     public WebElement addAppointment;
 
-    @FindBy (xpath = "//td[@class='day' and text()='29']")
+    @FindBy (xpath = "//td[@class='day' and text()='30']")
     public WebElement day29;
 
     @FindBy (xpath = "//*[@class='form-control date']")
@@ -237,7 +237,7 @@ public class HomePageGeneralPage extends BasePage{
     public WebElement appointmentSave;
 
 
-    @FindBy (xpath = "//*[@id=\"slot_10\"]")    
+    @FindBy (xpath = "//span[@id='slot_6']")
 
     public WebElement availableSlots;
 

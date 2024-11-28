@@ -54,12 +54,17 @@ public class DoctorIPDFeatureSteps {
     }
     @Given("Login as doctor")
     public void login_as_doctor() {
-    doctorIDPPage.doctorLogin(8);
+    doctorIDPPage.doctorLogin(9);
     }
 
 
     @Then("As a doctor, click on the IPD menu in the dashboard.")
-    public void as_a_doctor_click_on_the_ipd_menu_in_the_dashboard() {
+    public void
+
+
+
+
+    as_a_doctor_click_on_the_ipd_menu_in_the_dashboard() {
      ReusableMethods.clickWithText(" IPD");
 
     }
@@ -503,7 +508,7 @@ public class DoctorIPDFeatureSteps {
         @Then("Verify that the data in row {int}, column {int} of the IPD Patient table equals the name of the last registered patient.")
         public void verify_that_the_data_in_row_column_of_the_ipd_patient_table_equals_the_name_of_the_last_registered_patient(Integer int1, Integer int2) {
        ReusableMethods.hardWait(3);
-     Assert.assertTrue( doctorIDPPage.TableDataRetriever(1,3).getText().contains("Emily Houston"));
+     Assert.assertTrue( doctorIDPPage.TableDataRetriever(1,3).getText().contains("Rana nur ulker"));
         }
 
 
@@ -518,8 +523,9 @@ public class DoctorIPDFeatureSteps {
         ReusableMethods.waitForElementToBeClickable(doctorIDPPage.addOldPatientDDM,20);
         actions.click(doctorIDPPage.addOldPatientDDM).perform();
          actions.sendKeys(doctorIDPPage.addOldPatientDDM,string).perform();
-          ReusableMethods.waitForElementVisibility(doctorIDPPage.addedPAtIDText,20);
-          actions.click(doctorIDPPage.addedPAtIDText).perform();
+         // ReusableMethods.waitForElementVisibility(doctorIDPPage.addedPAtIDText,20);
+         // actions.click(doctorIDPPage.addedPAtIDText).perform();
+        doctorIDPPage.clickContainsTextWE("79");
     }
     @Then("Click on the Height box.")
     public void click_on_the_height_box() {
@@ -613,6 +619,35 @@ public class DoctorIPDFeatureSteps {
     public void click_on_the_save_button_on_the_add_patient() {
             ReusableMethods.waitForElementVisibility(doctorIDPPage.saveButtonAddPAt,20);
             doctorIDPPage.saveButtonAddPAt.click();
+
+    }
+
+    @Then("Click on the Discharge Patient button.")
+    public void click_on_the_discharge_patient_button() {
+       doctorIDPPage.dischargePattButton.click();
+    }
+    @Then("Click on the Discharge Date box.")
+    public void click_on_the_discharge_date_box() {
+    doctorIDPPage.dischargeDate.click();
+
+    }
+    @Then("Click on the Discharge Status dropdown menu.")
+    public void click_on_the_discharge_status_dropdown_menu() {
+        actions.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).sendKeys(Keys.DOWN).sendKeys(Keys.DOWN).sendKeys(Keys.DOWN).sendKeys(Keys.ENTER).perform();
+    }
+
+    @Then("Click on the Save button on the Discharge Page.")
+    public void click_on_the_save_button_on_the_discharge_page() {
+        ReusableMethods.waitForElementVisibility(doctorIDPPage.saveDischargeButton,20);
+        doctorIDPPage.saveDischargeButton.click();
+
+        ReusableMethods.hardWait(2);
+
+
+    }
+    @Then("Verify that the patient's name {string} is no longer visible in the IPD Patient Data table.")
+    public void verify_that_the_patient_s_name_is_no_longer_visible_in_the_ipd_patient_data_table(String patientName) {
+       Assert.assertFalse( doctorIDPPage.isPatientNamePresent(driver,patientName));
 
     }
 

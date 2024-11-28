@@ -2122,3 +2122,179 @@
 2024-11-28 12:26:54 [main] INFO  stepdefinitions.HomePageGeneralSteps - Anasayfaya gidildi: https://qa.heallifehospital.com/
 2024-11-28 12:27:27 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Hasta appointment olusturur
 2024-11-28 12:27:27 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 12:39:57 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 12:39:58 [main] INFO  utils.LoggerHelper - Test Başlıyor: Hasta appointment olusturur
+2024-11-28 12:40:01 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 12:40:04 [main] INFO  stepdefinitions.HomePageGeneralSteps - Anasayfaya gidildi: https://qa.heallifehospital.com/
+2024-11-28 12:40:20 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Hasta appointment olusturur
+2024-11-28 12:40:20 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 12:41:12 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 12:41:13 [main] INFO  utils.LoggerHelper - Test Başlıyor: Hasta appointment olusturur
+2024-11-28 12:41:16 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 12:41:18 [main] INFO  stepdefinitions.HomePageGeneralSteps - Anasayfaya gidildi: https://qa.heallifehospital.com/
+2024-11-28 12:41:52 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Hasta appointment olusturur
+2024-11-28 12:41:52 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 12:44:15 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 12:44:39 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 12:44:40 [main] INFO  utils.LoggerHelper - Test Başlıyor: Hasta appointment olusturur
+2024-11-28 12:44:44 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 12:44:47 [main] INFO  stepdefinitions.HomePageGeneralSteps - Anasayfaya gidildi: https://qa.heallifehospital.com/
+2024-11-28 12:45:18 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Hasta appointment olusturur
+2024-11-28 12:45:18 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 12:46:19 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 12:46:20 [main] INFO  utils.LoggerHelper - Test Başlıyor: Hasta appointment olusturur
+2024-11-28 12:46:23 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 12:46:26 [main] INFO  stepdefinitions.HomePageGeneralSteps - Anasayfaya gidildi: https://qa.heallifehospital.com/
+2024-11-28 12:46:58 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Hasta appointment olusturur
+2024-11-28 12:46:58 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 12:55:48 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 12:55:48 [main] INFO  utils.LoggerHelper - Test Başlıyor: Hasta appointment olusturur
+2024-11-28 12:55:51 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 12:55:55 [main] INFO  stepdefinitions.HomePageGeneralSteps - Anasayfaya gidildi: https://qa.heallifehospital.com/
+2024-11-28 12:56:23 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Hasta appointment olusturur
+2024-11-28 12:56:23 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 12:57:22 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 12:57:23 [main] INFO  utils.LoggerHelper - Test Başlıyor: Hasta appointment olusturur
+2024-11-28 12:57:26 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 12:57:29 [main] INFO  stepdefinitions.HomePageGeneralSteps - Anasayfaya gidildi: https://qa.heallifehospital.com/
+2024-11-28 12:57:57 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Hasta appointment olusturur
+2024-11-28 12:57:57 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 13:00:59 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 13:01:00 [main] INFO  utils.LoggerHelper - Test Başlıyor: Hasta appointment olusturur
+2024-11-28 13:01:03 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 13:01:05 [main] INFO  stepdefinitions.HomePageGeneralSteps - Anasayfaya gidildi: https://qa.heallifehospital.com/
+2024-11-28 13:01:37 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Hasta appointment olusturur
+2024-11-28 13:01:37 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 13:03:39 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 13:03:40 [main] INFO  utils.LoggerHelper - Test Başlıyor: Hasta appointment olusturur
+2024-11-28 13:03:43 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 13:03:46 [main] INFO  stepdefinitions.HomePageGeneralSteps - Anasayfaya gidildi: https://qa.heallifehospital.com/
+2024-11-28 13:04:17 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Hasta appointment olusturur
+2024-11-28 13:04:17 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 13:06:12 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 13:06:13 [main] INFO  utils.LoggerHelper - Test Başlıyor: Hasta appointment olusturur
+2024-11-28 13:06:16 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 13:06:19 [main] INFO  stepdefinitions.HomePageGeneralSteps - Anasayfaya gidildi: https://qa.heallifehospital.com/
+2024-11-28 13:07:48 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Hasta appointment olusturur
+2024-11-28 13:07:48 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 13:21:15 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 13:21:15 [main] INFO  utils.LoggerHelper - Test Başlıyor: Hasta appointment olusturur
+2024-11-28 13:21:19 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 13:21:22 [main] INFO  stepdefinitions.HomePageGeneralSteps - Anasayfaya gidildi: https://qa.heallifehospital.com/
+2024-11-28 13:22:33 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Hasta appointment olusturur
+2024-11-28 13:22:33 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 13:27:18 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 13:27:19 [main] INFO  utils.LoggerHelper - Test Başlıyor: Hasta appointment olusturur
+2024-11-28 13:27:22 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 13:27:25 [main] INFO  stepdefinitions.HomePageGeneralSteps - Anasayfaya gidildi: https://qa.heallifehospital.com/
+2024-11-28 13:28:53 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Hasta appointment olusturur
+2024-11-28 13:28:53 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 13:31:09 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 13:31:10 [main] INFO  utils.LoggerHelper - Test Başlıyor: Hasta appointment olusturur
+2024-11-28 13:31:13 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 13:31:16 [main] INFO  stepdefinitions.HomePageGeneralSteps - Anasayfaya gidildi: https://qa.heallifehospital.com/
+2024-11-28 13:33:08 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Hasta appointment olusturur
+2024-11-28 13:33:09 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 13:34:31 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 13:34:32 [main] INFO  utils.LoggerHelper - Test Başlıyor: Hasta appointment olusturur
+2024-11-28 13:34:35 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 13:34:38 [main] INFO  stepdefinitions.HomePageGeneralSteps - Anasayfaya gidildi: https://qa.heallifehospital.com/
+2024-11-28 13:35:53 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Hasta appointment olusturur
+2024-11-28 13:35:54 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 13:38:32 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 13:38:33 [main] INFO  utils.LoggerHelper - Test Başlıyor: Hasta appointment olusturur
+2024-11-28 13:38:36 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 13:38:39 [main] INFO  stepdefinitions.HomePageGeneralSteps - Anasayfaya gidildi: https://qa.heallifehospital.com/
+2024-11-28 13:40:22 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Hasta appointment olusturur
+2024-11-28 13:40:23 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 13:48:46 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 13:48:47 [main] INFO  utils.LoggerHelper - Test Başlıyor: Hasta appointment olusturur
+2024-11-28 13:48:51 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 13:48:53 [main] INFO  stepdefinitions.HomePageGeneralSteps - Anasayfaya gidildi: https://qa.heallifehospital.com/
+2024-11-28 13:50:25 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: Hasta appointment olusturur
+2024-11-28 13:50:25 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 14:12:37 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 14:12:38 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_04>TC_01]
+2024-11-28 14:12:41 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 14:13:03 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_04>TC_01]
+2024-11-28 14:13:03 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 14:13:03 [main] INFO  utils.LoggerHelper - Test Başlıyor: Doktor IPD girisi yapar
+2024-11-28 14:13:03 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Doktor IPD girisi yapar
+2024-11-28 14:13:03 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 14:13:53 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 14:13:53 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_04>TC_01]
+2024-11-28 14:13:56 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 14:14:03 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: [US_053_04>TC_01]
+2024-11-28 14:14:04 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 14:14:04 [main] INFO  utils.LoggerHelper - Test Başlıyor: Doktor IPD girisi yapar
+2024-11-28 14:14:04 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Doktor IPD girisi yapar
+2024-11-28 14:14:04 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 14:34:16 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 14:34:16 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_04>TC_01]
+2024-11-28 14:34:18 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 14:35:12 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_04>TC_01]
+2024-11-28 14:35:13 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 14:35:13 [main] INFO  utils.LoggerHelper - Test Başlıyor: Doktor IPD girisi yapar
+2024-11-28 14:35:13 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Doktor IPD girisi yapar
+2024-11-28 14:35:13 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 14:35:52 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 14:35:52 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_04>TC_01]
+2024-11-28 14:35:54 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 14:36:23 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_04>TC_01]
+2024-11-28 14:36:24 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 14:36:24 [main] INFO  utils.LoggerHelper - Test Başlıyor: Doktor IPD girisi yapar
+2024-11-28 14:36:24 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Doktor IPD girisi yapar
+2024-11-28 14:36:24 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 14:37:04 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 14:37:04 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_04>TC_01]
+2024-11-28 14:37:06 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 14:37:35 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_04>TC_01]
+2024-11-28 14:37:35 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 14:37:35 [main] INFO  utils.LoggerHelper - Test Başlıyor: Doktor IPD girisi yapar
+2024-11-28 14:37:35 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Doktor IPD girisi yapar
+2024-11-28 14:37:35 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 14:57:26 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 14:57:27 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_04>TC_01]
+2024-11-28 14:57:29 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 14:57:38 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_04>TC_01]
+2024-11-28 14:57:38 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 14:57:38 [main] INFO  utils.LoggerHelper - Test Başlıyor: Doktor IPD girisi yapar
+2024-11-28 14:57:38 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Doktor IPD girisi yapar
+2024-11-28 14:57:38 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 14:57:45 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 14:57:46 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_04>TC_01]
+2024-11-28 14:57:47 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 14:58:11 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_04>TC_01]
+2024-11-28 14:58:11 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 14:58:11 [main] INFO  utils.LoggerHelper - Test Başlıyor: Doktor IPD girisi yapar
+2024-11-28 14:58:11 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Doktor IPD girisi yapar
+2024-11-28 14:58:11 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 14:59:19 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 14:59:20 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_04>TC_01]
+2024-11-28 14:59:21 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 14:59:30 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_04>TC_01]
+2024-11-28 14:59:30 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 14:59:30 [main] INFO  utils.LoggerHelper - Test Başlıyor: Doktor IPD girisi yapar
+2024-11-28 14:59:30 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Doktor IPD girisi yapar
+2024-11-28 14:59:30 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 15:40:57 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 15:40:57 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_04>TC_01]
+2024-11-28 15:40:59 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 15:41:12 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: [US_053_04>TC_01]
+2024-11-28 15:41:12 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 15:41:12 [main] INFO  utils.LoggerHelper - Test Başlıyor: Doktor IPD girisi yapar
+2024-11-28 15:41:12 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Doktor IPD girisi yapar
+2024-11-28 15:41:12 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 15:43:26 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 15:43:27 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_04>TC_01]
+2024-11-28 15:43:28 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 15:43:40 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: [US_053_04>TC_01]
+2024-11-28 15:43:41 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 15:43:41 [main] INFO  utils.LoggerHelper - Test Başlıyor: Doktor IPD girisi yapar
+2024-11-28 15:43:41 [main] ERROR utils.LoggerHelper - Test başarısız oldu: Doktor IPD girisi yapar
+2024-11-28 15:43:41 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 15:46:54 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 15:46:54 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_04>TC_01]
+2024-11-28 15:46:56 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 15:47:07 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: [US_053_04>TC_01]
+2024-11-28 15:47:07 [main] INFO  utils.LoggerHelper - Driver kapatıldı.

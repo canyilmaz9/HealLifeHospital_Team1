@@ -594,7 +594,12 @@ public class HomePageGeneralSteps {
         homePageGeneralPage.addAppointment.click();
         Thread.sleep(2000);
         homePageGeneralPage.date.click();
-        homePageGeneralPage.day29.click();
+
+        String targetDay = "2";
+        WebElement day = driver.findElement(By.xpath("(//tbody)[3]//tr[6]//td["+targetDay+"]"));
+        day.click();
+
+
         Select select=new Select(homePageGeneralPage.specialist);
         select.selectByValue("1");
         homePageGeneralPage.Doctor.click();
@@ -602,11 +607,12 @@ public class HomePageGeneralSteps {
         select1.selectByValue("792");
         Select select2=new Select(homePageGeneralPage.shift);
         select2.selectByValue("1");
-        Select select3=new Select(homePageGeneralPage.slot);
-        select3.selectByValue("132");
+
+        actions.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).sendKeys(Keys.DOWN).sendKeys(Keys.DOWN).sendKeys(Keys.ENTER).perform();
         Thread.sleep(3000);
         homePageGeneralPage.messageToDoctor.sendKeys("hello, I will be there");
         homePageGeneralPage.availableSlots.click();
+
         homePageGeneralPage.appointmentSave.click();
 
 
