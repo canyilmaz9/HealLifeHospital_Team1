@@ -134,27 +134,7 @@ Scenario: US_019>TC_006 Visits sayfasinda Visits List'te (OPD No, Case ID, Appoi
       Then It can be seen that a line and enable to see timeline information
 
 
-   #US030 Gallery sayfasinda farkli bölümler (Health & Wellness, Hospitals and Directions, Specialities, Recreation Centre, Your Health, Surgery) ile ilgili her bölüme ait sayfalarin  olmasi ve ustune tiklanildiginda dogru sayfaya yonlendirilmesi testi
-    Scenario: US_030>TC_012 Ana sayfa header bölümündeki Gallery linkine tiklandiginda "gallery" sayfasina yönlendirmesi testi
-      Given Kullanici Anasayfa adresine gider
-      And User reach gallery section
-      Then User clicks gallery button
-      Then The link redirected gallery page
 
-    Scenario: US_030>TC_013 Gallery sayfasinda farkli bölümler (Health & Wellness, Hospitals and Directions, Specialities, Recreation Centre, Your Health, Surgery) ile ilgili her bölüme ait sayfalarin  olmasi ve ustune tiklanildiginda dogru sayfaya yonlendirilmesi testi
-      Given Kullanici Anasayfa adresine gider
-      And User reach gallery section
-      Then User clicks gallery button
-      Then The link redirected gallery page
-      Then verification of the Health & Wellness page is clickable and forwarding correct link
-      Then verification of the Hospitals and Directions page is clickable and forwarding correct link
-      Then verification of the Specialities page is clickable and forwarding correct link
-      Then verification of the Recreation Centre page is clickable and forwarding correct link
-      Then verification of the Your Health page is clickable and forwarding correct link
-      Then verification of the Surgery page is clickable and forwarding correct link
-
-
-  @homepage
   #US018 Bir kullanici(hasta) olarak randevularimi kontrol edebilmem icin bir randevularimla ilgili islemleri yapabilecegim bir randevu sayfasinin olmasini istiyorum
   Scenario: US_018>TC001 Checking appointments information, perform operations and search appointment in appointment page
     Given Kullanici Anasayfa adresine gider
@@ -175,15 +155,7 @@ Scenario: US_019>TC_006 Visits sayfasinda Visits List'te (OPD No, Case ID, Appoi
 
     Then Make a new appointment
     Then Click on show, pay
-    Then Search in appointments
 
-    Scenario: US_018>TC003
-      Given Kullanici Anasayfa adresine gider
-      When Patient clicks the login button
-      And Patient logins to patient dashboard
-      Then Patient clicks to my appointments
-      Then Make a new appointment
-      Then Click on delete
 
 
   Scenario: US_018>TC002 Checking appointments in appointment page
@@ -192,6 +164,26 @@ Scenario: US_019>TC_006 Visits sayfasinda Visits List'te (OPD No, Case ID, Appoi
     And Patient logins to patient dashboard
     Then Patient clicks to my appointments
     Then User can use all filters and sorting menu
+
+
+  @homepage
+      #US030 Gallery sayfasinda farkli bölümler (Health & Wellness, Hospitals and Directions, Specialities, Recreation Centre, Your Health, Surgery) ile ilgili her bölüme ait sayfalarin  olmasi ve ustune tiklanildiginda dogru sayfaya yonlendirilmesi testi
+  Scenario: US_030>TC_012 Ana sayfa header bölümündeki Gallery linkine tiklandiginda "gallery" sayfasina yönlendirmesi testi
+    Given Kullanici Anasayfa adresine gider
+    Then User clicks gallery button
+    Then The link redirected gallery page
+
+  Scenario: US_030>TC_013 Gallery sayfasinda farkli bölümler (Health & Wellness, Hospitals and Directions, Specialities, Recreation Centre, Your Health, Surgery) ile ilgili her bölüme ait sayfalarin  olmasi ve ustune tiklanildiginda dogru sayfaya yonlendirilmesi testi
+    Given Kullanici Anasayfa adresine gider
+    And User reach gallery section
+    Then User clicks gallery button
+    Then The link redirected gallery page
+    Then verification of the Health & Wellness page is clickable and forwarding correct link
+    Then verification of the Hospitals and Directions page is clickable and forwarding correct link
+    Then verification of the Specialities page is clickable and forwarding correct link
+    Then verification of the Recreation Centre page is clickable and forwarding correct link
+    Then verification of the Your Health page is clickable and forwarding correct link
+    Then verification of the Surgery page is clickable and forwarding correct link
 
 
 

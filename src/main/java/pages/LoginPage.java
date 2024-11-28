@@ -1,10 +1,13 @@
 package pages;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utils.ExcelReader;
 
 public class LoginPage extends BasePage {
 	@FindBy(id = "username")
@@ -94,6 +97,50 @@ public class LoginPage extends BasePage {
 
 	@FindBy(xpath = "//*[@rel=\"1\"]")
 	public WebElement trLanguage;
+
+	private static final Logger logger = LogManager.getLogger(Admin_Billing_AppointmentPage.class);
+
+	@FindBy(id = "email")
+	private WebElement adminUsernameBox;
+
+	@FindBy(id = "password")
+	private WebElement adminPasswordBox;
+
+	@FindBy(className = "btn")
+	private WebElement adminSigninBtn;
+
+
+	public void adminSignin(String filePath, int usernameSheetIndex, int usernameRowIndex, int usernameColumnIndex,
+							int passwordSheetIndex, int passwordRowIndex, int passwordColumnIndex) {
+		// ExcelReader'dan username ve password değerlerini çekiyoruz
+		String username = ExcelReader.getCellData(filePath, usernameSheetIndex, usernameRowIndex, usernameColumnIndex);
+		String password = ExcelReader.getCellData(filePath, passwordSheetIndex, passwordRowIndex, passwordColumnIndex);
+
+		// Çekilen değerleri kontrol ediyoruz
+		if (username != null && password != null) {
+			logger.info("Excel'den çekilen kullanıcı adı: {"+username+"}");
+			logger.info("Excel'den çekilen şifre: {"+password+"}");
+
+			adminUsernameBox.sendKeys(username);
+			adminPasswordBox.sendKeys(password);
+			adminSigninBtn.click();
+		} else {
+			System.err.println("Kullanıcı adı veya şifre Excel'den okunamadı!");
+		}
+	}
+
+	@FindBy(xpath = "//*[@name=\"email\"]")
+	public WebElement loginfpMailBox;
+
+	@FindBy(xpath = "//*[@type=\"submit\"]")
+	public WebElement loginfpSubmitBtn;
+
+	@FindBy(xpath = "//*[@class=\"forgot\"]")
+	public WebElement loginfpAdminLoginBtn;
+
+	@FindBy(xpath = "//*[@class=\"alert alert-danger\"]")
+	public WebElement mailSendAlert;
+
 
 
 }
