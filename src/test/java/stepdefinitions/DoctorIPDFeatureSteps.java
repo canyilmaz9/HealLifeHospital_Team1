@@ -31,12 +31,13 @@ public class DoctorIPDFeatureSteps {
 
     @Given("Enters the {string}")
     public void enters_the(String url) {
-        driver.get(ConfigReader.getProperty(url));
+        ReusableMethods.switchWindowByUrl(driver,ConfigReader.getProperty(url));
+       // driver.get(ConfigReader.getProperty(url));
         ReusableMethods.bekle(2);
     }
     @Given("Login as doctor")
     public void login_as_doctor() {
-    doctorIDPPage.doctorLogin(9);
+    doctorIDPPage.doctorLogin(8);
     }
 
 

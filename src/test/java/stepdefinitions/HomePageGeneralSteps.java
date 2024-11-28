@@ -611,6 +611,7 @@ public class HomePageGeneralSteps {
 
 
 
+
     }
 
     @Then("Click on show, pay")
@@ -620,8 +621,9 @@ public class HomePageGeneralSteps {
         homePageGeneralPage.paywithCard.click();
         WebElement anIframeElement=driver.findElement(By.xpath("/html/body/iframe"));
         driver.switchTo().frame(anIframeElement);
+        ReusableMethods.waitForElementVisibility(homePageGeneralPage.payEmail,20);
         homePageGeneralPage.payEmail.sendKeys("rananurulker@gmail.com");
-        Thread.sleep(2000);
+       // ReusableMethods.waitForElementVisibility(homePageGeneralPage.payCardNumber,20);
         homePageGeneralPage.payCardNumber.click();
        //try {
        //    Robot robot = new Robot();
@@ -659,7 +661,10 @@ public class HomePageGeneralSteps {
         homePageGeneralPage.zipCode.sendKeys("34567");
         Thread.sleep(2000);
         homePageGeneralPage.payButtoninCard.click();
+        Thread.sleep(2000);
+        driver.switchTo().parentFrame();
         homePageGeneralPage.goToHomeButton.click();
+        Thread.sleep(2000);
 
     }
 
