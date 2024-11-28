@@ -36,6 +36,7 @@ public class DoctorIPDFeatureSteps {
 
     @Given("Enters the {string}")
     public void enters_the(String url) {
+
         ((JavascriptExecutor) driver).executeScript("window.open();"); // Yeni sekme aç
         Set<String> windowHandles = driver.getWindowHandles();
         for (String handle : windowHandles) {
@@ -47,6 +48,7 @@ public class DoctorIPDFeatureSteps {
         }
 
         //ReusableMethods.switchWindowByUrl(driver,ConfigReader.getProperty(url));
+
        // driver.get(ConfigReader.getProperty(url));
         ReusableMethods.bekle(2);
     }
