@@ -211,6 +211,12 @@ public class ReusableMethods {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+
+    public static void waitForUrlVisibility(WebElement element, int timeout) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+        wait.until(ExpectedConditions.urlContains(""));
+    }
+
     public static boolean isTextVisible(String text) {
         try {
             // Metni içeren bir WebElement bul

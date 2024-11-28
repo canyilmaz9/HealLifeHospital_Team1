@@ -7,6 +7,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
+import static utils.ReusableMethods.driver;
+
 public class JSUtilities {
 
     // A function that scrolls the page up to the specified element.
@@ -15,7 +17,7 @@ public class JSUtilities {
     }
 
     // A function that clicks the specified element using the JavaScriptExecutor.
-    public static void clickWithJS(WebDriver driver, WebElement element) {
+    public static void clickWithJS(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
     }
 
