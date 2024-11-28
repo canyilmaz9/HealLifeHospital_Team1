@@ -128,7 +128,7 @@ Scenario: (US_053_US03_TC01) Verify that the doctor can admit a new patient to a
     * Verify that the Patient Added Successfully message is displayed.
     * Verify that the data in row 1, column 3 of the IPD Patient table equals the name of the last registered patient.
 
-  @ac
+
   Scenario:[US_053_03>TC_02] Verify that the doctor can admit an existing registered patient in the system.
     * As a doctor, verify that the Add Patient button is accessible.
     * Click on the dropdown menu in the pop-up page.
@@ -147,6 +147,32 @@ Scenario: (US_053_US03_TC01) Verify that the doctor can admit a new patient to a
     * Click on the Save button.
     * Verify that the Patient Added Successfully message is displayed.
     * Verify that the data in row 1, column 3 of the IPD Patient table equals the name of the last registered patient.
+
+  @ac
+  Scenario:[US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+    * As a doctor, verify that the Add Patient button is accessible.
+    * Click on the New Patient button.
+    * Click on the Name box.
+    * Enter "Emily Houston" in the Name box.
+    * Click on the Guardian Name box.
+    * Enter "Eric Houston" in the Guardian Name box.
+    * Click on the Gender button.
+    * Select "Female" from the Gender dropdown.
+    * Click on the Date of Birth box.
+    * Enter "30.11.2024" in the Date of Birth box.
+    * Click on the Blood Group dropdown menu.
+    * Select AB+ from the Blood Group dropdown menu.
+    * Click on the Marital Status dropdown menu.
+    * Select "Married" from the Marital Status dropdown menu.
+    * Click on the Patient Photo Upload button.
+    * Select "PatientPhoto" from the PC.
+    * Click on the Any Known Allergies box.
+    * Enter "Penisilin" in the Any Known Allergies box.
+    * Click on the Save button.
+    * Verify that the Patient Added Successfully message is displayed.
+    * Verify that the data in row 1, column 3 of the IPD Patient table equals the name of the last registered patient.
+
+
 
 
 

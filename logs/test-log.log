@@ -1584,3 +1584,329 @@
 2024-11-27 19:58:25 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
 2024-11-27 19:59:02 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: [US_053_03>TC_02] Verify that the doctor can admit an existing registered patient in the system.
 2024-11-27 19:59:02 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 20:28:06 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 20:28:07 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_02] Verify that the doctor can admit an existing registered patient in the system.
+2024-11-27 20:28:09 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 20:29:25 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_02] Verify that the doctor can admit an existing registered patient in the system.
+2024-11-27 20:29:25 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 20:29:25 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 20:29:25 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 20:29:25 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 20:29:57 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 20:29:57 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 20:30:00 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 20:30:11 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 20:30:11 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 20:46:43 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 20:46:43 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 20:46:46 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 20:46:56 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 20:46:57 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 20:47:37 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 20:47:37 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 20:47:39 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 20:47:59 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 20:48:00 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 20:57:06 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 20:57:06 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 20:57:09 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 20:57:36 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 20:57:36 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 20:58:52 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 20:58:52 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 20:58:55 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 20:59:21 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 20:59:22 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 21:10:42 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 21:10:43 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 21:10:45 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 21:11:06 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 21:11:06 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 21:12:39 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 21:12:39 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 21:12:41 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 21:13:03 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 21:13:03 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 21:14:27 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 21:14:27 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 21:14:29 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 21:14:51 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 21:14:51 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 21:15:53 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 21:15:53 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 21:15:55 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 21:16:19 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 21:16:19 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 21:28:25 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 21:28:25 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 21:28:27 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 21:28:48 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 21:28:49 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 21:28:58 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 21:28:58 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 21:28:59 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 21:29:21 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 21:29:21 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 21:30:22 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 21:30:23 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 21:30:25 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 21:30:46 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 21:30:47 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 21:33:59 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 21:34:00 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 21:34:02 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 21:34:24 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 21:34:24 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 21:36:54 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 21:36:54 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 21:36:57 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 21:37:28 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 21:37:28 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 22:09:07 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 22:09:08 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:09:10 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 22:10:00 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:10:00 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 22:15:59 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 22:15:59 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:16:01 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 22:16:51 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:16:51 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 22:25:11 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 22:25:11 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:25:15 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 22:25:56 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:25:56 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 22:27:18 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 22:27:19 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:27:21 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 22:28:01 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:28:02 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 22:33:47 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 22:33:48 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:33:50 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 22:34:30 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:34:30 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 22:34:52 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 22:34:52 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:34:55 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 22:35:34 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:35:34 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 22:36:57 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 22:36:57 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:37:00 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 22:37:40 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:37:40 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 22:43:39 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 22:43:39 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:43:41 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 22:44:21 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:44:21 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 22:44:54 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 22:44:54 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:44:56 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 22:45:36 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:45:36 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 22:46:31 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 22:46:32 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:46:34 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 22:47:13 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:47:13 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 22:49:24 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 22:49:25 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:49:27 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 22:50:06 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:50:06 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 22:50:37 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 22:50:37 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:50:39 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 22:51:19 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:51:19 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 22:52:42 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 22:52:43 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:52:45 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 22:53:25 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:53:25 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 22:58:16 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 22:58:17 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:58:19 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 22:58:59 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:59:00 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 22:59:31 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 22:59:32 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 22:59:34 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:00:14 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:00:14 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:01:29 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:01:29 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:01:31 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:02:11 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:02:11 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:02:50 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:02:50 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:02:52 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:03:32 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:03:32 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:06:48 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:06:49 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:06:51 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:07:30 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:07:30 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:08:00 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:08:01 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:08:03 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:08:43 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:08:43 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:11:06 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:11:07 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:11:10 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:11:49 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:11:50 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:12:25 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:12:26 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:12:28 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:12:54 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:12:54 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:18:36 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:18:36 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:18:38 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:19:12 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:19:12 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:21:38 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:21:39 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:21:40 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:22:14 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:22:15 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:25:00 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:25:01 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:25:02 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:25:37 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:25:37 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:25:43 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:25:43 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:25:45 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:26:38 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:26:38 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:26:40 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:27:17 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:27:18 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:27:51 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:27:51 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:27:53 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:28:27 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:28:28 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:29:09 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:29:10 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:29:12 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:29:46 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:29:46 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:30:36 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:30:37 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:30:39 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:31:18 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:31:19 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:32:45 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:32:46 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:32:47 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:33:07 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:33:07 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:34:03 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:34:04 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:34:06 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:34:25 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:34:25 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:38:44 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:38:44 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:38:46 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:39:06 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:39:06 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:39:33 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:39:33 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:39:35 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:39:51 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:39:51 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:41:28 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:41:28 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:41:31 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:41:50 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:41:51 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:43:38 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:43:38 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:43:41 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:44:11 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:44:11 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:45:47 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:45:47 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:45:49 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:46:20 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:46:21 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:47:17 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:47:18 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:47:20 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:47:51 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:47:51 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:50:02 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:50:03 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:50:06 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:50:25 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:50:26 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:50:52 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:50:52 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:50:55 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:51:35 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:51:36 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:54:11 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:54:11 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:54:13 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:54:33 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:54:33 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:55:22 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:55:23 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:55:25 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:55:44 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:55:45 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-27 23:57:10 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-27 23:57:10 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:57:12 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-27 23:57:49 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-27 23:57:50 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 00:01:30 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 00:01:31 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-28 00:01:33 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 00:02:10 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-28 00:02:10 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 00:35:51 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 00:35:52 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-28 00:35:55 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 00:36:34 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-28 00:36:34 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 00:37:03 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 00:37:03 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-28 00:37:05 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 00:37:31 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-28 00:37:32 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 00:41:25 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 00:41:25 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-28 00:41:27 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 00:42:01 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-28 00:42:01 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 00:42:58 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 00:42:59 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-28 00:43:02 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 00:43:39 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-28 00:43:39 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 00:45:59 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 00:45:59 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-28 00:46:01 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 00:46:36 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-28 00:46:36 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 00:50:20 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 00:50:21 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-28 00:50:23 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 00:51:32 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-28 00:51:33 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-28 00:55:51 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-28 00:55:52 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-28 00:55:54 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-28 00:57:06 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
+2024-11-28 00:57:07 [main] INFO  utils.LoggerHelper - Driver kapatıldı.

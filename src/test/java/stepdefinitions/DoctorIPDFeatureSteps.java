@@ -9,13 +9,17 @@ import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.DoctorIDPPage;
 import utilities.ReusableMethods;
 import utils.ExcelDataReader_Seren;
 import utils.JSUtilities;
 
 import javax.print.Doc;
+import java.awt.*;
+import java.time.Duration;
 
 
 public class DoctorIPDFeatureSteps {
@@ -406,10 +410,13 @@ public class DoctorIPDFeatureSteps {
         }
         @Then("Click on the Date of Birth box.")
         public void click_on_the_date_of_birth_box() {
+        ReusableMethods.waitForElementVisibility(doctorIDPPage.dateOfBirthAddPAt,20);
         doctorIDPPage.dateOfBirthAddPAt.click();
+        ReusableMethods.hardWait(2);
         }
         @Then("Enter {string} in the Date of Birth box.")
         public void enter_in_the_date_of_birth_box(String string) {
+        ReusableMethods.waitForElementVisibility(doctorIDPPage.dateOfBirthAddPAt,20);
 
         doctorIDPPage.dateOfBirthAddPAt.sendKeys(string);
         }
@@ -521,6 +528,84 @@ public class DoctorIPDFeatureSteps {
             ReusableMethods.hardWait(5);
             ReusableMethods.waitForElementVisibility(doctorIDPPage.symptomTitleCheckBoxAddPAt,20);
             actions.click(doctorIDPPage.symptomTitleCheckBoxAddPAt).perform();
+    }
+
+
+    @Then("Click on the Guardian Name box.")
+    public void click_on_the_guardian_name_box() {
+            ReusableMethods.waitForElementVisibility(doctorIDPPage.guardianNameAddPat,20);
+            actions.click(doctorIDPPage.guardianNameAddPat).perform();
+            ReusableMethods.hardWait(1);
+
+    }
+    @Then("Enter {string} in the Guardian Name box.")
+    public void enter_in_the_guardian_name_box(String string) {
+            actions.sendKeys(doctorIDPPage.guardianNameAddPat,string).perform();
+            ReusableMethods.hardWait(2);
+    }
+    @Then("Click on the Blood Group dropdown menu.")
+    public void click_on_the_blood_group_dropdown_menu() {
+        ReusableMethods.waitForElementVisibility(doctorIDPPage.bloodGroupDDMAddPat,20);
+        actions.click(doctorIDPPage.bloodGroupDDMAddPat).perform();
+        ReusableMethods.hardWait(2);
+
+
+    }
+    @Then("Select AB+ from the Blood Group dropdown menu.")
+    public void select_from_the_blood_group_dropdown_menu() {
+
+
+        for (int i = 0; i <4 ; i++) {
+            actions.sendKeys(Keys.DOWN).perform();
+        }
+
+        utils.ReusableMethods.hardWait(1);
+        actions.sendKeys(Keys.ENTER).perform();
+        ReusableMethods.hardWait(2);
+
+    }
+    @Then("Click on the Marital Status dropdown menu.")
+    public void click_on_the_marital_status_dropdown_menu() {
+
+
+
+
+    }
+    @Then("Select {string} from the Marital Status dropdown menu.")
+    public void select_from_the_marital_status_dropdown_menu(String string) {
+       actions.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).sendKeys(Keys.DOWN).sendKeys(Keys.DOWN).sendKeys(Keys.ENTER).perform();
+       ReusableMethods.waitForElementVisibility(  doctorIDPPage.marriedAddPAt,20);
+       doctorIDPPage.marriedAddPAt.click();
+       ReusableMethods.hardWait(3);
+    }
+    @Then("Click on the Patient Photo Upload button.")
+    public void click_on_the_patient_photo_upload_button() {
+
+    }
+    @Then("Select {string} from the PC.")
+    public void select_from_the_pc(String string) throws AWTException {
+        String filePath = "/Users/User/IdeaProjects/HealLifeHospital_Team1/src/test/resources/PatientPhoto.jpg";
+        ReusableMethods.waitForElementToBeClickable(doctorIDPPage.patientPhotoUploadButton,50);
+      //  JavascriptExecutor js = (JavascriptExecutor) driver;
+       // js.executeScript("arguments[0].value=arguments[1];", doctorIDPPage.patientPhotoUploadButton, "C:/Users/User/IdeaProjects/HealLifeHospital_Team1/src/test/resources/PatientPhoto.jpg");
+
+        doctorIDPPage.patientPhotoUploadButton.sendKeys(filePath);
+
+
+
+    }
+    @Then("Click on the Any Known Allergies box.")
+    public void click_on_the_any_known_allergies_box() {
+        for (int i = 0; i <7 ; i++) {
+            actions.sendKeys(Keys.TAB).perform();
+        }
+        ReusableMethods.hardWait(2);
+
+    }
+    @Then("Enter {string} in the Any Known Allergies box.")
+    public void enter_in_the_any_known_allergies_box(String string) {
+        actions.sendKeys(string).perform();
+        ReusableMethods.hardWait(2);
     }
 
 

@@ -11,7 +11,7 @@ public class ConfigReader {
     static {// static blok herseyden once calisir
 
 
-        String dosyaYolu= "src/main/resources/config.properties";
+        String dosyaYolu= "src/test/resources/config.properties";
         try {
 
             FileInputStream fis= new FileInputStream(dosyaYolu);
