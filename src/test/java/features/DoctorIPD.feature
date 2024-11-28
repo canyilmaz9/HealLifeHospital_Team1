@@ -98,7 +98,7 @@ Feature:As a doctor, they should be able to list data about inpatients from the 
 
 
 
-
+@ac
   Scenario:(US_053_US02_TC07) Verify that the doctor can add patient notes using the Timeline button on the IPD page.
     * Clicking on the IPD No 47 navigates to the patient's details page.
     * The Timeline page displays future timeline plans.
@@ -148,7 +148,7 @@ Scenario: (US_053_US03_TC01) Verify that the doctor can admit a new patient to a
     * Verify that the Patient Added Successfully message is displayed.
     * Verify that the data in row 1, column 3 of the IPD Patient table equals the name of the last registered patient.
 
-  @ac
+
   Scenario:[US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
     * As a doctor, verify that the Add Patient button is accessible.
     * Click on the New Patient button.

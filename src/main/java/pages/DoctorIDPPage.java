@@ -298,7 +298,7 @@ public class DoctorIDPPage extends BasePage {
     public WebElement bedGroupAddPAt; //select value 2 -> private Ward
     @FindBy(xpath = "//span[@id='select2-bed_no-container']")
     public WebElement bedNumberAddPAt;
-    @FindBy(xpath = "//li[contains(text(), '152')]")
+    @FindBy(xpath = "//li[contains(text(), '153')]")
     public WebElement option151BedNumAddPAt;
     @FindBy(xpath = "//button[@id='formaddbtn']")
     public WebElement saveAddPAt2;

@@ -20,6 +20,7 @@ import utils.JSUtilities;
 import javax.print.Doc;
 import java.awt.*;
 import java.time.Duration;
+import java.util.Set;
 
 
 public class DoctorIPDFeatureSteps {
@@ -30,12 +31,24 @@ public class DoctorIPDFeatureSteps {
     DoctorIDPPage doctorIDPPage=new DoctorIDPPage(driver);
 
 
-   static ExcelDataReader_Seren excelDataReaderSeren=new ExcelDataReader_Seren(ConfigReader.getProperty("IPDPatient"),"Sheet1");
+ //  static ExcelDataReader_Seren excelDataReaderSeren=new ExcelDataReader_Seren(ConfigReader.getProperty("IPDPatient"),"Sheet1");
  private static final Logger logger = LogManager.getLogger(DoctorIPDFeatureSteps.class);
 
     @Given("Enters the {string}")
     public void enters_the(String url) {
-        ReusableMethods.switchWindowByUrl(driver,ConfigReader.getProperty(url));
+
+        ((JavascriptExecutor) driver).executeScript("window.open();"); // Yeni sekme aç
+        Set<String> windowHandles = driver.getWindowHandles();
+        for (String handle : windowHandles) {
+            driver.switchTo().window(handle);
+            if (driver.getCurrentUrl().equals("about:blank")) { // Yeni açılan pencereyi bul
+                driver.get(ConfigReader.getProperty(url)); // Hedef URL'yi yükle
+                break;
+            }
+        }
+
+        //ReusableMethods.switchWindowByUrl(driver,ConfigReader.getProperty(url));
+
        // driver.get(ConfigReader.getProperty(url));
         ReusableMethods.bekle(2);
     }
@@ -327,7 +340,7 @@ public class DoctorIPDFeatureSteps {
        }
        @Then("Verify that the first patient name in the downloaded Excel file equals the first patient name displayed in the IPD Patient List.")
        public void verify_that_the_first_patient_name_in_the_downloaded_excel_file_equals_the_first_patient_name_displayed_in_the_ipd_patient_list() {
-
+            ExcelDataReader_Seren excelDataReaderSeren=new ExcelDataReader_Seren(ConfigReader.getProperty("IPDPatient"),"Sheet1");
        Assert.assertEquals(excelDataReaderSeren.getCellData(2,2),doctorIDPPage.patientDataFromIPDList(1,3).getText());
 
        }
