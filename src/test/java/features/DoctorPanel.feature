@@ -1,15 +1,15 @@
-Feature:Doctor Panel Tests
+Feature:Doctor Login Page Tests
 
 
   Background:
     Given Go to the admin login page
 
-  @doctorLoginPanelVisibility
+  @loginWindow
   Scenario: Test for displaying doctor panel
 
     Given Display the Admin Login window on the right and the Latest New information on the left.
 
-  @doctorLoginLogoutFunction
+  @loginLogoutFunction
   Scenario: Test for login and logout the doctor panel
 
     Given Log in the doctor panel by entering the information (previously registered in the system) on the login page.
