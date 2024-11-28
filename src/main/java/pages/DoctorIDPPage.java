@@ -298,7 +298,7 @@ public class DoctorIDPPage extends BasePage {
     public WebElement bedGroupAddPAt; //select value 2 -> private Ward
     @FindBy(xpath = "//span[@id='select2-bed_no-container']")
     public WebElement bedNumberAddPAt;
-    @FindBy(xpath = "//li[contains(text(), '150')]")
+    @FindBy(xpath = "//li[contains(text(), '152')]")
     public WebElement option151BedNumAddPAt;
     @FindBy(xpath = "//button[@id='formaddbtn']")
     public WebElement saveAddPAt2;
@@ -325,8 +325,10 @@ public class DoctorIDPPage extends BasePage {
     public WebElement maritalStatusAddPAt;
     @FindBy(xpath = "(//option[contains(text(),'Married')])[2]")
     public WebElement marriedAddPAt;
+    @FindBy(xpath = "//button[@id='formaddpabtn']")
+    public WebElement saveButtonAddPAt;
 
-    @FindBy(xpath = "(//*[@class='dropify-errors-container'])[2]")
+    @FindBy(xpath = "(//*[@class='filestyle form-control'])[2]")
     public WebElement patientPhotoUploadButton;
 
 
