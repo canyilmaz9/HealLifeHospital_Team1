@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2024-11-19 14:49:11 [main] INFO  utils.LoggerHelper - Test Başlıyor: User searches for a keyword on Google
 2024-11-19 14:49:13 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
 2024-11-19 14:49:17 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: User searches for a keyword on Google
@@ -1995,3 +1996,5 @@
 2024-11-28 10:47:41 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
 2024-11-28 10:48:30 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: [US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
 2024-11-28 10:48:30 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+=======
+>>>>>>> 0f430916930fd8f63a42cd7da58465ac4c552fc1
