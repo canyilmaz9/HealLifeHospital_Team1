@@ -63,10 +63,10 @@ public class AdminDashboardPage extends BasePage{
         @FindBy(xpath = "//span[text()=' Certificate'")
         public WebElement certificateTitle;
 
-        @FindBy (xpath = "//*[@id='email']")
+        @FindBy (xpath = "//input[@id='email']")
         public WebElement adminLoginUsername;
 
-         @FindBy (xpath = "//*[@id='password']")
+         @FindBy (xpath = "//input[@id='password']")
          public WebElement adminLoginPassword;
          @FindBy (xpath = "//button[@type='submit']")
          public WebElement adminLoginSignIn;

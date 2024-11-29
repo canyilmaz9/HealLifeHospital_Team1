@@ -28,3 +28,18 @@ Feature:Doctor Panel Tests
 
 
 
+
+
+    Scenario: US_46 Doktor paneli ana sayfasinda, post mesajlari ve doktora ait calendar testi
+      Given  Doktor panelindeki ana sayfada navbar altinda doktorlara gönderilen post mesajlarini goruntuler
+      Then   Calendar görüntülemeyi ve calendar üzerinde islemler yapabilmasin test eder
+      When   Doktor paneli ana sayfasinda sisteme kayitli calisan sayisi bilgilerini goruntulenmesini dogrular
+      And    Doktor paneli ana sayfasinda sisteme kayitli calisanlara tiklaninca Human Resources sayfasina yönlendirme yapabildigini test eder
+
+
+
+
+
+
+
+

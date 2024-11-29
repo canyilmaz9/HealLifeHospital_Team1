@@ -146,6 +146,37 @@ import java.time.Duration;
 
 
         }
+
+
+
+
+
+        @Given("Doktor panelindeki ana sayfada navbar altinda doktorlara gönderilen post mesajlarini goruntuler")
+        public void doktor_panelindeki_ana_sayfada_navbar_altinda_doktorlara_gönderilen_post_mesajlarini_goruntuler() {
+
+        }
+        @Then("Calendar görüntülemeyi ve calendar üzerinde islemler yapabilmasin test eder")
+        public void calendar_görüntülemeyi_ve_calendar_üzerinde_islemler_yapabilmasin_test_eder() {
+
+        }
+        @When("Doktor paneli ana sayfasinda sisteme kayitli calisan sayisi bilgilerini goruntulenmesini dogrular")
+        public void doktor_paneli_ana_sayfasinda_sisteme_kayitli_calisan_sayisi_bilgilerini_goruntulenmesini_dogrular() {
+
+        }
+        @When("Doktor paneli ana sayfasinda sisteme kayitli calisanlara tiklaninca Human Resources sayfasina yönlendirme yapabildigini test eder")
+        public void doktor_paneli_ana_sayfasinda_sisteme_kayitli_calisanlara_tiklaninca_human_resources_sayfasina_yönlendirme_yapabildigini_test_eder() {
+
+        }
+
+
+
+
+
+
+
+
+
+
     }
 
 
