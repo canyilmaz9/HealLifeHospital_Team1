@@ -236,7 +236,9 @@ public class HomePageGeneralPage extends BasePage{
     @FindBy (xpath = "//*[@id=\"formaddbtn\"]")
     public WebElement appointmentSave;
 
-    @FindBy (xpath = "//*[@id=\"slot_2\"]")
+
+    @FindBy (xpath = "//span[@id='slot_6']")
+
     public WebElement availableSlots;
 
     @FindBy (xpath = "//*[@class='btn btn-info btn-xs']")
