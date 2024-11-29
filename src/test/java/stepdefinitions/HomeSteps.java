@@ -8,6 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -19,12 +20,53 @@ import utilities.ReusableMethods;
 
 import static stepdefinitions.DoctorIPDFeatureSteps.driver;
 
+import org.openqa.selenium.WebDriver;
+import pages.HomePage;
+import pages.HomePageHeaderPage;
+import utilities.ConfigReader;
+import utilities.ReusableMethods;
+
+
+
+
+
 public class HomeSteps {
 
     private static final Logger logger = LogManager.getLogger(HomeSteps.class);
     WebDriver driver = stepdefinitions.Hooks.getDriver();
+
     // HomePage homePage = new HomePage(driver);
     HomePage homePage = new HomePage(driver);
+
+
+
+
+    HomePage homePage = new HomePage(driver);
+
+
+    @Given("Hasta anasayfaya gider")
+    public void hasta_anasayfaya_gider() {
+        driver.get(ConfigReader.getProperty("url"));
+        driver.get(driver.getCurrentUrl());
+        logger.info("Ana Sayfa'ya gidildi");
+    }
+    @Given("Sayfaya erisebildigini test eder")
+    public void sayfaya_erisebildigini_test_eder() {
+        Assert.assertTrue(homePage.anaSayfaInsurancePlansYazisi.isDisplayed());
+        logger.info("Kullanici ana sayfada 'Insurance Plans' yazisi goruldu");
+    }
+
+    @Given("Hasta anasayfaya ulasir")
+    public void hasta_anasayfaya_ulasir() {
+        driver.get(ConfigReader.getProperty("url"));
+        driver.get(driver.getCurrentUrl());
+        logger.info("Ana Sayfa'ya gidildi");
+    }
+    @Given("{string} yazisinin gorundugunu test eder.")
+    public void yazisinin_gorundugunu_test_eder(String string) {
+        Assert.assertTrue(homePage.anaSayfaInsurancePlansYazisi.isDisplayed());
+        logger.info("Kullanici ana sayfada 'Insurance Plans' yazisi goruldu");
+    }
 
 
     @Given("kullanici url adresine gider")
@@ -57,7 +99,11 @@ public class HomeSteps {
     public void kullanici_faq_s_basligini_gorur() {
 
 
+
         Assertions.assertTrue(homePage.homePageAboutUsFAQ.isDisplayed());
+
+        Assert.assertTrue(homePage.homePageAboutUsFAQ.isDisplayed());
+
     }
     @Then("kullanici Departments  basligini gorur")
     public void kullanici_departments_basligini_gorur() {
@@ -252,6 +298,7 @@ public class HomeSteps {
 
     }
 
+
     @Then("kullanici gallery butununa tiklar")
     public void kullanici_gallery_butununa_tiklar() {
 
@@ -292,6 +339,7 @@ public class HomeSteps {
         Assertions.assertTrue(homePage.homepagegallerybuyukresim2.isDisplayed());
 
     }
+
 
 
 

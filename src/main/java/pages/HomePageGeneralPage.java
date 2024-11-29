@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.security.PublicKey;
+import java.util.List;
 
 public class HomePageGeneralPage extends BasePage{
     public HomePageGeneralPage(WebDriver driver) {
@@ -166,6 +167,7 @@ public class HomePageGeneralPage extends BasePage{
     @FindBy (xpath = "//*[@id='DataTables_Table_2_filter']")
     public WebElement searcBoxinLabinvestigation;
 
+
     //US_009>TC009 locations
     @FindBy (xpath = "(//*[@class='dataTables_empty'])[1]")
     public WebElement labinvestigationTable;
@@ -234,7 +236,9 @@ public class HomePageGeneralPage extends BasePage{
     @FindBy (xpath = "//*[@id=\"formaddbtn\"]")
     public WebElement appointmentSave;
 
-    @FindBy (xpath = "//*[@id=\"slot_2\"]")
+
+    @FindBy (xpath = "//span[@id='slot_6']")
+
     public WebElement availableSlots;
 
     @FindBy (xpath = "//*[@class='btn btn-info btn-xs']")
@@ -267,9 +271,57 @@ public class HomePageGeneralPage extends BasePage{
     @FindBy (xpath = "/html/body/iframe")
     public WebElement iframe;
 
+    @FindBy (xpath = "//*[@class='paginate_button current']")
+    public WebElement myappointment1;
+
+    @FindBy (xpath = "(//*[@class='paginate_button '])[1]")
+    public WebElement myappointment2;
+
+    @FindBy (xpath = "(//*[@class='paginate_button '])[2]")
+    public WebElement myappointment3;
+
+    @FindBy (xpath = "(//*[@class='paginate_button '])[3]")
+    public WebElement myappointment4;
+
+    //US03>TC012
+   @FindBy(xpath = "(//*[@class=' '])[2]")
+    public WebElement galleryOntheHeader;
+
+   @FindBy (xpath = "//*[@class='img-responsive']")
+    public WebElement galleryTextinTheGalleryPage;
+
+   @FindBy (xpath = "(//*[@class='evcontentfix'])[1]")
+    public WebElement healthandWellnes;
+
+   @FindBy (xpath = "/html/body/div[2]/div/div/h1")
+   public WebElement healthandWellnesYazisiSayfaici;
+
+    @FindBy (xpath = "(//*[@class='evcontentfix'])[2]")
+    public WebElement hospitalsandDirections;
+
+    @FindBy (xpath = "(//*[@class='evcontentfix'])[3]")
+    public WebElement specialities;
+
+    @FindBy (xpath = "(//*[@class='evcontentfix'])[4]")
+    public WebElement recreation;
+
+    @FindBy (xpath = "(//*[@class='evcontentfix'])[5]")
+    public WebElement yourhealth;
+
+    @FindBy (xpath = "(//*[@class='evcontentfix'])[6]")
+    public WebElement surgery;
+
+    @FindBy (xpath = "/html/body/div[2]/div/div/h1")
+    public WebElement hospitalsAndDirectionsinText;
+
+    @FindBy (xpath = "/html/body/div[2]/div/div/h1")
+    public WebElement surgeryinText;
+
+    @FindBy (xpath = "/html/body/div[2]/div/div/h1")
+    public WebElement specialitiesinText;
 
 
-    //US_030>TC013 Locations
+
 
 
 

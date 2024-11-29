@@ -18,11 +18,7 @@ import org.junit.runner.RunWith;
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" // Allure raporları için plugin
 		},
 		monochrome = true,                         // Konsol çıktısını daha okunabilir hale getirir
-
-		tags = "@doctorLoginLogoutFunction"                        // Yalnızca belirtilen etiketli senaryolar çalıştırılır
-
-		                           // Yalnızca belirtilen etiketli senaryolar çalıştırılır
-
+		tags = "@path"                           // Yalnızca belirtilen etiketli senaryolar çalıştırılır
 )
 public class TestRunner {
 	private static final Logger logger = LogManager.getLogger(TestRunner.class);
