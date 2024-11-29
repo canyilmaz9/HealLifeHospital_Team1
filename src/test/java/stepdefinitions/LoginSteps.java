@@ -14,7 +14,7 @@ import pages.LoginPage;
 import utilities.ReusableMethods;
 
 public class LoginSteps {
-	private static final Logger logger = LogManager.getLogger(GoogleSteps.class);
+	private static final Logger logger = LogManager.getLogger(LoginSteps.class);
 	WebDriver driver = stepdefinitions.Hooks.getDriver();
 	LoginPage loginPage = new LoginPage(driver);
 
@@ -243,7 +243,7 @@ public class LoginSteps {
 
 	}
 
-}
+
 
 
 	@Then("kullanici sayfayi body bolumune gelir")

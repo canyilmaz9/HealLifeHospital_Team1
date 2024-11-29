@@ -34,7 +34,7 @@ Feature:
     Then OPD sayfasinda liste elemanlarini all ve 100 olarak secer
 
 
-@mervenur
+
 
   Scenario: US_35 >TC_05 Bir yönetici (admin) olarak yeni hasta kaydının yapılabılmesı testi
 

@@ -48,7 +48,7 @@ And    kullanici Testimonials  basligini gorur
     When kullanici bu sayfada what our clients say ve what our doctor say basliklarini  gorur
     And  kullanici sayfadaki sorulardan herhangi birini tikladiginda cevabini gorur
 
-   @mervenur
+
   Scenario:  US012  heallifehospital.com About Us menusunun olmasi testi TC05 Bir kullanici olarak hastaneye ait bilgilere erisebilmek icin bir About Us menusunden departments sayfasına yönlendırme testi
 
     Given kullanici url gelir
@@ -97,5 +97,24 @@ And    kullanici Testimonials  basligini gorur
     Then Anasayfanin tamamina basarili bir sekilde erisir
     When Anasayfada Featurerd Services başlığını görür
     And Featured Services başlığının altında Medical professionals panosuna erişir
+
+
+  Scenario: US_03 > TC_ 01  bır kullanıcı olarak anasayfa slider ınde hastane fotograflarının olup olmadığı testi
+
+    Given kullanici url gelir
+    Then  kullanici gallery butununa tiklar
+    And  gallery sayfasinda hastane resimlerinin oldugunu dogrular
+
+
+  @mervenur
+  Scenario: US_03 > TC_ 02 bır kullanıcı olarak anasayfa slider inde hastane fotograflarında resim gecişlerinin dogrulnması testi
+
+    Given kullanici url gelir
+    Then  kullanici gallery butununa tiklar
+    Then  gallery sayfasinda hastane resimlerinin oldugunu dogrular
+    When gallery sayfasindaki herhangi bir resmin uzerine gelerek ortasindaki mercek kismina tıklar ve resmin sayfada buyudugunu gorur
+    Then buyuyen resmin sag ok kismini tiklayarak slider in oldugunu görür ve bir sonraki resme gectigini dogrular
+
+
 
 

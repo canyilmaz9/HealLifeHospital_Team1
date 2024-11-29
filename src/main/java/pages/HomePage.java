@@ -211,10 +211,10 @@ public class HomePage extends BasePage {
     @FindBy (xpath = "//*[@id=\"navbar-collapse-3\"]/ul/li[4]/a")
     public WebElement homepagegallery;
 
-    @FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/div[1]")
+    @FindBy(xpath = "//*[@id=\"postList\"]/div[1]/div[1]/div/a/img")
     public WebElement homepagegalleryimg;
 
-  @FindBy(xpath = "//*[@id=\"fancyLightbox-264\"]/div/div/div[2]/div/div[3]")
+  @FindBy(xpath = "//*[@id=\"fancyLightbox-732\"]/div/div/div[2]/div/div[3]")
     public WebElement homepagegallerybuyukresim;
 
   @FindBy(xpath = "//*[@id=\"postList\"]/div[1]/div[1]/div/a/div/h3")
@@ -222,5 +222,13 @@ public class HomePage extends BasePage {
 
   @FindBy(xpath = "/html/body/div[2]/div/div/div/div/div/div[1]/div/div/a/div[2]/i")
     public WebElement homepegegalleryimgbuyutec;
+
+  @FindBy(name = "//*[@id=\"fancyLightbox-871\"]/div/div/div[2]")
+    public WebElement homepagegallerybuyukresimslider;
+
+  @FindBy(xpath = "//*[@id=\"fancyLightbox-732\"]/div/div/div[2]/div/div[3]")
+    public WebElement homepagegallerybuyukresim2;
+
+
 
 }
