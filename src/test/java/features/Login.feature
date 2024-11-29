@@ -33,6 +33,45 @@ Feature: Login Functionality
             And Forgot password sayfasindaki textBox'a girilen mail adresine sifre gönderilmeli.
             Then Forgot password sayfasinda login sayfasina dönmek icin user login linki bulunmali ve bu linke tiklaninca userlogin sayfasina yönlendirmeli.
 
+
+        Scenario: US_26 >TC_01 Bir kullanici (hasta) olarak Dashboard sayfasinın header bolumunde bilgi boardlarının gorunur oldugu  ve sayfaya yonlendırıldıgı testi
+          Given kullanici url ye gelir
+          Then  kullanicihome sayfasinda login butonunu tiklar
+          Then kullanici login sayfasinda usarname kismina pat79 password kismina  w2c4u8 datalarini girer ve sing in butonuna tiklar ve sayfasina gelir
+          Then kullanici sayfasinda OPD board a tiklayarak sayfaya gider
+          When kullanici IPD boarda tiklayarak sayfaya gider
+          When kullanici Pharmacy boarda tiklayarak sayfaya gider
+              Then kullanici Patology boarda tiklayarak sayfaya gider
+          Then kullanici Radiology boarda tiklayarak sayfaya gider
+          When kullanici Ambulance  boarda tiklayarak sayfaya gider
+          And kullanici Blood Bankboarda tiklayarak sayfaya gider
+
+
+
+
+          Scenario: US_26 >TC_02 Bir kullanici (hasta) olarak Dashboard sayfasinın body  bolumunde OPD, IPD, Pharmacy, Pathology, Radiology, Blood Bank, Ambulance
+          degerlerini kullanarak grafik olusturabıldığı testi
+
+            Given kullanici url ye gelir
+            Then  kullanicihome sayfasinda login butonunu tiklar
+            Then kullanici login sayfasinda usarname kismina pat79 password kismina  w2c4u8 datalarini girer ve sing in butonuna tiklar ve sayfasina gelir
+            And kullanici dasboard butonuna tıklar
+
+
+
+
+            Scenario: US_26 > TC_03 Bir kullanici (hasta) olarak Dashboard sayfasinın body  bolumunde  bulgu ve semptomlar ile ilgii
+            grafıklerın oldugunun olup olmadıgının dogrulandıgı  testi
+
+              Given kullanici url ye gelir
+              Then  kullanicihome sayfasinda login butonunu tiklar
+              Then kullanici login sayfasinda usarname kismina pat79 password kismina  w2c4u8 datalarini girer ve sing in butonuna tiklar ve sayfasina gelir
+              Then kullanici sayfayi body bolumune gelir
+              When kullanici sayfanin body bolumunda top 10 findings grafigini gordugunu dogrular
+              And kullanici sayfanin body bolumunde top 10 Symptoms grafiğini gorur
+
+
+
   @language
   Scenario: US_016> TC_001 Dashboard navbar'ındaki heallifehospital logosuna tıklandığında anasayfasına yönlendirmeli ve bayrak simgesine tıklandığında panelin dilini değiştirebilmesi
     Given kullanici anasayfada

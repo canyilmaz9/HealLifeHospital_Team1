@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.appender.rolling.action.Action;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -12,6 +13,9 @@ import pages.HomePageHeaderPage;
 import utilities.ConfigReader;
 import utilities.ReusableMethods;
 import javax.swing.*;
+import java.awt.*;
+import java.io.IOException;
+
 import static utilities.ReusableMethods.bekle;
 
 
@@ -202,4 +206,7 @@ public class HomePageHeaderSteps {
     }
 
 
-}
+    }
+
+
+

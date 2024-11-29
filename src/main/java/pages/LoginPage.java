@@ -9,6 +9,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.ExcelReader;
 
+import java.util.Queue;
+
 public class LoginPage extends BasePage {
 	@FindBy(id = "username")
 	private WebElement usernameInput;
@@ -79,6 +81,69 @@ public class LoginPage extends BasePage {
 
 	@FindBy(className = "forgot")
 	public WebElement ufpasswordPageUserLoginBtn;
+
+	@FindBy (xpath = "//input[@id='email']")
+	public WebElement loginusernama;
+
+	@FindBy(xpath ="//input[@id='password']" )
+	public WebElement loginpassword;
+
+	@FindBy(xpath = "//button[@type='submit']")
+	public WebElement loginSinginbutton;
+
+	@FindBy(xpath = "//span[normalize-space()='OPD']")
+	public WebElement loginOPD;
+
+	@FindBy(xpath = "//a[normalize-space()='Overview']")
+	public WebElement loginOPDOverview;
+
+	@FindBy(xpath = "//*[@id=\"sibe-box\"]/ul/li[4]/a/i")
+	public WebElement loginIPD;
+
+	@FindBy(xpath = "//input[@placeholder='Search...']")
+	public WebElement loginIPDIpdPatient;
+
+	@FindBy(xpath = "//*[@id=\"sibe-box\"]/ul/li[5]/a/span")
+	public WebElement loginPharmacy;
+
+	@FindBy(xpath = "//input[@placeholder='Search...']")
+	public WebElement loginPharmacysearch;
+
+	@FindBy(xpath = "//a[@href='https://qa.heallifehospital.com/patient/dashboard/pathology']")
+	public WebElement loginPathology;
+
+	@FindBy(xpath = "//input[@placeholder='Search...']")
+	public WebElement loginPathologysearch;
+
+	@FindBy(xpath = "//span[normalize-space()='Radiology']")
+	public WebElement loginRadiology;
+
+	@FindBy(xpath = "//h3[@class='box-title titlefix']")
+	public WebElement loginRadiologyRadiologytestreports;
+
+	@FindBy(xpath ="//span[normalize-space()='Ambulance']" )
+	public WebElement loginAmbulance;
+
+	@FindBy(xpath = "//h3[@class='box-title titlefix']")
+	public WebElement loginAmbulanceAmbulanceBill;
+
+	@FindBy(xpath = "//*[@id=\"sibe-box\"]/ul/li[9]/a/span")
+	public WebElement loginBloodbank;
+
+	@FindBy(xpath ="//h3[normalize-space()='Blood Issue']" )
+	public WebElement loginBloodbankBloodIssue;
+
+	@FindBy(xpath = "//span[normalize-space()='Dashboard']")
+	public WebElement loginDasboard;
+
+	@FindBy(xpath = "//canvas[@id='medical-history-chart']")
+	public WebElement DashboardOPD;
+
+	@FindBy(xpath = "//canvas[@id='finding-bar-chart']")
+	public WebElement loginDasboardtopfindings;
+
+    @FindBy(xpath ="//canvas[@id='symptom-bar-chart']")
+    public WebElement loginDasboardtop10Symptoms;
 
 	@FindBy(xpath = "//*[@id=\"alert\"]/a/span[2]/img")
 	public WebElement dashboardLogo;

@@ -8,6 +8,18 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import pages.HomePage;
+import config.ConfigReader;
+import utilities.ReusableMethods;
+
+import static stepdefinitions.DoctorIPDFeatureSteps.driver;
+
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
 import pages.HomePageHeaderPage;
@@ -17,10 +29,17 @@ import utilities.ReusableMethods;
 
 
 
+
 public class HomeSteps {
 
     private static final Logger logger = LogManager.getLogger(HomeSteps.class);
     WebDriver driver = stepdefinitions.Hooks.getDriver();
+
+    // HomePage homePage = new HomePage(driver);
+    HomePage homePage = new HomePage(driver);
+
+
+
 
     HomePage homePage = new HomePage(driver);
 
@@ -48,6 +67,7 @@ public class HomeSteps {
         Assert.assertTrue(homePage.anaSayfaInsurancePlansYazisi.isDisplayed());
         logger.info("Kullanici ana sayfada 'Insurance Plans' yazisi goruldu");
     }
+
 
     @Given("kullanici url adresine gider")
     public void kullanici_url_adresine_gider() {
@@ -79,7 +99,11 @@ public class HomeSteps {
     public void kullanici_faq_s_basligini_gorur() {
 
 
+
+        Assertions.assertTrue(homePage.homePageAboutUsFAQ.isDisplayed());
+
         Assert.assertTrue(homePage.homePageAboutUsFAQ.isDisplayed());
+
     }
     @Then("kullanici Departments  basligini gorur")
     public void kullanici_departments_basligini_gorur() {
@@ -273,6 +297,49 @@ public class HomeSteps {
         Assertions.assertTrue(homePage.AboutusTestimonialyorum2.isDisplayed());
 
     }
+
+
+    @Then("kullanici gallery butununa tiklar")
+    public void kullanici_gallery_butununa_tiklar() {
+
+        homePage.homepagegallery.click();
+    }
+    @Then("gallery sayfasinda hastane resimlerinin oldugunu dogrular")
+    public void gallery_sayfasinda_hastane_resimlerinin_oldugunu_dogrular() {
+
+        Assertions.assertTrue(homePage.homepagegalleryimg.isDisplayed());
+    }
+
+
+    @When("gallery sayfasindaki herhangi bir resmin uzerine gelerek ortasindaki mercek kismina tıklar ve resmin sayfada buyudugunu gorur")
+    public void gallery_sayfasindaki_herhangi_bir_resmin_uzerine_gelerek_ortasindaki_mercek_kismina_tıklar_ve_resmin_sayfada_buyudugunu_gorur() {
+
+
+        homePage.homapagegalleryHealtWelnes.click();
+        ReusableMethods.bekle(2);
+        homePage.homepegegalleryimgbuyutec.click();
+        ReusableMethods.bekle(2);
+       Assertions.assertTrue(homePage.homepagegallerybuyukresim.isDisplayed());
+
+    }
+    @Then("buyuyen resmin sag ok kismini tiklayarak slider in oldugunu görür ve bir sonraki resme gectigini dogrular")
+    public void buyuyen_resmin_sag_ok_kismini_tiklayarak_slider_in_oldugunu_görür_ve_bir_sonraki_resme_gectigini_dogrular() {
+
+
+        //JavascriptExecutor js = (JavascriptExecutor) driver;
+       // WebElement element =driver.findElement(By.xpath("//*[@id=\"fancyLightbox-435\"]/div/div/div[2]/div/div[3]/a[2]"));
+      // js.executeScript("arguments[0].click()",element);
+
+
+       // Actions actions=new Actions(driver);
+        //actions.moveToElement()
+
+        ReusableMethods.bekle(1);
+        homePage.homepagegallerybuyukresimslider.click();
+        Assertions.assertTrue(homePage.homepagegallerybuyukresim2.isDisplayed());
+
+    }
+
 
 
 

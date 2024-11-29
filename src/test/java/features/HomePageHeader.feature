@@ -69,3 +69,4 @@ Feature: US_002: User Home Page Header test
     And   Clicks on the About Us Button
     Then  Clicks on the Testimonials Button
     And   Verifies that it is Testimonials Page
+

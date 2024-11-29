@@ -9,6 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import pages.LoginPage;
 import utilities.ReusableMethods;
 
@@ -126,6 +127,96 @@ public class LoginSteps {
 		loginPage.ufpasswordPageUserLoginBtn.click();
 	}
 
+
+	@Given("kullanici url ye gelir")
+	public void kullanici_url_ye_gelir() {
+
+
+		String url = ConfigReader.getProperty("url");
+		driver.get(url);
+		logger.info("Anasayfaya gidildi: " + url);
+
+	}
+
+	@Then("kullanicihome sayfasinda login butonunu tiklar")
+	public void kullanicihome_sayfasinda_login_butonunu_tiklar() {
+		loginPage.homePageLoginButton.click();
+	}
+
+	@Then("kullanici login sayfasinda usarname kismina pat79 password kismina  w2c4u8 datalarini girer ve sing in butonuna tiklar ve sayfasina gelir")
+	public void kullanici_login_sayfasinda_usarname_kismina_pat79_password_kismina_w2c4u8_datalarini_girer_ve_sing_in_butonuna_tiklar_ve_sayfasina_gelir() {
+		loginPage.loginusernama.sendKeys("pat79");
+		loginPage.loginpassword.sendKeys("w2c4u8");
+		loginPage.loginSinginbutton.click();
+	}
+
+	@Then("kullanici sayfasinda OPD board a tiklayarak sayfaya gider")
+	public void kullanici_sayfasinda_opd_board_a_tiklayarak_sayfaya_gider() {
+
+		loginPage.loginOPD.click();
+		ReusableMethods.bekle(2);
+		Assert.assertTrue(loginPage.loginOPDOverview.isDisplayed());
+	}
+
+	@When("kullanici IPD boarda tiklayarak sayfaya gider")
+	public void kullanici_IPD_boarda_tiklayarak_sayfaya_gider() {
+
+		loginPage.loginIPD.click();
+		ReusableMethods.bekle(2);
+		Assert.assertTrue(loginPage.loginIPDIpdPatient.isDisplayed());
+	}
+
+	@When("kullanici Pharmacy boarda tiklayarak sayfaya gider")
+	public void kullanici_pharmacy_boarda_tiklayarak_sayfaya_gider() {
+
+		loginPage.loginPharmacy.click();
+		ReusableMethods.bekle(2);
+		Assert.assertTrue(loginPage.loginPharmacysearch.isDisplayed());
+	}
+
+	@Then("kullanici Patology boarda tiklayarak sayfaya gider")
+	public void kullaniciPatologyBoardaTiklayarakSayfayaGider() {
+
+
+		loginPage.loginPathology.click();
+		ReusableMethods.bekle(2);
+		Assert.assertTrue(loginPage.loginPathologysearch.isDisplayed());
+	}
+
+	@Then("kullanici Radiology boarda tiklayarak sayfaya gider")
+	public void kullanici_radiology_boarda_tiklayarak_sayfaya_gider() {
+
+		loginPage.loginRadiology.click();
+		ReusableMethods.bekle(2);
+		Assert.assertTrue(loginPage.loginRadiologyRadiologytestreports.isDisplayed());
+	}
+
+	@When("kullanici Ambulance  boarda tiklayarak sayfaya gider")
+	public void kullanici_ambulance_boarda_tiklayarak_sayfaya_gider() {
+
+		loginPage.loginAmbulance.click();
+		ReusableMethods.bekle(2);
+		Assert.assertTrue(loginPage.loginAmbulanceAmbulanceBill.isDisplayed());
+	}
+
+	@When("kullanici Blood Bankboarda tiklayarak sayfaya gider")
+	public void kullanici_blood_bankboarda_tiklayarak_sayfaya_gider() {
+
+		loginPage.loginBloodbank.click();
+		ReusableMethods.bekle(2);
+		Assert.assertTrue(loginPage.loginBloodbankBloodIssue.isDisplayed());
+
+
+	}
+	@Then("kullanici dasboard butonuna tıklar")
+	public void kullanici_dasboard_butonuna_tıklar() {
+		ReusableMethods.bekle(2);
+		loginPage.loginDasboard.click();
+		ReusableMethods.bekle(2);
+	Assert.assertTrue(loginPage.DashboardOPD.isDisplayed());
+
+	}
+
 	@And("Hasta girisini yapar")
 	public void hastaGirisiniYapar() {
 		loginPage.homePageLoginButton.click();
@@ -152,4 +243,31 @@ public class LoginSteps {
 
 	}
 
+
+
+
+	@Then("kullanici sayfayi body bolumune gelir")
+	public void kullanici_sayfayi_body_bolumune_gelir() {
+		Actions actions=new Actions(driver);
+		ReusableMethods.bekle(2);
+		actions.dragAndDrop(loginPage.loginDasboard, loginPage.loginAmbulance);
+
+	}
+	@When("kullanici sayfanin body bolumunda top {int} findings grafigini gordugunu dogrular")
+	public void kullanici_sayfanin_body_bolumunda_top_findings_grafigini_gordugunu_dogrular(Integer int1) {
+
+		Assert.assertTrue(loginPage.loginDasboardtopfindings.isDisplayed());
+
+	}
+	@When("kullanici sayfanin body bolumunde top {int} Symptoms grafiğini gorur")
+	public void kullanici_sayfanin_body_bolumunde_top_symptoms_grafiğini_gorur(Integer int1) {
+
+		Assert.assertTrue(loginPage.loginDasboardtop10Symptoms.isDisplayed());
+
+	}
+
+
+
 }
+
+
