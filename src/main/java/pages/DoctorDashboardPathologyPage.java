@@ -2,11 +2,8 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import java.util.List;
 
 public class DoctorDashboardPathologyPage extends BasePage{
 
@@ -48,12 +45,6 @@ public class DoctorDashboardPathologyPage extends BasePage{
     @FindBy(xpath="//*[text()='Balance Amount ($)']")
     public WebElement DoctorPathologyPageBalanceAmountText;
 
-    @FindBy(xpath="//tbody/tr/td[1][*]")
-    public List<WebElement> DoctorPathologyPageBillNoTextList;
-
-    @FindBy(xpath="//*[@id='testreport']/tbody/tr[*]/td[2]")
-    public List<WebElement> DoctorPathologyPageCaseIdTextList;
-
     @FindBy(xpath="//input[@type='search']")
     public WebElement DoctorPathologyPageSearchBox;
 
@@ -75,7 +66,7 @@ public class DoctorDashboardPathologyPage extends BasePage{
     @FindBy(xpath="(//h4[text()='Bill Details'])[1]")
     public WebElement DoctorPathologyPageBalanceAmountViewReportsBillDetailsText;
 
-    @FindBy(xpath="(//a[@class='btn btn-default btn-xs add_payment'])[1]")
+    @FindBy(xpath="(//a[@data-original-title='Add / View Payments'])[1]")
     public WebElement DoctorPathologyPageBalanceAmountAddViewPaymentsLink;
 
     @FindBy(xpath="//h4[text()='Payments']")
@@ -117,27 +108,6 @@ public class DoctorDashboardPathologyPage extends BasePage{
     @FindBy(xpath="//*[text()='Amount ($)']")
     public WebElement DoctorPathologyTestPageAmountText;
 
-    @FindBy(xpath="//tbody/tr/td[1][*]")
-    public List<WebElement> DoctorPathologyTestPageTestNameTextList;
-
-    @FindBy(xpath="//*[@id='DataTables_Table_0']/tbody/tr[*]/td[2]")
-    public List<WebElement> DoctorPathologyTestPageShortNameTextList;
-
-    @FindBy(xpath="//*[@id='DataTables_Table_0']/tbody/tr[*]/td[3]")
-    public List<WebElement> DoctorPathologyTestPageTestTypeTextList;
-
-    @FindBy(xpath="//*[@id='DataTables_Table_0']/tbody/tr[*]/td[4]")
-    public List<WebElement> DoctorPathologyTestPageCategoryTextList;
-
-    @FindBy(xpath="//*[@id='DataTables_Table_0']/tbody/tr[*]/td[5]")
-    public List<WebElement> DoctorPathologyTestPageSubCategoryTextList;
-
-    @FindBy(xpath="//*[@id='DataTables_Table_0']/tbody/tr[*]/td[6]")
-    public List<WebElement> DoctorPathologyTestPageMethodTextList;
-
-    @FindBy(xpath="//*[@id='DataTables_Table_0']/tbody/tr[*]/td[7]")
-    public List<WebElement> DoctorPathologyTestPageReportDaysTextList;
-
     @FindBy(xpath="//input[@type='search']")
     public WebElement DoctorPathologyTestPageSearchBox;
 
@@ -153,11 +123,16 @@ public class DoctorDashboardPathologyPage extends BasePage{
     @FindBy(xpath="(//td[@class=' dt-body-right'])[3]")
     public WebElement DoctorPathologyTestPageAmountRaw1Link;
 
-    @FindBy(xpath="//a[@onclick='viewDetail(12)']")
+    @FindBy(xpath="(//i[@class='fa fa-reorder'])[2]")
     public WebElement DoctorPathologyTestPageAmountShowLink;
 
     @FindBy(xpath="(//h4[@class='modal-title'])[1]")
     public WebElement DoctorPathologyTestPageAmountShowTestDetailsText;
+
+
+
+
+
 
 
 }

@@ -17,7 +17,7 @@ public class Admin_Pharmacy_Pathology_RadiologyPage extends BasePage {
     public WebElement userPagePathologyButton;
 
 
-    @FindBy(xpath = "//*[@class='box-header with-border']")
+    @FindBy(xpath = "//th[@aria-label='Bill No: activate to sort column ascending']")
     public WebElement PathologyBillTexti;
 
     @FindBy(xpath = "//*[@aria-controls='testreport']")
@@ -26,20 +26,45 @@ public class Admin_Pharmacy_Pathology_RadiologyPage extends BasePage {
     @FindBy(xpath ="//*[@class='text-right white-space-nowrap dt-body-right sorting_disabled']")
     public WebElement BalanceAmount;
 
-    @FindBy(xpath = "//*[@class='treeview active']")
+    @FindBy(xpath = "//span[normalize-space()='Pathology']")
     public WebElement PathologyButonu;
 
-    @FindBy(xpath = "//*[@class='white-space-nowrap sorting']")
+    @FindBy(xpath = "//*[@class='sorting']")
     public List<WebElement> PathologyBasliklar;
 
-    @FindBy(xpath = "//*[@class='white-space-nowrap dt-body-right sorting']")
+    @FindBy(xpath = "//*[@class='text-right sorting']")
     public List<WebElement> AmountBasliklar;
 
-    @FindBy(xpath = "//input[@type='search']")
+    @FindBy(xpath = "//input[@placeholder='Search...']")
     public WebElement PathologySearch;
 
+    @FindBy(xpath = "//td[@class='dataTables_empty']")
+    public WebElement SearchResult;
 
+    @FindBy(xpath = "//th[@aria-label='Bill No: activate to sort column descending']")
+    public WebElement siralamaButonu;
 
+    @FindBy(xpath = "//*[@class='sorting_1']")
+    public List<WebElement> BillNo;
 
+    @FindBy(xpath = "//*[@class='text-right noExport sorting_desc']")
+    public WebElement ActionButonu;
 
+    @FindBy(xpath = "//span[normalize-space()='Radiology']")
+    public WebElement RadiologyButonu;
+
+    @FindBy(xpath = "//*[@class='sorting']")
+    public List<WebElement> RadyologyBasliklar;
+
+    @FindBy(xpath = "//span[normalize-space()='Radiology']")
+    public WebElement AmountButonu;
+
+    @FindBy(xpath = "//*[@class='text-right sorting']")
+    public List<WebElement> PaidBalanceAmount;
+
+    @FindBy(xpath = "//*[@class='text-right noExport sorting_asc']")
+    public WebElement RadyologyAction;
+
+    @FindBy(xpath = "//input[@placeholder='Search...']")
+    public WebElement RadyologySearch;
 }

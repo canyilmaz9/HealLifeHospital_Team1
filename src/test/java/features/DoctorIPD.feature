@@ -128,7 +128,7 @@ Scenario: (US_053_US03_TC01) Verify that the doctor can admit a new patient to a
     * Verify that the Patient Added Successfully message is displayed.
     * Verify that the data in row 1, column 3 of the IPD Patient table equals the name of the last registered patient.
 
-
+  @ac
   Scenario:[US_053_03>TC_02] Verify that the doctor can admit an existing registered patient in the system.
     * As a doctor, verify that the Add Patient button is accessible.
     * Click on the dropdown menu in the pop-up page.
@@ -148,47 +148,6 @@ Scenario: (US_053_US03_TC01) Verify that the doctor can admit a new patient to a
     * Verify that the Patient Added Successfully message is displayed.
     * Verify that the data in row 1, column 3 of the IPD Patient table equals the name of the last registered patient.
 
-
-  Scenario:[US_053_03>TC_03] Verify that the patient's Date of Birth cannot be entered as a future date on the Add Patient Page.
-    * As a doctor, verify that the Add Patient button is accessible.
-    * Click on the New Patient button.
-    * Click on the Name box.
-    * Enter "Emily Houston" in the Name box.
-    * Click on the Guardian Name box.
-    * Enter "Eric Houston" in the Guardian Name box.
-    * Click on the Gender button.
-    * Select "Female" from the Gender dropdown.
-    * Click on the Date of Birth box.
-    * Enter "30.11.2024" in the Date of Birth box.
-    * Click on the Blood Group dropdown menu.
-    * Select AB+ from the Blood Group dropdown menu.
-    * Select "Married" from the Marital Status dropdown menu.
-    * Upload "PatientPhoto" from the PC.
-    * Click on the Any Known Allergies box.
-    * Enter "Penisilin" in the Any Known Allergies box.
-    * Click on the Save button on the Add Patient.
-    * Click on the Admission Date box.
-    * Enter today's date in the Admission Date box.
-    * Verify that the Credit Limit box text is not null.
-    * Verify that the Consultant Doctor box text is not null.
-    * Click on the Bed Group box.
-    * Select "2" as the patient private ward in the Bed Group box.
-    * Click on the Bed Number box.
-    * Select 151 as the bed number.
-    * Click on the Save button.
-    * Verify that the Patient Added Successfully message is displayed.
-    * Verify that the data in row 1, column 3 of the IPD Patient table equals the name of the last registered patient.
-    * Verify that the Patient Added Successfully message is displayed.
-
-@lastTask
-  Scenario:[US_053_04>TC_01] Verify that the doctor can view discharged patients on the IPD page.
-    * Clicking on the IPD No 65 navigates to the patient's details page.
-    * Click on the Discharge Patient button.
-    * Click on the Discharge Date box.
-    * Click on the Discharge Status dropdown menu.
-    * Click on the Save button on the Discharge Page.
-    Then As a doctor, click on the IPD menu in the dashboard.
-    * Verify that the patient's name "Mark" is no longer visible in the IPD Patient Data table.
 
 
 

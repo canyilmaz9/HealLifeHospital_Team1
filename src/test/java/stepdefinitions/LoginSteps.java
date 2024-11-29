@@ -11,7 +11,6 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.LoginPage;
 import utilities.ReusableMethods;
-import utils.ExcelReader;
 
 public class LoginSteps {
 	private static final Logger logger = LogManager.getLogger(LoginSteps.class);
@@ -153,77 +152,4 @@ public class LoginSteps {
 
 	}
 
-	@Then("login sayfasinda sagda login penceresi solda latest new bilgileri bulunur")
-	public void loginSayfasindaSagdaLoginPenceresiSoldaLatestNewBilgileriBulunur() {
-		loginPage.loginPageBoxes();
-		logger.info("login sayfasinda sagda login penceresi solda latest new bilgileri bulundu" );
-	}
-
-	@Then("Login sayfasinda \\(sisteme daha önceden kayitli) bilgiler girilerek admin panele login olunur.")
-	public void loginSayfasindaSistemeDahaÖncedenKayitliBilgilerGirilerekAdminPaneleLoginOlunur() {
-		loginPage.adminSignin(ConfigReader.getProperty("testData"),0,7,3,
-				0,7,2);
-		String exceptedURL = "https://qa.heallifehospital.com/admin/admin/dashboard";
-		Assert.assertEquals(exceptedURL,driver.getCurrentUrl());
-		logger.info("Sisteme daha önceden kayitli bilgiler girilerek admin panele login olundu.");
-	}
-
-
-	@Then("Login sayfasinda \\(yanlis eksik veya sisteme daha önceden kayitli olmayan) bilgiler girilerek admin panele login olunmaz.")
-	public void loginSayfasindaYanlisEksikVeyaSistemeDahaÖncedenKayitliOlmayanBilgilerGirilerekAdminPaneleLoginOlunmaz() {
-		loginPage.adminSignin(ConfigReader.getProperty("testData"),1,1,1,
-				0,7,2);
-
-		String exceptedUyari = "Invalid Username or Password";
-		Assert.assertEquals(exceptedUyari, loginPage.invalidLoginAlert.getText());
-		logger.info("Yanlis kullanici adi ve dogru sifre ile sisteme giris yapilamadigi dogrulandi");
-
-
-		loginPage.adminSignin(ConfigReader.getProperty("testData"),0,7,3,
-				1,1,1);
-
-		Assert.assertEquals(exceptedUyari,loginPage.invalidLoginAlert.getText());
-		logger.info("Dogru kullanici adi ve yanlis sifre ile sisteme giris yapilamadigi dogrulandi");
-
-		loginPage.adminSignin(ConfigReader.getProperty("testData"),1,1,1,
-				0,7,3);
-
-		Assert.assertEquals(exceptedUyari,loginPage.invalidLoginAlert.getText());
-		logger.info("Yanlis kullanici adi ve yanlis sifre ile sisteme giris yapilamadigi dogrulandi");
-	}
-
-
-	@When("Login sayfasinda forget password linki bulunmali ve bu linke tiklaninca forgotpassword sayfasina yönlendirmeli.")
-	public void loginSayfasindaForgetPasswordLinkiBulunmaliVeBuLinkeTiklanincaSayfasinaYönlendirmeli() {
-		loginPage.forgotPasswordBox.isDisplayed();
-		logger.info("login sayfasinda Forgot Password butonu goruntulendi" );
-		loginPage.forgotPasswordBox.click();
-		logger.info("Forgot Password butonu tiklandi." );
-		String exceptedUrl = "https://qa.heallifehospital.com/site/forgotpassword";
-		Assert.assertEquals(exceptedUrl,driver.getCurrentUrl());
-		logger.info("Forget password sayfasina yönlendirildigi dogrulandi." );
-	}
-
-	@And("Forgot password sayfasindaki textBox'a girilen mail adresine sifre gönderir")
-	public void forgotPasswordSayfasindakiTextBoxAGirilenMailAdresineSifreGönderir() {
-		loginPage.forgotPasswordMailBox.isDisplayed();
-		logger.info("Forgot password sayfasinda Email kutusu goruntulendi");
-		loginPage.forgotPasswordMailBox.sendKeys("rastgele@mail.com");
-		String alertText = "Your password has been sent to your e-mail address.";
-		Assert.assertEquals(alertText,loginPage.mailSendAlert.getText());
-		logger.info("Mail gonderildigi sayfada cikan alert uzerinden dogrulandi.");
-
-		logger.debug("Sayfada kayitli bir admin email'i ile girildiginde herhangi bir alert cikmamakla birlikte, Submit butonu tiklandiginda" +
-				" login sayfasina geri atiyor!");
-	}
-
-	@Then("Forgot password sayfasinda login sayfasina dönmek icin admin login linki bulunmali ve bu linke tiklaninca login sayfasina yönlendirmeli.")
-	public void forgotPasswordSayfasindaLoginSayfasinaDönmekIcinAdminLoginLinkiBulunmaliVeBuLinkeTiklanincaLoginSayfasinaYönlendirmeli() {
-		loginPage.loginfpAdminLoginBtn.isDisplayed();
-		logger.info("login sayfasina dönmek icin admin login linki goruntulendi");
-		loginPage.loginfpAdminLoginBtn.click();
-		String exceptedURL = "https://qa.heallifehospital.com/site/login";
-		Assert.assertEquals(exceptedURL,driver.getCurrentUrl());
-		logger.info("admin login linki tiklandiginda Admin Login sayfasina yonlendirildigi URL uzerinden dogrulandi.");
-	}
 }

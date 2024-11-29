@@ -9,18 +9,13 @@ import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.DoctorIDPPage;
 import utilities.ReusableMethods;
 import utils.ExcelDataReader_Seren;
 import utils.JSUtilities;
 
 import javax.print.Doc;
-import java.awt.*;
-import java.time.Duration;
-import java.util.Set;
 
 
 public class DoctorIPDFeatureSteps {
@@ -31,25 +26,12 @@ public class DoctorIPDFeatureSteps {
     DoctorIDPPage doctorIDPPage=new DoctorIDPPage(driver);
 
 
- //  static ExcelDataReader_Seren excelDataReaderSeren=new ExcelDataReader_Seren(ConfigReader.getProperty("IPDPatient"),"Sheet1");
+   static ExcelDataReader_Seren excelDataReaderSeren=new ExcelDataReader_Seren(ConfigReader.getProperty("IPDPatient"),"Sheet1");
  private static final Logger logger = LogManager.getLogger(DoctorIPDFeatureSteps.class);
 
     @Given("Enters the {string}")
     public void enters_the(String url) {
-
-        ((JavascriptExecutor) driver).executeScript("window.open();"); // Yeni sekme aç
-        Set<String> windowHandles = driver.getWindowHandles();
-        for (String handle : windowHandles) {
-            driver.switchTo().window(handle);
-            if (driver.getCurrentUrl().equals("about:blank")) { // Yeni açılan pencereyi bul
-                driver.get(ConfigReader.getProperty(url)); // Hedef URL'yi yükle
-                break;
-            }
-        }
-
-        //ReusableMethods.switchWindowByUrl(driver,ConfigReader.getProperty(url));
-
-       // driver.get(ConfigReader.getProperty(url));
+        driver.get(ConfigReader.getProperty(url));
         ReusableMethods.bekle(2);
     }
     @Given("Login as doctor")
@@ -59,12 +41,7 @@ public class DoctorIPDFeatureSteps {
 
 
     @Then("As a doctor, click on the IPD menu in the dashboard.")
-    public void
-
-
-
-
-    as_a_doctor_click_on_the_ipd_menu_in_the_dashboard() {
+    public void as_a_doctor_click_on_the_ipd_menu_in_the_dashboard() {
      ReusableMethods.clickWithText(" IPD");
 
     }
@@ -345,7 +322,7 @@ public class DoctorIPDFeatureSteps {
        }
        @Then("Verify that the first patient name in the downloaded Excel file equals the first patient name displayed in the IPD Patient List.")
        public void verify_that_the_first_patient_name_in_the_downloaded_excel_file_equals_the_first_patient_name_displayed_in_the_ipd_patient_list() {
-            ExcelDataReader_Seren excelDataReaderSeren=new ExcelDataReader_Seren(ConfigReader.getProperty("IPDPatient"),"Sheet1");
+
        Assert.assertEquals(excelDataReaderSeren.getCellData(2,2),doctorIDPPage.patientDataFromIPDList(1,3).getText());
 
        }
@@ -429,13 +406,10 @@ public class DoctorIPDFeatureSteps {
         }
         @Then("Click on the Date of Birth box.")
         public void click_on_the_date_of_birth_box() {
-        ReusableMethods.waitForElementVisibility(doctorIDPPage.dateOfBirthAddPAt,20);
         doctorIDPPage.dateOfBirthAddPAt.click();
-        ReusableMethods.hardWait(2);
         }
         @Then("Enter {string} in the Date of Birth box.")
         public void enter_in_the_date_of_birth_box(String string) {
-        ReusableMethods.waitForElementVisibility(doctorIDPPage.dateOfBirthAddPAt,20);
 
         doctorIDPPage.dateOfBirthAddPAt.sendKeys(string);
         }
@@ -508,7 +482,7 @@ public class DoctorIPDFeatureSteps {
         @Then("Verify that the data in row {int}, column {int} of the IPD Patient table equals the name of the last registered patient.")
         public void verify_that_the_data_in_row_column_of_the_ipd_patient_table_equals_the_name_of_the_last_registered_patient(Integer int1, Integer int2) {
        ReusableMethods.hardWait(3);
-     Assert.assertTrue( doctorIDPPage.TableDataRetriever(1,3).getText().contains("Rana nur ulker"));
+     Assert.assertTrue( doctorIDPPage.TableDataRetriever(1,3).getText().contains("Emily Houston"));
         }
 
 
@@ -523,9 +497,8 @@ public class DoctorIPDFeatureSteps {
         ReusableMethods.waitForElementToBeClickable(doctorIDPPage.addOldPatientDDM,20);
         actions.click(doctorIDPPage.addOldPatientDDM).perform();
          actions.sendKeys(doctorIDPPage.addOldPatientDDM,string).perform();
-         // ReusableMethods.waitForElementVisibility(doctorIDPPage.addedPAtIDText,20);
-         // actions.click(doctorIDPPage.addedPAtIDText).perform();
-        doctorIDPPage.clickContainsTextWE("79");
+          ReusableMethods.waitForElementVisibility(doctorIDPPage.addedPAtIDText,20);
+          actions.click(doctorIDPPage.addedPAtIDText).perform();
     }
     @Then("Click on the Height box.")
     public void click_on_the_height_box() {
@@ -548,107 +521,6 @@ public class DoctorIPDFeatureSteps {
             ReusableMethods.hardWait(5);
             ReusableMethods.waitForElementVisibility(doctorIDPPage.symptomTitleCheckBoxAddPAt,20);
             actions.click(doctorIDPPage.symptomTitleCheckBoxAddPAt).perform();
-    }
-
-
-    @Then("Click on the Guardian Name box.")
-    public void click_on_the_guardian_name_box() {
-            ReusableMethods.waitForElementVisibility(doctorIDPPage.guardianNameAddPat,20);
-            actions.click(doctorIDPPage.guardianNameAddPat).perform();
-            ReusableMethods.hardWait(1);
-
-    }
-    @Then("Enter {string} in the Guardian Name box.")
-    public void enter_in_the_guardian_name_box(String string) {
-            actions.sendKeys(doctorIDPPage.guardianNameAddPat,string).perform();
-            ReusableMethods.hardWait(2);
-    }
-    @Then("Click on the Blood Group dropdown menu.")
-    public void click_on_the_blood_group_dropdown_menu() {
-        ReusableMethods.waitForElementVisibility(doctorIDPPage.bloodGroupDDMAddPat,20);
-        actions.click(doctorIDPPage.bloodGroupDDMAddPat).perform();
-        ReusableMethods.hardWait(2);
-
-
-    }
-    @Then("Select AB+ from the Blood Group dropdown menu.")
-    public void select_from_the_blood_group_dropdown_menu() {
-
-
-        for (int i = 0; i <4 ; i++) {
-            actions.sendKeys(Keys.DOWN).perform();
-        }
-
-        utils.ReusableMethods.hardWait(1);
-        actions.sendKeys(Keys.ENTER).perform();
-        ReusableMethods.hardWait(2);
-
-    }
-
-    @Then("Select {string} from the Marital Status dropdown menu.")
-    public void select_from_the_marital_status_dropdown_menu(String string) {
-       actions.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).sendKeys(Keys.DOWN).sendKeys(Keys.DOWN).sendKeys(Keys.ENTER).perform();
-       ReusableMethods.waitForElementVisibility(  doctorIDPPage.marriedAddPAt,20);
-       doctorIDPPage.marriedAddPAt.click();
-       ReusableMethods.hardWait(3);
-       actions.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
-       ReusableMethods.hardWait(5);
-    }
-
-    @Then("Upload {string} from the PC.")
-    public void select_from_the_pc(String string) throws AWTException {
-        String filePath = "C:\\Users\\User\\Desktop\\Heal Life Project\\PatientPhoto.jpg";
-                 ReusableMethods.uploadFileWithRobot(filePath);
-
-    }
-    @Then("Click on the Any Known Allergies box.")
-    public void click_on_the_any_known_allergies_box() {
-        for (int i = 0; i <5 ; i++) {
-            actions.sendKeys(Keys.TAB).perform();
-        }
-        ReusableMethods.hardWait(2);
-
-    }
-    @Then("Enter {string} in the Any Known Allergies box.")
-    public void enter_in_the_any_known_allergies_box(String string) {
-        actions.sendKeys(string).perform();
-        ReusableMethods.hardWait(2);
-    }
-
-    @Then("Click on the Save button on the Add Patient.")
-    public void click_on_the_save_button_on_the_add_patient() {
-            ReusableMethods.waitForElementVisibility(doctorIDPPage.saveButtonAddPAt,20);
-            doctorIDPPage.saveButtonAddPAt.click();
-
-    }
-
-    @Then("Click on the Discharge Patient button.")
-    public void click_on_the_discharge_patient_button() {
-       doctorIDPPage.dischargePattButton.click();
-    }
-    @Then("Click on the Discharge Date box.")
-    public void click_on_the_discharge_date_box() {
-    doctorIDPPage.dischargeDate.click();
-
-    }
-    @Then("Click on the Discharge Status dropdown menu.")
-    public void click_on_the_discharge_status_dropdown_menu() {
-        actions.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).sendKeys(Keys.DOWN).sendKeys(Keys.DOWN).sendKeys(Keys.DOWN).sendKeys(Keys.ENTER).perform();
-    }
-
-    @Then("Click on the Save button on the Discharge Page.")
-    public void click_on_the_save_button_on_the_discharge_page() {
-        ReusableMethods.waitForElementVisibility(doctorIDPPage.saveDischargeButton,20);
-        doctorIDPPage.saveDischargeButton.click();
-
-        ReusableMethods.hardWait(2);
-
-
-    }
-    @Then("Verify that the patient's name {string} is no longer visible in the IPD Patient Data table.")
-    public void verify_that_the_patient_s_name_is_no_longer_visible_in_the_ipd_patient_data_table(String patientName) {
-       Assert.assertFalse( doctorIDPPage.isPatientNamePresent(driver,patientName));
-
     }
 
 

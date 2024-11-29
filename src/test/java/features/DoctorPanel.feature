@@ -1,15 +1,15 @@
-Feature:Doctor Login Page Tests
+Feature:Doctor Panel Tests
 
 
   Background:
     Given Go to the admin login page
 
-  @loginWindow
+  @doctorLoginPanelVisibility
   Scenario: Test for displaying doctor panel
 
     Given Display the Admin Login window on the right and the Latest New information on the left.
 
-  @loginLogoutFunction
+  @doctorLoginLogoutFunction
   Scenario: Test for login and logout the doctor panel
 
     Given Log in the doctor panel by entering the information (previously registered in the system) on the login page.
@@ -22,8 +22,24 @@ Feature:Doctor Login Page Tests
     Given Display the forget password link on the login page
     When Click on the link and verify that forget password page opens
     Then Enter an valid e-mail address in the textbox and reset password and verify that an email is sent
+    And Return to the login page
     And Display the admin login link on the forget password page
-    And Click on the link and return to the admin login page
+    And Click on the link and verify that admin login page opens
+
+
+
+
+
+    Scenario: US_46 Doktor paneli ana sayfasinda, post mesajlari ve doktora ait calendar testi
+      Given  Doktor panelindeki ana sayfada navbar altinda doktorlara gönderilen post mesajlarini goruntuler
+      Then   Calendar görüntülemeyi ve calendar üzerinde islemler yapabilmasin test eder
+      When   Doktor paneli ana sayfasinda sisteme kayitli calisan sayisi bilgilerini goruntulenmesini dogrular
+      And    Doktor paneli ana sayfasinda sisteme kayitli calisanlara tiklaninca Human Resources sayfasina yönlendirme yapabildigini test eder
+
+
+
+
+
 
 
 

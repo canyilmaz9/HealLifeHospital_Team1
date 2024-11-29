@@ -594,12 +594,7 @@ public class HomePageGeneralSteps {
         homePageGeneralPage.addAppointment.click();
         Thread.sleep(2000);
         homePageGeneralPage.date.click();
-
-        String targetDay = "2";
-        WebElement day = driver.findElement(By.xpath("(//tbody)[3]//tr[6]//td["+targetDay+"]"));
-        day.click();
-
-
+        homePageGeneralPage.day29.click();
         Select select=new Select(homePageGeneralPage.specialist);
         select.selectByValue("1");
         homePageGeneralPage.Doctor.click();
@@ -607,14 +602,12 @@ public class HomePageGeneralSteps {
         select1.selectByValue("792");
         Select select2=new Select(homePageGeneralPage.shift);
         select2.selectByValue("1");
-
-        actions.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).sendKeys(Keys.DOWN).sendKeys(Keys.DOWN).sendKeys(Keys.ENTER).perform();
+        Select select3=new Select(homePageGeneralPage.slot);
+        select3.selectByValue("132");
         Thread.sleep(3000);
         homePageGeneralPage.messageToDoctor.sendKeys("hello, I will be there");
         homePageGeneralPage.availableSlots.click();
-
         homePageGeneralPage.appointmentSave.click();
-
 
 
 
@@ -627,9 +620,8 @@ public class HomePageGeneralSteps {
         homePageGeneralPage.paywithCard.click();
         WebElement anIframeElement=driver.findElement(By.xpath("/html/body/iframe"));
         driver.switchTo().frame(anIframeElement);
-        ReusableMethods.waitForElementVisibility(homePageGeneralPage.payEmail,20);
         homePageGeneralPage.payEmail.sendKeys("rananurulker@gmail.com");
-       // ReusableMethods.waitForElementVisibility(homePageGeneralPage.payCardNumber,20);
+        Thread.sleep(2000);
         homePageGeneralPage.payCardNumber.click();
        //try {
        //    Robot robot = new Robot();
@@ -667,10 +659,7 @@ public class HomePageGeneralSteps {
         homePageGeneralPage.zipCode.sendKeys("34567");
         Thread.sleep(2000);
         homePageGeneralPage.payButtoninCard.click();
-        Thread.sleep(2000);
-        driver.switchTo().parentFrame();
         homePageGeneralPage.goToHomeButton.click();
-        Thread.sleep(2000);
 
     }
 
