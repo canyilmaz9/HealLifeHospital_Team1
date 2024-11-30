@@ -61,6 +61,20 @@
             <version>${allure.version}</version>
         </dependency>
 
+
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-java-commons</artifactId>
+            <version>2.20.1</version>
+        </dependency>
+
+
+
+
+
+
+
         <!-- Java Faker for Random Data Generation -->
         <dependency>
             <groupId>com.github.javafaker</groupId>
