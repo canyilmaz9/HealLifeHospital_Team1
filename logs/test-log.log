@@ -2298,3 +2298,18 @@
 2024-11-28 15:46:56 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
 2024-11-28 15:47:07 [main] INFO  utils.LoggerHelper - Test başarıyla tamamlandı: [US_053_04>TC_01]
 2024-11-28 15:47:07 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-30 16:06:45 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-30 16:06:46 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_04>TC_01] Verify that the doctor can view discharged patients on the IPD page.
+2024-11-30 16:06:49 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-30 16:07:11 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_04>TC_01] Verify that the doctor can view discharged patients on the IPD page.
+2024-11-30 16:07:12 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-30 16:24:47 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-30 16:24:48 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_04>TC_01] Verify that the doctor can view discharged patients on the IPD page.
+2024-11-30 16:24:50 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-30 16:25:13 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_04>TC_01] Verify that the doctor can view discharged patients on the IPD page.
+2024-11-30 16:25:13 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
+2024-11-30 16:34:12 [main] INFO  runners.TestRunner - Cucumber Test Runner başlatılıyor...
+2024-11-30 16:34:13 [main] INFO  utils.LoggerHelper - Test Başlıyor: [US_053_04>TC_01] Verify that the doctor can view discharged patients on the IPD page.
+2024-11-30 16:34:15 [main] INFO  utils.LoggerHelper - Driver başlatıldı ve test hazırlandı.
+2024-11-30 16:34:38 [main] ERROR utils.LoggerHelper - Test başarısız oldu: [US_053_04>TC_01] Verify that the doctor can view discharged patients on the IPD page.
+2024-11-30 16:34:38 [main] INFO  utils.LoggerHelper - Driver kapatıldı.
